@@ -4,13 +4,15 @@ import SpriteKit
 
 class FakeGameViewer: GameView {
     var view: SKView!
+    var scene: GameScene!
 
     init() {
         view = SKView()
+        scene = GameScene(size: boundsSize)
     }
 
     var presentScene_wasCalled = false
-    func presentScene(scene: GameScene) {
+    func presentScene() {
         presentScene_wasCalled = true
     }
 

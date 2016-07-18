@@ -2,7 +2,6 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-    var scene: GameScene!
     let viewer: GameView!
 
     init(viewer: GameView) {
@@ -26,9 +25,7 @@ class GameViewController: UIViewController {
 
     private func configureSubviews() {
         viewer.configure(view.frame)
-        scene = GameScene(size: viewer.size())
-        scene.scaleMode = .AspectFill
-        viewer.presentScene(scene)
+        viewer.presentScene()
     }
 
     private func addSubviews() {

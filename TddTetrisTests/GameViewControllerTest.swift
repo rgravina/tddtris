@@ -13,14 +13,6 @@ class GameViewControllerTest: XCTestCase {
         gameVC.viewDidLoad()
     }
 
-    func test_viewDidLoad_createsGameScene() {
-        expect(self.gameVC.scene).to(beAKindOf(GameScene))
-    }
-
-    func test_viewDidLoad_setsScaleModeToAspectFill() {
-        expect(self.gameVC.scene.scaleMode).to(equal(SKSceneScaleMode.AspectFill))
-    }
-
     func test_viewDidLoad_presentsSceme() {
         expect(self.fakeGameViewer.presentScene_wasCalled).to(equal(true))
     }
@@ -32,9 +24,5 @@ class GameViewControllerTest: XCTestCase {
 
     func test_viewDidLoad_addsSubviews() {
         expect(self.gameVC.view).to(containSubview(fakeGameViewer.view))
-    }
-
-    func test_viewDidLoad_createsSceneBoundToScreenSize() {
-        expect(self.gameVC.scene.size).to(equal(CGSizeMake(100, 200)))
     }
 }

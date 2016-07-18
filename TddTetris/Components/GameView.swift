@@ -2,7 +2,8 @@ import SpriteKit
 
 protocol GameView {
     var view: SKView! { get }
-    func presentScene(scene: GameScene)
+    var scene: GameScene! { get }
+    func presentScene()
     func configure(frame: CGRect)
     func size() -> CGSize
 }

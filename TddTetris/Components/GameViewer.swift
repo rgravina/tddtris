@@ -2,13 +2,16 @@ import SpriteKit
 
 class GameViewer: GameView {
     var view: SKView!
+    var scene: GameScene!
 
     func configure(frame: CGRect) {
-        self.view = SKView(frame: frame)
-        self.view.multipleTouchEnabled = false
+        view = SKView(frame: frame)
+        view.multipleTouchEnabled = false
+        scene = GameScene(size: size())
+        scene.scaleMode = .AspectFill
     }
 
-    func presentScene(scene: GameScene) {
+    func presentScene() {
         view.presentScene(scene)
     }
 
