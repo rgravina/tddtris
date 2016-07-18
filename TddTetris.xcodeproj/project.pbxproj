@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		97D120991D3C820A007A7E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120981D3C820A007A7E2B /* AppDelegate.swift */; };
 		97D120A41D3C820A007A7E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D120A31D3C820A007A7E2B /* Assets.xcassets */; };
-		97D120B21D3C820A007A7E2B /* TddTetrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120B11D3C820A007A7E2B /* TddTetrisTests.swift */; };
+		97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */; };
 		97D120BD1D3C8412007A7E2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */; };
 		97D120C41D3CC485007A7E2B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120C21D3CC485007A7E2B /* GameScene.swift */; };
 		97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120C31D3CC485007A7E2B /* GameViewController.swift */; };
+		97D120C71D3CCEF1007A7E2B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D120C61D3CCEF1007A7E2B /* Nimble.framework */; };
+		97D120C91D3CCF68007A7E2B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 97D120C61D3CCEF1007A7E2B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		97D120CD1D3CCFE6007A7E2B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 97D120C61D3CCEF1007A7E2B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +28,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		97D120C81D3CCF5E007A7E2B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				97D120C91D3CCF68007A7E2B /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D120CC1D3CCFDE007A7E2B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				97D120CD1D3CCFE6007A7E2B /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		97D120951D3C820A007A7E2B /* TddTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TddTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D120981D3C820A007A7E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D120A31D3C820A007A7E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97D120A81D3C820A007A7E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D120AD1D3C820A007A7E2B /* TddTetrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TddTetrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		97D120B11D3C820A007A7E2B /* TddTetrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TddTetrisTests.swift; sourceTree = "<group>"; };
+		97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewControllerTest.swift; path = ../GameViewControllerTest.swift; sourceTree = "<group>"; };
 		97D120B31D3C820A007A7E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		97D120C21D3CC485007A7E2B /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		97D120C31D3CC485007A7E2B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		97D120C61D3CCEF1007A7E2B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D120C71D3CCEF1007A7E2B /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +87,9 @@
 		97D1208C1D3C820A007A7E2B = {
 			isa = PBXGroup;
 			children = (
+				97D120961D3C820A007A7E2B /* Products */,
 				97D120971D3C820A007A7E2B /* TddTetris */,
 				97D120B01D3C820A007A7E2B /* TddTetrisTests */,
-				97D120961D3C820A007A7E2B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				97D120C01D3CC45D007A7E2B /* Screens */,
-				97D120B11D3C820A007A7E2B /* TddTetrisTests.swift */,
 				97D120B31D3C820A007A7E2B /* Info.plist */,
+				97D120C61D3CCEF1007A7E2B /* Nimble.framework */,
 			);
 			path = TddTetrisTests;
 			sourceTree = "<group>";
@@ -96,9 +124,9 @@
 		97D120BE1D3C842F007A7E2B /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */,
 				97D120981D3C820A007A7E2B /* AppDelegate.swift */,
 				97D120A31D3C820A007A7E2B /* Assets.xcassets */,
+				97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */,
 				97D120A81D3C820A007A7E2B /* Info.plist */,
 			);
 			path = Application;
@@ -107,6 +135,7 @@
 		97D120C01D3CC45D007A7E2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -130,6 +159,7 @@
 				97D120911D3C820A007A7E2B /* Sources */,
 				97D120921D3C820A007A7E2B /* Frameworks */,
 				97D120931D3C820A007A7E2B /* Resources */,
+				97D120C81D3CCF5E007A7E2B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -147,6 +177,8 @@
 				97D120A91D3C820A007A7E2B /* Sources */,
 				97D120AA1D3C820A007A7E2B /* Frameworks */,
 				97D120AB1D3C820A007A7E2B /* Resources */,
+				97D120CE1D3CCFEF007A7E2B /* ShellScript */,
+				97D120CC1D3CCFDE007A7E2B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -215,14 +247,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97D120CE1D3CCFEF007A7E2B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97D120911D3C820A007A7E2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
-				97D120C41D3CC485007A7E2B /* GameScene.swift in Sources */,
 				97D120991D3C820A007A7E2B /* AppDelegate.swift in Sources */,
+				97D120C41D3CC485007A7E2B /* GameScene.swift in Sources */,
+				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D120B21D3C820A007A7E2B /* TddTetrisTests.swift in Sources */,
+				97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TddTetris/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravina.robert.TddTetris;
@@ -343,6 +396,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TddTetris/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravina.robert.TddTetris;
@@ -355,6 +412,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = TddTetrisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravina.robert.TddTetrisTests;
@@ -367,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = TddTetrisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravina.robert.TddTetrisTests;
@@ -394,6 +453,7 @@
 				97D120B81D3C820A007A7E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97D120B91D3C820A007A7E2B /* Build configuration list for PBXNativeTarget "TddTetrisTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +462,7 @@
 				97D120BB1D3C820A007A7E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
