@@ -8,7 +8,9 @@ class GameViewerTest: XCTestCase {
 
     override func setUp() {
         gameViewer = GameViewer()
-        gameViewer.configure(CGRectMake(0, 0, 100, 200))
+        gameViewer.configure(
+            CGRectMake(0, 0, 100, 200)
+        )
     }
 
     func test_configure_createsGameScene() {

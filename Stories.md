@@ -1,0 +1,17 @@
+- [x] I want the game to launch when I start, and show an empty game background.
+- [ ] I want the next block to appear at the top of the screen
+  - divide the gameobard into a grid
+  - center block in top row
+  - support drawiing all types of blocks
+- [ ] I want the blocks to fall
+  - handle ticks
+  - move block down on each tick
+- [ ] I want to be able to move the block left and right as it falls
+- [ ] I want to be able to rotate the block as it falls
+- [ ] I want to be able to quick drop the block so I don't have to wait for it to fall.
+- [ ] I want rows to disappear when they fill and get points for that
+- [ ] I want to see a preview of the next block so I can make better choices of where to place the current block
+- [ ] I want sound effects and background music
+- [ ] I want blocks to have random colours
+- [ ] I want to level up after getting a certain number of points
+- [ ] I want the game to get harder as I progess in levels

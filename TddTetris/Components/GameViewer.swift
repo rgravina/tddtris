@@ -7,7 +7,10 @@ class GameViewer: GameView {
     func configure(frame: CGRect) {
         view = SKView(frame: frame)
         view.multipleTouchEnabled = false
-        scene = GameScene(size: size())
+        scene = GameScene(
+            size: size(),
+            blockGenerator: DefaultBlockGenerator()
+        )
         scene.scaleMode = .AspectFill
     }
 

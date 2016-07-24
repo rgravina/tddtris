@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		975349511D43A3530084B569 /* BlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* BlockGenerator.swift */; };
+		975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */; };
+		975349551D43B8990084B569 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* Block.swift */; };
+		975349571D4477760084B569 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 975349561D4477760084B569 /* Sprites.atlas */; };
 		97CCECAC1D3FDF7A0066670A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAA1D3FDF7A0066670A /* background.png */; };
 		97CCECAD1D3FDF7A0066670A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAB1D3FDF7A0066670A /* background@2x.png */; };
 		97CCECB01D3FE7180066670A /* gameboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAE1D3FE7180066670A /* gameboard.png */; };
@@ -61,6 +65,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		975349501D43A3530084B569 /* BlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGenerator.swift; sourceTree = "<group>"; };
+		975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlockGenerator.swift; sourceTree = "<group>"; };
+		975349541D43B8990084B569 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		975349561D4477760084B569 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		97CCECAA1D3FDF7A0066670A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		97CCECAB1D3FDF7A0066670A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		97CCECAE1D3FE7180066670A /* gameboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameboard.png; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 				97CCECAB1D3FDF7A0066670A /* background@2x.png */,
 				97CCECAE1D3FE7180066670A /* gameboard.png */,
 				97CCECAF1D3FE7180066670A /* gameboard@2x.png */,
+				975349561D4477760084B569 /* Sprites.atlas */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -195,6 +204,9 @@
 		97D120CF1D3CD43B007A7E2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				975349541D43B8990084B569 /* Block.swift */,
+				975349501D43A3530084B569 /* BlockGenerator.swift */,
+				975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */,
 				97D120D71D3D1AC3007A7E2B /* GameView.swift */,
 				97D120D11D3CD4C1007A7E2B /* GameViewer.swift */,
 			);
@@ -300,6 +312,7 @@
 				97D120BD1D3C8412007A7E2B /* Default-568h@2x.png in Resources */,
 				97CCECB01D3FE7180066670A /* gameboard.png in Resources */,
 				97CCECB11D3FE7180066670A /* gameboard@2x.png in Resources */,
+				975349571D4477760084B569 /* Sprites.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D120991D3C820A007A7E2B /* AppDelegate.swift in Sources */,
+				975349551D43B8990084B569 /* Block.swift in Sources */,
+				975349511D43A3530084B569 /* BlockGenerator.swift in Sources */,
+				975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */,
 				97D120C41D3CC485007A7E2B /* GameScene.swift in Sources */,
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
 				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
