@@ -1,6 +1,10 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    static let BLOCK_SIZE = 20
+    static let BOARD_LEADING_PADDING = 22
+    static let BOARD_TOP_PADDING = 43
+
     var blockGenerator: BlockGenerator!
 
     convenience init(size: CGSize, blockGenerator: BlockGenerator) {
@@ -26,7 +30,7 @@ class GameScene: SKScene {
         addChild(background)
 
         let gameBoardTexture = SKTexture(imageNamed: "gameboard")
-        let gameBoard = SKSpriteNode(texture: gameBoardTexture, size: CGSizeMake(Block.SIZE * CGFloat(10), Block.SIZE * CGFloat(20))
+        let gameBoard = SKSpriteNode(texture: gameBoardTexture, size: CGSizeMake(CGFloat(GameScene.BLOCK_SIZE) * CGFloat(10), CGFloat(GameScene.BLOCK_SIZE) * CGFloat(20))
         )
         gameBoard.name = "gameboard"
         gameBoard.anchorPoint = CGPoint(x: 0, y: 1)
@@ -36,7 +40,7 @@ class GameScene: SKScene {
 
     private func displayNextBlock() {
         let block = blockGenerator.nextBlock()
-        block.position = CGPoint(x: 22 + Block.SIZE * 4, y: frame.height - 43)
+        block.position = CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING))
         addChild(block)
     }
 }

@@ -41,7 +41,7 @@ class GameSceneTest: XCTestCase {
         expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
         let block = self.gameScene.children.last
         expect(block?.position).to(equal(
-            CGPoint(x: 22 + Block.SIZE * 4, y: 300 - 43)
+            CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: CGFloat(300) - CGFloat(GameScene.BOARD_TOP_PADDING))
         ))
     }
 }
