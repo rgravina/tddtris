@@ -1,7 +1,7 @@
 import SpriteKit
 
 class Block: SKNode {
-    let SPRITE_DISTANCE = CGFloat(20)
+    static let SIZE = CGFloat(20)
     var sprites = [SKSpriteNode]()
 
     override init() {
@@ -10,13 +10,13 @@ class Block: SKNode {
         sprites.append(SKSpriteNode(imageNamed: "blue"))
         sprites.append(SKSpriteNode(imageNamed: "blue"))
 
-        sprites[0].position.y = SPRITE_DISTANCE
+        sprites[0].position.y = Block.SIZE
         sprites[1].position = CGPoint(
-            x: SPRITE_DISTANCE,
-            y: SPRITE_DISTANCE
+            x: Block.SIZE,
+            y: Block.SIZE
         )
         sprites[2].position = CGPointZero
-        sprites[3].position.x = SPRITE_DISTANCE
+        sprites[3].position.x = Block.SIZE
         super.init()
 
         for sprite in sprites {

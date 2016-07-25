@@ -18,7 +18,7 @@ class GameSceneTest: XCTestCase {
 
     override func setUp() {
         gameScene = GameScene(
-            size: CGSizeZero,
+            size: CGSize(width: 200, height: 300),
             blockGenerator: fakeBlockGenerator
         )
     }
@@ -28,12 +28,20 @@ class GameSceneTest: XCTestCase {
         expect(background.anchorPoint).to(equal(CGPoint(x: 0, y: 0)))
         let gameBoard = self.gameScene.children[1] as! SKSpriteNode
         expect(gameBoard.anchorPoint).to(equal(CGPoint(x: 0, y: 1)))
-        expect(gameBoard.position).to(equal(CGPoint(x: 6, y: gameScene.frame.height - 6)))
+        expect(gameBoard.position).to(equal(CGPoint(x: 12, y: gameScene.frame.height - 12)))
     }
 
     func test_init_displaysNextBlock() {
         expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
         let block = self.gameScene.children.last
         expect(block).to(beAKindOf(Block))
+    }
+
+    func test_init_movesNextBlockToDropCoordinates() {
+        expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
+        let block = self.gameScene.children.last
+        expect(block?.position).to(equal(
+            CGPoint(x: 22 + Block.SIZE * 4, y: 300 - 43)
+        ))
     }
 }
