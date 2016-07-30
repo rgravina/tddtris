@@ -6,8 +6,11 @@ class GameScene: SKScene {
     static let BOARD_TOP_PADDING = 43
 
     var blockGenerator: BlockGenerator!
+    var blockMover: BlockMover!
 
-    convenience init(size: CGSize, blockGenerator: BlockGenerator) {
+    convenience init(size: CGSize,
+                     blockGenerator: BlockGenerator
+    ) {
         self.init(size: size)
         self.blockGenerator = blockGenerator
 
@@ -40,7 +43,8 @@ class GameScene: SKScene {
 
     private func displayNextBlock() {
         let block = blockGenerator.nextBlock()
-        block.position = CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING))
+        let mover = BlockMover(block: block, height: frame.height)
+        mover.moveToDropCoordinates()
         addChild(block)
     }
 }

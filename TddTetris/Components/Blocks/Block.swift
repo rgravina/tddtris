@@ -4,10 +4,11 @@ class Block: SKNode {
     var sprites = [SKSpriteNode]()
 
     override init() {
-        sprites.append(SKSpriteNode(imageNamed: "blue"))
-        sprites.append(SKSpriteNode(imageNamed: "blue"))
-        sprites.append(SKSpriteNode(imageNamed: "blue"))
-        sprites.append(SKSpriteNode(imageNamed: "blue"))
+        let block = SKTexture(imageNamed: "blue")
+        sprites.append(SKSpriteNode(texture: block))
+        sprites.append(SKSpriteNode(texture: block))
+        sprites.append(SKSpriteNode(texture: block))
+        sprites.append(SKSpriteNode(texture: block))
 
         sprites[0].position.y = CGFloat(GameScene.BLOCK_SIZE)
         sprites[1].position = CGPoint(

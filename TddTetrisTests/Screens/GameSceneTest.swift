@@ -36,12 +36,4 @@ class GameSceneTest: XCTestCase {
         let block = self.gameScene.children.last
         expect(block).to(beAKindOf(Block))
     }
-
-    func test_init_movesNextBlockToDropCoordinates() {
-        expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
-        let block = self.gameScene.children.last
-        expect(block?.position).to(equal(
-            CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: CGFloat(300) - CGFloat(GameScene.BOARD_TOP_PADDING))
-        ))
-    }
 }
