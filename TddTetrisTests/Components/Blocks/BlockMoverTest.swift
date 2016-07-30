@@ -8,7 +8,7 @@ class BlockMoverTest: XCTestCase {
     var mover: BlockMover!
 
     override func setUp() {
-        block = Block()
+        block = SquareBlock()
         mover = BlockMover(block: block, height: CGFloat(300))
     }
 

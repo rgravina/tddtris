@@ -45,6 +45,6 @@ class GameScene: SKScene {
         let block = blockGenerator.nextBlock()
         let mover = BlockMover(block: block, height: frame.height)
         mover.moveToDropCoordinates()
-        addChild(block)
+        addChild(block as! SKNode)
     }
 }

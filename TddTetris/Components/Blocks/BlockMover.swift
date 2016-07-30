@@ -1,7 +1,7 @@
 import SpriteKit
 
 class BlockMover {
-    let block: Block!
+    var block: Block!
     let height: CGFloat!
 
     init(block: Block, height: CGFloat) {
