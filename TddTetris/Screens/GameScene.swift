@@ -43,7 +43,13 @@ class GameScene: SKScene {
 
     private func displayNextBlock() {
         let block = blockGenerator.nextBlock()
-        let mover = BlockMover(block: block, height: frame.height)
+        let mover = BlockMover(
+            block: block,
+            topLeft: CGPoint(
+                x: CGFloat(GameScene.BOARD_LEADING_PADDING),
+                y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING)
+            )
+        )
         mover.moveToDropCoordinates()
         addChild(block as! SKNode)
     }

@@ -2,14 +2,17 @@ import SpriteKit
 
 class BlockMover {
     var block: Block!
-    let height: CGFloat!
+    let topLeft: CGPoint!
 
-    init(block: Block, height: CGFloat) {
+    init(block: Block, topLeft: CGPoint) {
         self.block = block
-        self.height = height
+        self.topLeft = topLeft
     }
 
     func moveToDropCoordinates() {
-        self.block.position = CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: height - CGFloat(GameScene.BOARD_TOP_PADDING))
+        self.block.position = CGPoint(
+            x: topLeft.x + CGFloat(GameScene.BLOCK_SIZE * 4),
+            y: topLeft.y
+        )
     }
 }

@@ -9,13 +9,16 @@ class BlockMoverTest: XCTestCase {
 
     override func setUp() {
         block = SquareBlock()
-        mover = BlockMover(block: block, height: CGFloat(300))
+        mover = BlockMover(block: block,
+                           topLeft: CGPoint(x: 10, y: 300)
+        )
     }
 
     func test_moveToDropCoordinates_movesToTopCenter() {
         self.mover.moveToDropCoordinates()
         expect(self.block.position).to(equal(
-            CGPoint(x: CGFloat(GameScene.BOARD_LEADING_PADDING + GameScene.BLOCK_SIZE * 4), y: CGFloat(300) - CGFloat(GameScene.BOARD_TOP_PADDING)
+            CGPoint(x: CGFloat(10 + GameScene.BLOCK_SIZE * 4),
+                y: CGFloat(300)
             )
         ))
     }

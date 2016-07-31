@@ -1,6 +1,7 @@
 - [x] I want the game to launch when I start, and show an empty game background.
 - [x] I want a block to appear at the top center of the screen.
 - [ ] I want to see a preview of the next randomly chosen block.
+- [ ] I want the next block to be in a random rotation.
 - [ ] I want blocks to have random colours.
 - [ ] I want blocks to fall one row every 0.6 seconds.
 - [ ] I want to be able to move the block left and right as it falls.
