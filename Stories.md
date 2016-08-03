@@ -15,8 +15,8 @@
 - [ ] I want to get points when I complete rows.
 - [ ] I want to see a preview of the next randomly chosen block.
 - [ ] I want blocks to have random colors.
-- [ ] I want the preview block to be in a random rotation.
 - [ ] I want to be able to quick drop the block.
 - [ ] I want sound effects and background music.
 - [ ] I want to level up after getting a certain number of points.
 - [ ] I want the game to get harder as I progress in levels.
+- [ ] I want the preview block to be in a random rotation.
