@@ -6,10 +6,10 @@ class SquareBlock: SKNode, Block {
 
     override init() {
         super.init()
-        sprites.append(SKSpriteNode(texture: block))
-        sprites.append(SKSpriteNode(texture: block))
-        sprites.append(SKSpriteNode(texture: block))
-        sprites.append(SKSpriteNode(texture: block))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: GameScene.BLOCK_SIZE, height: GameScene.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: GameScene.BLOCK_SIZE, height: GameScene.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: GameScene.BLOCK_SIZE, height: GameScene.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: GameScene.BLOCK_SIZE, height: GameScene.BLOCK_SIZE)))
 
         sprites[0].position.y = CGFloat(GameScene.BLOCK_SIZE)
         sprites[1].position = CGPoint(

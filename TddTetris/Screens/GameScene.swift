@@ -1,9 +1,8 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    static let BLOCK_SIZE = 20
-    static let BOARD_LEADING_PADDING = 22
-    static let BOARD_TOP_PADDING = 43
+    static let BLOCK_SIZE = 36
+    static let BOARD_TOP_PADDING = 54
 
     var blockGenerator: BlockGenerator!
     var blockMover: BlockMover!
@@ -15,11 +14,9 @@ class GameScene: SKScene {
         self.init(size: size)
         self.blockGenerator = blockGenerator
         self.topLeft = CGPoint(
-            x: CGFloat(GameScene.BOARD_LEADING_PADDING),
+            x: CGFloat(0),
             y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING)
         )
-
-        setupBackgroundImages()
         displayNextBlock()
     }
 
@@ -29,21 +26,6 @@ class GameScene: SKScene {
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
-    }
-
-    private func setupBackgroundImages() {
-        let background = SKSpriteNode(imageNamed: "background")
-        background.name = "background"
-        background.anchorPoint = CGPoint(x: 0, y: 0)
-        addChild(background)
-
-        let gameBoardTexture = SKTexture(imageNamed: "gameboard")
-        let gameBoard = SKSpriteNode(texture: gameBoardTexture, size: CGSizeMake(CGFloat(GameScene.BLOCK_SIZE) * CGFloat(10), CGFloat(GameScene.BLOCK_SIZE) * CGFloat(20))
-        )
-        gameBoard.name = "gameboard"
-        gameBoard.anchorPoint = CGPoint(x: 0, y: 1)
-        gameBoard.position = CGPoint(x: 12, y: frame.height - 12)
-        addChild(gameBoard)
     }
 
     private func displayNextBlock() {

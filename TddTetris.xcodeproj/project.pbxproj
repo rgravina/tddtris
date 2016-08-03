@@ -12,10 +12,6 @@
 		975349551D43B8990084B569 /* SquareBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* SquareBlock.swift */; };
 		975349571D4477760084B569 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 975349561D4477760084B569 /* Sprites.atlas */; };
 		9753495B1D44DC320084B569 /* DefaultBlockGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */; };
-		97CCECAC1D3FDF7A0066670A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAA1D3FDF7A0066670A /* background.png */; };
-		97CCECAD1D3FDF7A0066670A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAB1D3FDF7A0066670A /* background@2x.png */; };
-		97CCECB01D3FE7180066670A /* gameboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAE1D3FE7180066670A /* gameboard.png */; };
-		97CCECB11D3FE7180066670A /* gameboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CCECAF1D3FE7180066670A /* gameboard@2x.png */; };
 		97CD4F731D4C5D820055B47C /* BlockMoverTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F721D4C5D820055B47C /* BlockMoverTest.swift */; };
 		97CD4F751D4C5EB20055B47C /* BlockMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F741D4C5EB20055B47C /* BlockMover.swift */; };
 		97CD4F771D4C63260055B47C /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F761D4C63260055B47C /* Block.swift */; };
@@ -74,10 +70,6 @@
 		975349541D43B8990084B569 /* SquareBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareBlock.swift; sourceTree = "<group>"; };
 		975349561D4477760084B569 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlockGeneratorTest.swift; sourceTree = "<group>"; };
-		97CCECAA1D3FDF7A0066670A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		97CCECAB1D3FDF7A0066670A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		97CCECAE1D3FE7180066670A /* gameboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameboard.png; sourceTree = "<group>"; };
-		97CCECAF1D3FE7180066670A /* gameboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gameboard@2x.png"; sourceTree = "<group>"; };
 		97CD4F721D4C5D820055B47C /* BlockMoverTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockMoverTest.swift; sourceTree = "<group>"; };
 		97CD4F741D4C5EB20055B47C /* BlockMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockMover.swift; sourceTree = "<group>"; };
 		97CD4F761D4C63260055B47C /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
@@ -151,10 +143,6 @@
 		97CCECA91D3FDF7A0066670A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				97CCECAA1D3FDF7A0066670A /* background.png */,
-				97CCECAB1D3FDF7A0066670A /* background@2x.png */,
-				97CCECAE1D3FE7180066670A /* gameboard.png */,
-				97CCECAF1D3FE7180066670A /* gameboard@2x.png */,
 				975349561D4477760084B569 /* Sprites.atlas */,
 			);
 			path = Images;
@@ -335,11 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D120A41D3C820A007A7E2B /* Assets.xcassets in Resources */,
-				97CCECAC1D3FDF7A0066670A /* background.png in Resources */,
-				97CCECAD1D3FDF7A0066670A /* background@2x.png in Resources */,
 				97D120BD1D3C8412007A7E2B /* Default-568h@2x.png in Resources */,
-				97CCECB01D3FE7180066670A /* gameboard.png in Resources */,
-				97CCECB11D3FE7180066670A /* gameboard@2x.png in Resources */,
 				975349571D4477760084B569 /* Sprites.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
