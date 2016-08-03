@@ -5,13 +5,18 @@
 - [ ] I want blocks to settle when they land.
 - [ ] I want rows to disappear when they fill.
 - [ ] I want the game to end when blocks reach the top of the game area.
-- [ ] I want to get points when I complete rows.
-- [ ] I want to play the game with all seven types of blocks.
+- [ ] I want to play the game with the line block.
 - [ ] I want to be able to rotate a block.
-- [ ] I want to level up after getting a certain number of points.
-- [ ] I want the game to get harder as I progress in levels.
+- [ ] I want to play the game with the S block.
+- [ ] I want to play the game with the Z block.
+- [ ] I want to play the game with the L block.
+- [ ] I want to play the game with the J block.
+- [ ] I want to play the game with the T block.
+- [ ] I want to get points when I complete rows.
 - [ ] I want to see a preview of the next randomly chosen block.
 - [ ] I want blocks to have random colors.
 - [ ] I want the preview block to be in a random rotation.
 - [ ] I want to be able to quick drop the block.
 - [ ] I want sound effects and background music.
+- [ ] I want to level up after getting a certain number of points.
+- [ ] I want the game to get harder as I progress in levels.
