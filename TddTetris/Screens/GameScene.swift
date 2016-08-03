@@ -7,12 +7,17 @@ class GameScene: SKScene {
 
     var blockGenerator: BlockGenerator!
     var blockMover: BlockMover!
+    var topLeft: CGPoint!
 
     convenience init(size: CGSize,
                      blockGenerator: BlockGenerator
     ) {
         self.init(size: size)
         self.blockGenerator = blockGenerator
+        self.topLeft = CGPoint(
+            x: CGFloat(GameScene.BOARD_LEADING_PADDING),
+            y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING)
+        )
 
         setupBackgroundImages()
         displayNextBlock()
@@ -42,15 +47,8 @@ class GameScene: SKScene {
     }
 
     private func displayNextBlock() {
-        let block = blockGenerator.nextBlock()
-        let mover = BlockMover(
-            block: block,
-            topLeft: CGPoint(
-                x: CGFloat(GameScene.BOARD_LEADING_PADDING),
-                y: frame.height - CGFloat(GameScene.BOARD_TOP_PADDING)
-            )
-        )
-        mover.moveToDropCoordinates()
-        addChild(block as! SKNode)
+        let nextBlock = blockGenerator.nextBlock()
+        BlockMover(block: nextBlock, topLeft: topLeft).moveToDropCoordinates()
+        addChild(nextBlock as! SKNode)
     }
 }

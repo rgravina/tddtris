@@ -15,4 +15,11 @@ class BlockMover {
             y: topLeft.y
         )
     }
+
+    func moveToPreviewArea() {
+        self.block.position = CGPoint(
+            x: topLeft.x + CGFloat(GameScene.BLOCK_SIZE * 12),
+            y: topLeft.y
+        )
+    }
 }
