@@ -13,17 +13,11 @@ class FakeBlockGenerator: BlockGenerator {
 }
 
 class GameSceneTest: XCTestCase {
-    var gameScene: GameScene!
-    var fakeBlockGenerator = FakeBlockGenerator()
+    var gameScene: SpriteKitGameScene!
 
     override func setUp() {
-        gameScene = GameScene(
-            size: CGSize(width: 200, height: 300),
-            blockGenerator: fakeBlockGenerator
+        gameScene = SpriteKitGameScene(
+            size: CGSize(width: 200, height: 300)
         )
-    }
-
-    func test_init_displaysNextBlock() {
-        expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
     }
 }

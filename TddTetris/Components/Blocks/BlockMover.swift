@@ -11,14 +11,14 @@ class BlockMover {
 
     func moveToDropCoordinates() {
         self.block.position = CGPoint(
-            x: topLeft.x + CGFloat(GameScene.BLOCK_SIZE * 4),
+            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 4),
             y: topLeft.y
         )
     }
 
     func moveToPreviewArea() {
         self.block.position = CGPoint(
-            x: topLeft.x + CGFloat(GameScene.BLOCK_SIZE * 12),
+            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 12),
             y: topLeft.y
         )
     }

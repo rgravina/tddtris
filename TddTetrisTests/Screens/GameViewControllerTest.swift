@@ -6,10 +6,15 @@ import SpriteKit
 class GameViewControllerTest: XCTestCase {
     var gameVC: GameViewController!
     var fakeGameViewer: FakeGameViewer!
+    var fakeBlockGenerator: FakeBlockGenerator!
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
-        gameVC = GameViewController(viewer: fakeGameViewer)
+        fakeBlockGenerator = FakeBlockGenerator()
+        gameVC = GameViewController(
+            viewer: fakeGameViewer,
+            blockGenerator: fakeBlockGenerator
+        )
         gameVC.viewDidLoad()
     }
 
@@ -24,5 +29,10 @@ class GameViewControllerTest: XCTestCase {
 
     func test_viewDidLoad_addsSubviews() {
         expect(self.gameVC.view).to(containSubview(fakeGameViewer.view))
+    }
+
+    func test_viewDidLoad_displaysNextBlock() {
+        expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
+        expect(self.fakeGameViewer.displayNextBlock_wasCalled).to(be(true))
     }
 }

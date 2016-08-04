@@ -3,9 +3,11 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     let viewer: GameView!
+    let blockGenerator: BlockGenerator!
 
-    init(viewer: GameView) {
+    init(viewer: GameView, blockGenerator: BlockGenerator) {
         self.viewer = viewer
+        self.blockGenerator = blockGenerator
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -21,6 +23,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         configureSubviews()
         addSubviews()
+        viewer.displayNextBlock(blockGenerator.nextBlock())
     }
 
     private func configureSubviews() {
