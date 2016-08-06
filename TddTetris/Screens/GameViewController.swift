@@ -2,12 +2,10 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-    let viewer: GameView!
-    let blockGenerator: BlockGenerator!
+    let game: Game!
 
-    init(viewer: GameView, blockGenerator: BlockGenerator) {
-        self.viewer = viewer
-        self.blockGenerator = blockGenerator
+    init(game: Game) {
+        self.game = game
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,15 +21,13 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         configureSubviews()
         addSubviews()
-        viewer.displayNextBlock(blockGenerator.nextBlock())
     }
 
     private func configureSubviews() {
-        viewer.configure(view.frame)
-        viewer.presentScene()
+        game.configure(view.frame)
     }
 
     private func addSubviews() {
-        view.addSubview(viewer.view)
+        view.addSubview(game.viewer.view)
     }
 }
