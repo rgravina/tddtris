@@ -17,7 +17,7 @@ class BlockMoverTest: XCTestCase {
     func test_moveToDropCoordinates_movesToTopCenter() {
         self.mover.moveToDropCoordinates()
         expect(self.block.position).to(equal(
-            CGPoint(x: CGFloat(10 + SpriteKitGameScene.BLOCK_SIZE * 4),
+            CGPoint(x: CGFloat(10 + SpriteKitGameScene.BLOCK_SIZE * 3),
                 y: CGFloat(300)
             )
         ))

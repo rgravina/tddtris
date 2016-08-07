@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		972329EA1D55DEFA00E23AA3 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329E91D55DEFA00E23AA3 /* GameTest.swift */; };
+		972329EC1D56F03E00E23AA3 /* SBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329EB1D56F03E00E23AA3 /* SBlock.swift */; };
 		975349511D43A3530084B569 /* BlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* BlockGenerator.swift */; };
 		975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */; };
 		975349551D43B8990084B569 /* SquareBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* SquareBlock.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		972329E91D55DEFA00E23AA3 /* GameTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
+		972329EB1D56F03E00E23AA3 /* SBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBlock.swift; sourceTree = "<group>"; };
 		975349501D43A3530084B569 /* BlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGenerator.swift; sourceTree = "<group>"; };
 		975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlockGenerator.swift; sourceTree = "<group>"; };
 		975349541D43B8990084B569 /* SquareBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareBlock.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				975349501D43A3530084B569 /* BlockGenerator.swift */,
 				97CD4F741D4C5EB20055B47C /* BlockMover.swift */,
 				975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */,
+				972329EB1D56F03E00E23AA3 /* SBlock.swift */,
 				975349541D43B8990084B569 /* SquareBlock.swift */,
 			);
 			path = Blocks;
@@ -390,6 +393,7 @@
 				97D960D41D537B8F00F77DE0 /* Game.swift in Sources */,
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
 				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
+				972329EC1D56F03E00E23AA3 /* SBlock.swift in Sources */,
 				97D120C41D3CC485007A7E2B /* SpriteKitGameScene.swift in Sources */,
 				97D120D21D3CD4C1007A7E2B /* SpriteKitGameView.swift in Sources */,
 				975349551D43B8990084B569 /* SquareBlock.swift in Sources */,

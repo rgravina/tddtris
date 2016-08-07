@@ -11,7 +11,7 @@ class BlockMover {
 
     func moveToDropCoordinates() {
         self.block.position = CGPoint(
-            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 4),
+            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 3),
             y: topLeft.y
         )
     }
