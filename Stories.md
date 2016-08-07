@@ -1,17 +1,17 @@
 - [x] I want the game to launch when I start, and show an empty game background.
-- [x] I want a square block to appear at the top center of the screen.
+- [ ] I want an S block to appear at the top centre of the screen when the game starts.
 - [ ] I want blocks to fall one row every 0.6 seconds.
 - [ ] I want to be able to move the block left and right as it falls.
 - [ ] I want blocks to settle when they land.
 - [ ] I want rows to disappear when they fill.
-- [ ] I want the game to end when blocks reach the top of the game area.
-- [ ] I want to play the game with the line block.
 - [ ] I want to be able to rotate a block.
-- [ ] I want to play the game with the S block.
+- [ ] I want the game to end when blocks reach the top of the game area.
 - [ ] I want to play the game with the Z block.
+- [ ] I want to play the game with the square block.
+- [ ] I want to play the game with the line block.
+- [ ] I want to play the game with the T block.
 - [ ] I want to play the game with the L block.
 - [ ] I want to play the game with the J block.
-- [ ] I want to play the game with the T block.
 - [ ] I want to get points when I complete rows.
 - [ ] I want to see a preview of the next randomly chosen block.
 - [ ] I want blocks to have random colors.
