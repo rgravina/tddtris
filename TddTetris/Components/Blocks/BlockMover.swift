@@ -22,4 +22,11 @@ class BlockMover {
             y: topLeft.y
         )
     }
+
+    func moveDownOneRow() {
+        self.block.position = CGPoint(
+            x: self.block.position.x,
+            y: self.block.position.y - CGFloat(SpriteKitGameScene.BLOCK_SIZE)
+        )
+    }
 }

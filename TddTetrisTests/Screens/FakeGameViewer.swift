@@ -8,7 +8,7 @@ class FakeGameViewer: GameView {
 
     init() {
         view = UIView()
-        scene = SpriteKitGameScene(size: boundsSize)
+        scene = SpriteKitGameScene(game: FakeGame(), size: boundsSize, timeKeeper: FakeTimeKeeper())
     }
 
     var presentScene_wasCalled = false
@@ -22,10 +22,10 @@ class FakeGameViewer: GameView {
     }
 
     var configure_wasCalled = false
-    var configure_arg: CGRect!
-    func configure(frame: CGRect) {
+    var configure_args: (delegate: Game, frame: CGRect, timeKeeper: TimeKeeper)!
+    func configure(game: Game, frame: CGRect, timeKeeper: TimeKeeper) {
         configure_wasCalled = true
-        configure_arg = frame
+        configure_args = (game, frame: frame, timeKeeper: timeKeeper)
     }
 
     var displayNextBlock_wasCalled = false
@@ -34,4 +34,12 @@ class FakeGameViewer: GameView {
         displayNextBlock_wasCalled = true
         displayNextBlock_arg = block
     }
+
+    var moveBlockDownOneRow_wasCalled = false
+    var moveBlockDownOneRow_arg: Block!
+    func moveBlockDownOneRow(block: Block) {
+        moveBlockDownOneRow_wasCalled = true
+        moveBlockDownOneRow_arg = block
+    }
+
 }

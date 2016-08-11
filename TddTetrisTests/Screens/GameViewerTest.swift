@@ -9,7 +9,9 @@ class SpriteKitGameViewTest: XCTestCase {
     override func setUp() {
         gameView = SpriteKitGameView()
         gameView.configure(
-            CGRectMake(0, 0, 100, 200)
+            FakeGame(),
+            frame: CGRectMake(0, 0, 100, 200),
+            timeKeeper: FakeTimeKeeper()
         )
     }
 }

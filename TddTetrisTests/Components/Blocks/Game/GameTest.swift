@@ -8,13 +8,16 @@ class GameTest: XCTestCase {
     var frame: CGRect!
     var fakeGameViewer: FakeGameViewer!
     var fakeBlockGenerator: FakeBlockGenerator!
+    var fakeTimeKeeper: FakeTimeKeeper!
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
         fakeBlockGenerator = FakeBlockGenerator()
-        game = Game(
+        fakeTimeKeeper = FakeTimeKeeper()
+        game = DefaultGame(
             viewer: fakeGameViewer,
-            blockGenerator: fakeBlockGenerator
+            blockGenerator: fakeBlockGenerator,
+            timeKeeper: fakeTimeKeeper
         )
         frame = CGRect(
             origin: CGPoint(x: 0, y: 0),
@@ -28,7 +31,6 @@ class GameTest: XCTestCase {
 
     func test_configure_configuresView() {
         expect(self.fakeGameViewer.configure_wasCalled).to(equal(true))
-        expect(self.fakeGameViewer.configure_arg).to(equal(frame))
     }
 
     func test_viewDidLoad_displaysNextBlock() {

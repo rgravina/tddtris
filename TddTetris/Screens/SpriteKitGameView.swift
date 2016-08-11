@@ -10,7 +10,7 @@ class SpriteKitGameView: GameView {
     private var scene: SpriteKitGameScene!
     private var topLeft: CGPoint!
 
-    func configure(frame: CGRect) {
+    func configure(game: Game, frame: CGRect, timeKeeper: TimeKeeper) {
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false
         self.topLeft = CGPoint(
@@ -18,7 +18,9 @@ class SpriteKitGameView: GameView {
             y: frame.height - CGFloat(SpriteKitGameScene.BOARD_TOP_PADDING)
         )
         scene = SpriteKitGameScene(
-            size: size()
+            game: game,
+            size: size(),
+            timeKeeper: timeKeeper
         )
         scene.scaleMode = .AspectFill
     }
@@ -34,5 +36,9 @@ class SpriteKitGameView: GameView {
     func displayNextBlock(block: Block) {
         BlockMover(block: block, topLeft: topLeft).moveToDropCoordinates()
         scene.addChild(block as! SKNode)
+    }
+
+    func moveBlockDownOneRow(block: Block) {
+        BlockMover(block: block, topLeft: topLeft).moveDownOneRow()
     }
 }

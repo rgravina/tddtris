@@ -17,7 +17,9 @@ class GameSceneTest: XCTestCase {
 
     override func setUp() {
         gameScene = SpriteKitGameScene(
-            size: CGSize(width: 200, height: 300)
+            game: FakeGame(),
+            size: CGSize(width: 200, height: 300),
+            timeKeeper: FakeTimeKeeper()
         )
     }
 }

@@ -7,13 +7,16 @@ class GameViewControllerTest: XCTestCase {
     var gameVC: GameViewController!
     var fakeGameViewer: FakeGameViewer!
     var fakeBlockGenerator: FakeBlockGenerator!
+    var fakeTimeKeeper: FakeTimeKeeper!
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
         fakeBlockGenerator = FakeBlockGenerator()
-        let game = Game(
+        fakeTimeKeeper = FakeTimeKeeper()
+        let game = DefaultGame(
             viewer: fakeGameViewer,
-            blockGenerator: fakeBlockGenerator
+            blockGenerator: fakeBlockGenerator,
+            timeKeeper: fakeTimeKeeper
         )
         gameVC = GameViewController(game: game)
         gameVC.viewDidLoad()

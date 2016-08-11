@@ -1,8 +1,9 @@
 - [x] I want the game to launch when I start, and show an empty game background.
 - [x] I want an S block to appear at the top centre of the screen when the game starts.
-- [ ] I want blocks to fall one row every 0.6 seconds.
-- [ ] I want to be able to move the block left and right as it falls.
-- [ ] I want blocks to settle when they land.
+- [ ] I want blocks to fall one row every 0.6 seconds until they reach the bottom.
+- [ ] I want a new block to appear at the top after a block has settled.
+- [ ] I want blocks to settle when landing on top of other blocks.
+- [ ] I want to be able to move the block left and right with the game boundaries as it falls.
 - [ ] I want rows to disappear when they fill.
 - [ ] I want to be able to rotate a block.
 - [ ] I want the game to end when blocks reach the top of the game area.
