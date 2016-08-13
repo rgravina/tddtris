@@ -4,7 +4,7 @@ This project is an experiment in test-driving a Tetris clone for the iPhone writ
 
 ## Stories
 
-When test driving this game I found it useful to define a set of user stories which gradually required more and more of the games features to be developed. The first story requires loading the scene only. The second requires drawing a square block (the square is the simplest) and placing it at the top center of the game area etc. Other stories complete a game using only the square block (a boring but complete Tetris experience nonetheless). Later stories add more kinds of blocks and rotations. It may even be a good idea to start with a rotatable block and build a game around that. The choices are yours!
+When test driving this game I found it useful to define a set of user stories which gradually required more and more of the games features to be developed. 
 
 See [Stories](Stories.md) for a list and which have been completed so far.
 
