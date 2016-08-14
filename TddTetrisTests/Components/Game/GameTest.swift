@@ -14,7 +14,7 @@ class GameTest: XCTestCase {
         fakeGameViewer = FakeGameViewer()
         fakeBlockGenerator = FakeBlockGenerator()
         fakeTimeKeeper = FakeTimeKeeper()
-        game = DefaultGame(
+        game = TetrisGame(
             viewer: fakeGameViewer,
             blockGenerator: fakeBlockGenerator,
             timeKeeper: fakeTimeKeeper

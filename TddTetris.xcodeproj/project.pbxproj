@@ -38,7 +38,7 @@
 		97D120D61D3CDE9E007A7E2B /* ExtensionsForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D51D3CDE9E007A7E2B /* ExtensionsForTest.swift */; };
 		97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D71D3D1AC3007A7E2B /* GameView.swift */; };
 		97D120DA1D3D1EF5007A7E2B /* GameViewerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D91D3D1EF5007A7E2B /* GameViewerTest.swift */; };
-		97D960D41D537B8F00F77DE0 /* DefaultGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D960D31D537B8F00F77DE0 /* DefaultGame.swift */; };
+		97D960D41D537B8F00F77DE0 /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D960D31D537B8F00F77DE0 /* TetrisGame.swift */; };
 		97DC642C1D3F36F900A17A17 /* GameSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC642B1D3F36F900A17A17 /* GameSceneTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,7 +110,7 @@
 		97D120D51D3CDE9E007A7E2B /* ExtensionsForTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsForTest.swift; sourceTree = "<group>"; };
 		97D120D71D3D1AC3007A7E2B /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		97D120D91D3D1EF5007A7E2B /* GameViewerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewerTest.swift; sourceTree = "<group>"; };
-		97D960D31D537B8F00F77DE0 /* DefaultGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGame.swift; sourceTree = "<group>"; };
+		97D960D31D537B8F00F77DE0 /* TetrisGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisGame.swift; sourceTree = "<group>"; };
 		97DC642B1D3F36F900A17A17 /* GameSceneTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,11 +140,10 @@
 				972329F11D5A062400E23AA3 /* FakeTimeKeeper.swift */,
 				972329E91D55DEFA00E23AA3 /* GameTest.swift */,
 			);
-			name = Game;
-			path = Blocks/Game;
+			path = Game;
 			sourceTree = "<group>";
 		};
-		975349581D449DEA0084B569 /* Blocks */ = {
+		975349581D449DEA0084B569 /* Tetrominos */ = {
 			isa = PBXGroup;
 			children = (
 				97CD4F761D4C63260055B47C /* Block.swift */,
@@ -154,16 +153,16 @@
 				97CD4F741D4C5EB20055B47C /* SpriteKitBlockMover.swift */,
 				975349541D43B8990084B569 /* SquareBlock.swift */,
 			);
-			path = Blocks;
+			path = Tetrominos;
 			sourceTree = "<group>";
 		};
-		975349591D44DC230084B569 /* Blocks */ = {
+		975349591D44DC230084B569 /* Tetrominos */ = {
 			isa = PBXGroup;
 			children = (
 				9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */,
 				97CD4F721D4C5D820055B47C /* SpriteKitBlockMoverTest.swift */,
 			);
-			path = Blocks;
+			path = Tetrominos;
 			sourceTree = "<group>";
 		};
 		97CCECA81D3FDF7A0066670A /* Resources */ = {
@@ -262,8 +261,8 @@
 		97D120CF1D3CD43B007A7E2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				975349581D449DEA0084B569 /* Blocks */,
 				97D960D21D537B7300F77DE0 /* Game */,
+				975349581D449DEA0084B569 /* Tetrominos */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -271,8 +270,8 @@
 		97D120D01D3CD449007A7E2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				975349591D44DC230084B569 /* Blocks */,
 				972329E81D55DEE700E23AA3 /* Game */,
+				975349591D44DC230084B569 /* Tetrominos */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -280,9 +279,9 @@
 		97D960D21D537B7300F77DE0 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				97D960D31D537B8F00F77DE0 /* DefaultGame.swift */,
 				972329EF1D59F3CE00E23AA3 /* DefaultTimeKeeper.swift */,
 				975C591F1D5C09C800B3AB2A /* Game.swift */,
+				97D960D31D537B8F00F77DE0 /* TetrisGame.swift */,
 				972329ED1D5888D000E23AA3 /* TimeKeeper.swift */,
 			);
 			path = Game;
@@ -413,7 +412,6 @@
 				97CD4F771D4C63260055B47C /* Block.swift in Sources */,
 				975349511D43A3530084B569 /* BlockGenerator.swift in Sources */,
 				975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */,
-				97D960D41D537B8F00F77DE0 /* DefaultGame.swift in Sources */,
 				972329F01D59F3CE00E23AA3 /* DefaultTimeKeeper.swift in Sources */,
 				975C59201D5C09C800B3AB2A /* Game.swift in Sources */,
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
@@ -425,6 +423,7 @@
 				97D120D21D3CD4C1007A7E2B /* SpriteKitGameView.swift in Sources */,
 				975349551D43B8990084B569 /* SquareBlock.swift in Sources */,
 				975C59261D5C3DA300B3AB2A /* TestingAppDelegate.swift in Sources */,
+				97D960D41D537B8F00F77DE0 /* TetrisGame.swift in Sources */,
 				972329EE1D5888D000E23AA3 /* TimeKeeper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

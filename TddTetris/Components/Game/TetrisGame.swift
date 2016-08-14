@@ -1,6 +1,6 @@
 import UIKit
 
-class DefaultGame: Game {
+class TetrisGame: Game {
     let viewer: GameView!
     let blockGenerator: BlockGenerator!
     let timeKeeper: TimeKeeper!

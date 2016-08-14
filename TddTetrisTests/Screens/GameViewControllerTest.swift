@@ -13,7 +13,7 @@ class GameViewControllerTest: XCTestCase {
         fakeGameViewer = FakeGameViewer()
         fakeBlockGenerator = FakeBlockGenerator()
         fakeTimeKeeper = FakeTimeKeeper()
-        let game = DefaultGame(
+        let game = TetrisGame(
             viewer: fakeGameViewer,
             blockGenerator: fakeBlockGenerator,
             timeKeeper: fakeTimeKeeper
