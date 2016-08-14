@@ -1,6 +1,6 @@
 import SpriteKit
 
-class BlockMover {
+class SpriteKitBlockMover {
     var block: Block!
     let topLeft: CGPoint!
 

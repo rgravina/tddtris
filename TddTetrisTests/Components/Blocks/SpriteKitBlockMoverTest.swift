@@ -3,13 +3,13 @@ import Nimble
 import SpriteKit
 @testable import TddTetris
 
-class BlockMoverTest: XCTestCase {
+class SpriteKitBlockMoverTest: XCTestCase {
     var block: Block!
-    var mover: BlockMover!
+    var mover: SpriteKitBlockMover!
 
     override func setUp() {
         block = SquareBlock()
-        mover = BlockMover(block: block,
+        mover = SpriteKitBlockMover(block: block,
                            topLeft: CGPoint(x: 10, y: 300)
         )
     }

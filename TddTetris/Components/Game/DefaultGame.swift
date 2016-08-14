@@ -16,9 +16,9 @@ class DefaultGame: Game {
     }
 
     func configure(frame: CGRect) {
-        block = blockGenerator.nextBlock()
         viewer.configure(self, frame: frame, timeKeeper: timeKeeper)
         viewer.presentScene()
+        block = blockGenerator.nextBlock()
         viewer.displayNextBlock(block)
     }
 

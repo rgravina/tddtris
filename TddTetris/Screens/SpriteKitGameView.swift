@@ -34,11 +34,11 @@ class SpriteKitGameView: GameView {
     }
 
     func displayNextBlock(block: Block) {
-        BlockMover(block: block, topLeft: topLeft).moveToDropCoordinates()
+        SpriteKitBlockMover(block: block, topLeft: topLeft).moveToDropCoordinates()
         scene.addChild(block as! SKNode)
     }
 
     func moveBlockDownOneRow(block: Block) {
-        BlockMover(block: block, topLeft: topLeft).moveDownOneRow()
+        SpriteKitBlockMover(block: block, topLeft: topLeft).moveDownOneRow()
     }
 }
