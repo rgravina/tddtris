@@ -1,5 +1,5 @@
 import SpriteKit
 
-protocol Block {
+protocol Tetromino {
     var position: CGPoint { get set }
 }

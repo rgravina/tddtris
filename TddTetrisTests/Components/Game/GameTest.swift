@@ -7,16 +7,16 @@ class GameTest: XCTestCase {
     var game: Game!
     var frame: CGRect!
     var fakeGameViewer: FakeGameViewer!
-    var fakeBlockGenerator: FakeBlockGenerator!
+    var fakeTetrominoGenerator: FakeTetrominoGenerator!
     var fakeTimeKeeper: FakeTimeKeeper!
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
-        fakeBlockGenerator = FakeBlockGenerator()
+        fakeTetrominoGenerator = FakeTetrominoGenerator()
         fakeTimeKeeper = FakeTimeKeeper()
         game = TetrisGame(
             viewer: fakeGameViewer,
-            blockGenerator: fakeBlockGenerator,
+            tetrominoGenerator: fakeTetrominoGenerator,
             timeKeeper: fakeTimeKeeper
         )
         frame = CGRect(
@@ -33,8 +33,8 @@ class GameTest: XCTestCase {
         expect(self.fakeGameViewer.configure_wasCalled).to(equal(true))
     }
 
-    func test_viewDidLoad_displaysNextBlock() {
-        expect(self.fakeBlockGenerator.nextBlock_wasCalled).to(be(true))
-        expect(self.fakeGameViewer.displayNextBlock_wasCalled).to(be(true))
+    func test_viewDidLoad_displaysNextTetromino() {
+        expect(self.fakeTetrominoGenerator.next_wasCalled).to(be(true))
+        expect(self.fakeGameViewer.displayNext_wasCalled).to(be(true))
     }
 }

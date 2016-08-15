@@ -28,18 +28,18 @@ class FakeGameViewer: GameView {
         configure_args = (game, frame: frame, timeKeeper: timeKeeper)
     }
 
-    var displayNextBlock_wasCalled = false
-    var displayNextBlock_arg: Block!
-    func displayNextBlock(block: Block) {
-        displayNextBlock_wasCalled = true
-        displayNextBlock_arg = block
+    var displayNext_wasCalled = false
+    var displayNext_arg: Tetromino!
+    func displayNext(tetromino: Tetromino) {
+        displayNext_wasCalled = true
+        displayNext_arg = tetromino
     }
 
-    var moveBlockDownOneRow_wasCalled = false
-    var moveBlockDownOneRow_arg: Block!
-    func moveBlockDownOneRow(block: Block) {
-        moveBlockDownOneRow_wasCalled = true
-        moveBlockDownOneRow_arg = block
+    var moveDownOneRow_wasCalled = false
+    var moveDownOneRow_arg: Tetromino!
+    func moveDownOneRow(tetromino: Tetromino) {
+        moveDownOneRow_wasCalled = true
+        moveDownOneRow_arg = tetromino
     }
 
 }

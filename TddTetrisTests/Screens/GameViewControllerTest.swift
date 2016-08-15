@@ -6,16 +6,16 @@ import SpriteKit
 class GameViewControllerTest: XCTestCase {
     var gameVC: GameViewController!
     var fakeGameViewer: FakeGameViewer!
-    var fakeBlockGenerator: FakeBlockGenerator!
+    var fakeTetrominoGenerator: FakeTetrominoGenerator!
     var fakeTimeKeeper: FakeTimeKeeper!
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
-        fakeBlockGenerator = FakeBlockGenerator()
+        fakeTetrominoGenerator = FakeTetrominoGenerator()
         fakeTimeKeeper = FakeTimeKeeper()
         let game = TetrisGame(
             viewer: fakeGameViewer,
-            blockGenerator: fakeBlockGenerator,
+            tetrominoGenerator: fakeTetrominoGenerator,
             timeKeeper: fakeTimeKeeper
         )
         gameVC = GameViewController(game: game)

@@ -5,6 +5,6 @@ protocol GameView {
     func presentScene()
     func configure(game: Game, frame: CGRect, timeKeeper: TimeKeeper)
     func size() -> CGSize
-    func displayNextBlock(block: Block)
-    func moveBlockDownOneRow(block: Block)
+    func displayNext(tetromino: Tetromino)
+    func moveDownOneRow(tetromino: Tetromino)
 }

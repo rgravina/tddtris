@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		972329EA1D55DEFA00E23AA3 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329E91D55DEFA00E23AA3 /* GameTest.swift */; };
-		972329EC1D56F03E00E23AA3 /* SBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329EB1D56F03E00E23AA3 /* SBlock.swift */; };
+		972329EC1D56F03E00E23AA3 /* STetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329EB1D56F03E00E23AA3 /* STetromino.swift */; };
 		972329EE1D5888D000E23AA3 /* TimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329ED1D5888D000E23AA3 /* TimeKeeper.swift */; };
 		972329F01D59F3CE00E23AA3 /* DefaultTimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329EF1D59F3CE00E23AA3 /* DefaultTimeKeeper.swift */; };
 		972329F21D5A062400E23AA3 /* FakeTimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329F11D5A062400E23AA3 /* FakeTimeKeeper.swift */; };
 		972329F41D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329F31D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift */; };
-		975349511D43A3530084B569 /* BlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* BlockGenerator.swift */; };
-		975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */; };
-		975349551D43B8990084B569 /* SquareBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* SquareBlock.swift */; };
+		975349511D43A3530084B569 /* TetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* TetrominoGenerator.swift */; };
+		975349531D43A3A50084B569 /* DefaultTetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349521D43A3A50084B569 /* DefaultTetrominoGenerator.swift */; };
+		975349551D43B8990084B569 /* SquareTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* SquareTetromino.swift */; };
 		975349571D4477760084B569 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 975349561D4477760084B569 /* Sprites.atlas */; };
-		9753495B1D44DC320084B569 /* DefaultBlockGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */; };
+		9753495B1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753495A1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift */; };
 		975C59201D5C09C800B3AB2A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C591F1D5C09C800B3AB2A /* Game.swift */; };
 		975C59221D5C0B0800B3AB2A /* FakeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C59211D5C0B0800B3AB2A /* FakeGame.swift */; };
 		975C59241D5C3D6100B3AB2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C59231D5C3D6100B3AB2A /* main.swift */; };
 		975C59261D5C3DA300B3AB2A /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C59251D5C3DA300B3AB2A /* TestingAppDelegate.swift */; };
-		97CD4F731D4C5D820055B47C /* SpriteKitBlockMoverTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F721D4C5D820055B47C /* SpriteKitBlockMoverTest.swift */; };
-		97CD4F751D4C5EB20055B47C /* SpriteKitBlockMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F741D4C5EB20055B47C /* SpriteKitBlockMover.swift */; };
-		97CD4F771D4C63260055B47C /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F761D4C63260055B47C /* Block.swift */; };
+		97CD4F731D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F721D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift */; };
+		97CD4F751D4C5EB20055B47C /* SpriteKitTetrominoMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F741D4C5EB20055B47C /* SpriteKitTetrominoMover.swift */; };
+		97CD4F771D4C63260055B47C /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD4F761D4C63260055B47C /* Tetromino.swift */; };
 		97D120991D3C820A007A7E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120981D3C820A007A7E2B /* AppDelegate.swift */; };
 		97D120A41D3C820A007A7E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D120A31D3C820A007A7E2B /* Assets.xcassets */; };
 		97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */; };
@@ -77,23 +77,23 @@
 
 /* Begin PBXFileReference section */
 		972329E91D55DEFA00E23AA3 /* GameTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
-		972329EB1D56F03E00E23AA3 /* SBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBlock.swift; sourceTree = "<group>"; };
+		972329EB1D56F03E00E23AA3 /* STetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STetromino.swift; sourceTree = "<group>"; };
 		972329ED1D5888D000E23AA3 /* TimeKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeKeeper.swift; sourceTree = "<group>"; };
 		972329EF1D59F3CE00E23AA3 /* DefaultTimeKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTimeKeeper.swift; sourceTree = "<group>"; };
 		972329F11D5A062400E23AA3 /* FakeTimeKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTimeKeeper.swift; sourceTree = "<group>"; };
 		972329F31D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTimeKeeperTest.swift; sourceTree = "<group>"; };
-		975349501D43A3530084B569 /* BlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGenerator.swift; sourceTree = "<group>"; };
-		975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlockGenerator.swift; sourceTree = "<group>"; };
-		975349541D43B8990084B569 /* SquareBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareBlock.swift; sourceTree = "<group>"; };
+		975349501D43A3530084B569 /* TetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrominoGenerator.swift; sourceTree = "<group>"; };
+		975349521D43A3A50084B569 /* DefaultTetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTetrominoGenerator.swift; sourceTree = "<group>"; };
+		975349541D43B8990084B569 /* SquareTetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareTetromino.swift; sourceTree = "<group>"; };
 		975349561D4477760084B569 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
-		9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBlockGeneratorTest.swift; sourceTree = "<group>"; };
+		9753495A1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTetrominoGeneratorTest.swift; sourceTree = "<group>"; };
 		975C591F1D5C09C800B3AB2A /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		975C59211D5C0B0800B3AB2A /* FakeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeGame.swift; sourceTree = "<group>"; };
 		975C59231D5C3D6100B3AB2A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		975C59251D5C3DA300B3AB2A /* TestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
-		97CD4F721D4C5D820055B47C /* SpriteKitBlockMoverTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitBlockMoverTest.swift; sourceTree = "<group>"; };
-		97CD4F741D4C5EB20055B47C /* SpriteKitBlockMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitBlockMover.swift; sourceTree = "<group>"; };
-		97CD4F761D4C63260055B47C /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		97CD4F721D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitTetrominoMoverTest.swift; sourceTree = "<group>"; };
+		97CD4F741D4C5EB20055B47C /* SpriteKitTetrominoMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitTetrominoMover.swift; sourceTree = "<group>"; };
+		97CD4F761D4C63260055B47C /* Tetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
 		97D120951D3C820A007A7E2B /* TddTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TddTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D120981D3C820A007A7E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D120A31D3C820A007A7E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,12 +146,12 @@
 		975349581D449DEA0084B569 /* Tetrominos */ = {
 			isa = PBXGroup;
 			children = (
-				97CD4F761D4C63260055B47C /* Block.swift */,
-				975349501D43A3530084B569 /* BlockGenerator.swift */,
-				975349521D43A3A50084B569 /* DefaultBlockGenerator.swift */,
-				972329EB1D56F03E00E23AA3 /* SBlock.swift */,
-				97CD4F741D4C5EB20055B47C /* SpriteKitBlockMover.swift */,
-				975349541D43B8990084B569 /* SquareBlock.swift */,
+				975349521D43A3A50084B569 /* DefaultTetrominoGenerator.swift */,
+				97CD4F741D4C5EB20055B47C /* SpriteKitTetrominoMover.swift */,
+				975349541D43B8990084B569 /* SquareTetromino.swift */,
+				972329EB1D56F03E00E23AA3 /* STetromino.swift */,
+				97CD4F761D4C63260055B47C /* Tetromino.swift */,
+				975349501D43A3530084B569 /* TetrominoGenerator.swift */,
 			);
 			path = Tetrominos;
 			sourceTree = "<group>";
@@ -159,8 +159,8 @@
 		975349591D44DC230084B569 /* Tetrominos */ = {
 			isa = PBXGroup;
 			children = (
-				9753495A1D44DC320084B569 /* DefaultBlockGeneratorTest.swift */,
-				97CD4F721D4C5D820055B47C /* SpriteKitBlockMoverTest.swift */,
+				9753495A1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift */,
+				97CD4F721D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift */,
 			);
 			path = Tetrominos;
 			sourceTree = "<group>";
@@ -409,21 +409,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D120991D3C820A007A7E2B /* AppDelegate.swift in Sources */,
-				97CD4F771D4C63260055B47C /* Block.swift in Sources */,
-				975349511D43A3530084B569 /* BlockGenerator.swift in Sources */,
-				975349531D43A3A50084B569 /* DefaultBlockGenerator.swift in Sources */,
+				975349531D43A3A50084B569 /* DefaultTetrominoGenerator.swift in Sources */,
 				972329F01D59F3CE00E23AA3 /* DefaultTimeKeeper.swift in Sources */,
 				975C59201D5C09C800B3AB2A /* Game.swift in Sources */,
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
 				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
 				975C59241D5C3D6100B3AB2A /* main.swift in Sources */,
-				972329EC1D56F03E00E23AA3 /* SBlock.swift in Sources */,
-				97CD4F751D4C5EB20055B47C /* SpriteKitBlockMover.swift in Sources */,
 				97D120C41D3CC485007A7E2B /* SpriteKitGameScene.swift in Sources */,
 				97D120D21D3CD4C1007A7E2B /* SpriteKitGameView.swift in Sources */,
-				975349551D43B8990084B569 /* SquareBlock.swift in Sources */,
+				97CD4F751D4C5EB20055B47C /* SpriteKitTetrominoMover.swift in Sources */,
+				975349551D43B8990084B569 /* SquareTetromino.swift in Sources */,
+				972329EC1D56F03E00E23AA3 /* STetromino.swift in Sources */,
 				975C59261D5C3DA300B3AB2A /* TestingAppDelegate.swift in Sources */,
 				97D960D41D537B8F00F77DE0 /* TetrisGame.swift in Sources */,
+				97CD4F771D4C63260055B47C /* Tetromino.swift in Sources */,
+				975349511D43A3530084B569 /* TetrominoGenerator.swift in Sources */,
 				972329EE1D5888D000E23AA3 /* TimeKeeper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9753495B1D44DC320084B569 /* DefaultBlockGeneratorTest.swift in Sources */,
+				9753495B1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift in Sources */,
 				972329F41D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift in Sources */,
 				97D120D61D3CDE9E007A7E2B /* ExtensionsForTest.swift in Sources */,
 				975C59221D5C0B0800B3AB2A /* FakeGame.swift in Sources */,
@@ -442,7 +442,7 @@
 				972329EA1D55DEFA00E23AA3 /* GameTest.swift in Sources */,
 				97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */,
 				97D120DA1D3D1EF5007A7E2B /* GameViewerTest.swift in Sources */,
-				97CD4F731D4C5D820055B47C /* SpriteKitBlockMoverTest.swift in Sources */,
+				97CD4F731D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

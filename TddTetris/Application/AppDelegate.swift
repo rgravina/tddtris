@@ -6,7 +6,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let game = TetrisGame(
             viewer: SpriteKitGameView(),
-            blockGenerator: DefaultBlockGenerator(),
+            tetrominoGenerator: DefaultTetrominoGenerator(),
             timeKeeper: DefaultTimeKeeper()
         )
         let gameVC = GameViewController(game: game)

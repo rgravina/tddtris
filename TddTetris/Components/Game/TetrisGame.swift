@@ -2,27 +2,27 @@ import UIKit
 
 class TetrisGame: Game {
     let viewer: GameView!
-    let blockGenerator: BlockGenerator!
+    let tetrominoGenerator: TetrominoGenerator!
     let timeKeeper: TimeKeeper!
-    var block: Block!
+    var tetromino: Tetromino!
 
     init(viewer: GameView,
-         blockGenerator: BlockGenerator,
+         tetrominoGenerator: TetrominoGenerator,
          timeKeeper: TimeKeeper
         ) {
         self.viewer = viewer
-        self.blockGenerator = blockGenerator
+        self.tetrominoGenerator = tetrominoGenerator
         self.timeKeeper = timeKeeper
     }
 
     func configure(frame: CGRect) {
         viewer.configure(self, frame: frame, timeKeeper: timeKeeper)
         viewer.presentScene()
-        block = blockGenerator.nextBlock()
-        viewer.displayNextBlock(block)
+        tetromino = tetrominoGenerator.next()
+        viewer.displayNext(tetromino)
     }
 
     func tick() {
-        viewer.moveBlockDownOneRow(block)
+        viewer.moveDownOneRow(tetromino)
     }
 }

@@ -33,12 +33,12 @@ class SpriteKitGameView: GameView {
         return skview.bounds.size
     }
 
-    func displayNextBlock(block: Block) {
-        SpriteKitBlockMover(block: block, topLeft: topLeft).moveToDropCoordinates()
-        scene.addChild(block as! SKNode)
+    func displayNext(tetromino: Tetromino) {
+        SpriteKitTetrominoMover(tetromino: tetromino, topLeft: topLeft).moveToDropCoordinates()
+        scene.addChild(tetromino as! SKNode)
     }
 
-    func moveBlockDownOneRow(block: Block) {
-        SpriteKitBlockMover(block: block, topLeft: topLeft).moveDownOneRow()
+    func moveDownOneRow(tetromino: Tetromino) {
+        SpriteKitTetrominoMover(tetromino: tetromino, topLeft: topLeft).moveDownOneRow()
     }
 }
