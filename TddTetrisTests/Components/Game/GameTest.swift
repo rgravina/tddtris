@@ -1,6 +1,5 @@
 import XCTest
 import Nimble
-import SpriteKit
 @testable import TddTetris
 
 class GameTest: XCTestCase {

@@ -1,6 +1,6 @@
 import SpriteKit
 
-class SpriteKitGameView: GameView {
+class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     static let BLOCK_SIZE = 36
     var view: UIView! {
         get {
@@ -11,8 +11,10 @@ class SpriteKitGameView: GameView {
     private var skview: SKView!
     private var scene: SKScene!
     private var topLeft: CGPoint!
+    private var game: Game!
 
-    func configure(game: SKSceneDelegate, frame: CGRect) {
+    func configure(game: Game, frame: CGRect) {
+        self.game = game
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false
         self.topLeft = CGPoint(
@@ -20,8 +22,12 @@ class SpriteKitGameView: GameView {
             y: frame.height - CGFloat(SpriteKitGameView.BOARD_TOP_PADDING)
         )
         scene = SKScene(size: size())
-        scene.delegate = game
+        scene.delegate = self
         scene.scaleMode = .AspectFill
+    }
+
+    func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
+        game.update(currentTime)
     }
 
     func presentScene() {

@@ -1,24 +1,22 @@
 import UIKit
-import SpriteKit
 @testable import TddTetris
 
-class FakeGame: NSObject, Game, SKSceneDelegate {
+class FakeGame: Game {
     var view: UIView
 
-    override init() {
+    init () {
         view = UIView()
-        super.init()
     }
 
     func configure(frame: CGRect) {
+    }
+
+    func update(currentTime: NSTimeInterval) {
     }
 
     func tick() {
     }
 
     func start() {
-    }
-
-    func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
     }
 }

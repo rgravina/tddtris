@@ -1,14 +1,11 @@
 import UIKit
-import SpriteKit
 @testable import TddTetris
 
 class FakeGameViewer: GameView {
     var view: UIView!
-    var scene: SKScene!
 
     init() {
         view = UIView()
-//        scene = SpriteKitGameScene(game: FakeGame(), size: boundsSize, timeKeeper: FakeTimeKeeper())
     }
 
     var presentScene_wasCalled = false
@@ -22,8 +19,8 @@ class FakeGameViewer: GameView {
     }
 
     var configure_wasCalled = false
-    var configure_args: (delegate: SKSceneDelegate, frame: CGRect)!
-    func configure(game: SKSceneDelegate, frame: CGRect) {
+    var configure_args: (delegate: Game, frame: CGRect)!
+    func configure(game: Game, frame: CGRect) {
         configure_wasCalled = true
         configure_args = (game, frame: frame)
     }
