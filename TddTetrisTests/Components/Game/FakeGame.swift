@@ -10,6 +10,9 @@ class FakeGame: NSObject, Game, SKSceneDelegate {
     func tick() {
     }
 
+    func start() {
+    }
+
     func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
     }
 }

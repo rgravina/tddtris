@@ -18,6 +18,9 @@ class TetrisGame: NSObject, Game, SKSceneDelegate {
 
     func configure(frame: CGRect) {
         viewer.configure(self, frame: frame)
+    }
+
+    func start() {
         viewer.presentScene()
         tetromino = tetrominoGenerator.next()
         viewer.displayNext(tetromino)

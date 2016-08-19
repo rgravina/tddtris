@@ -24,8 +24,10 @@ class GameTest: XCTestCase {
             size: CGSize(width: 100, height: 100)
         )
         game.configure(frame)
+        game.start()
     }
-    func test_configure_presentsSceme() {
+
+    func test_start_presentsSceme() {
         expect(self.fakeGameViewer.presentScene_wasCalled).to(equal(true))
     }
 
@@ -33,7 +35,7 @@ class GameTest: XCTestCase {
         expect(self.fakeGameViewer.configure_wasCalled).to(equal(true))
     }
 
-    func test_viewDidLoad_displaysNextTetromino() {
+    func test_start_displaysNextTetromino() {
         expect(self.fakeTetrominoGenerator.next_wasCalled).to(be(true))
         expect(self.fakeGameViewer.displayNext_wasCalled).to(be(true))
     }

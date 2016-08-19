@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
 
     private func configureSubviews() {
         game.configure(view.frame)
+        game.start()
     }
 
     private func addSubviews() {
