@@ -1,6 +1,7 @@
 import UIKit
+import SpriteKit
 
-class TetrisGame: Game {
+class TetrisGame: NSObject, Game, SKSceneDelegate {
     let viewer: GameView!
     let tetrominoGenerator: TetrominoGenerator!
     let timeKeeper: TimeKeeper!
@@ -16,10 +17,16 @@ class TetrisGame: Game {
     }
 
     func configure(frame: CGRect) {
-        viewer.configure(self, frame: frame, timeKeeper: timeKeeper)
+        viewer.configure(self, frame: frame)
         viewer.presentScene()
         tetromino = tetrominoGenerator.next()
         viewer.displayNext(tetromino)
+    }
+
+    func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
+        if (timeKeeper.update(currentTime)) {
+            tick()
+        }
     }
 
     func tick() {

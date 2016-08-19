@@ -11,15 +11,3 @@ class FakeTetrominoGenerator: TetrominoGenerator {
         return next_return
     }
 }
-
-class GameSceneTest: XCTestCase {
-    var gameScene: SpriteKitGameScene!
-
-    override func setUp() {
-        gameScene = SpriteKitGameScene(
-            game: FakeGame(),
-            size: CGSize(width: 200, height: 300),
-            timeKeeper: FakeTimeKeeper()
-        )
-    }
-}

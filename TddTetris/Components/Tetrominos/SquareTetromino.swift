@@ -6,18 +6,18 @@ class SquareTetromino: SKNode, Tetromino {
 
     override init() {
         super.init()
-        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameScene.BLOCK_SIZE, height: SpriteKitGameScene.BLOCK_SIZE)))
-        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameScene.BLOCK_SIZE, height: SpriteKitGameScene.BLOCK_SIZE)))
-        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameScene.BLOCK_SIZE, height: SpriteKitGameScene.BLOCK_SIZE)))
-        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameScene.BLOCK_SIZE, height: SpriteKitGameScene.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameView.BLOCK_SIZE, height: SpriteKitGameView.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameView.BLOCK_SIZE, height: SpriteKitGameView.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameView.BLOCK_SIZE, height: SpriteKitGameView.BLOCK_SIZE)))
+        sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameView.BLOCK_SIZE, height: SpriteKitGameView.BLOCK_SIZE)))
 
-        sprites[0].position.y = CGFloat(SpriteKitGameScene.BLOCK_SIZE)
+        sprites[0].position.y = CGFloat(SpriteKitGameView.BLOCK_SIZE)
         sprites[1].position = CGPoint(
-            x: SpriteKitGameScene.BLOCK_SIZE,
-            y: SpriteKitGameScene.BLOCK_SIZE
+            x: SpriteKitGameView.BLOCK_SIZE,
+            y: SpriteKitGameView.BLOCK_SIZE
         )
         sprites[2].position = CGPointZero
-        sprites[3].position.x = CGFloat(SpriteKitGameScene.BLOCK_SIZE)
+        sprites[3].position.x = CGFloat(SpriteKitGameView.BLOCK_SIZE)
 
         for sprite in sprites {
             addChild(sprite)

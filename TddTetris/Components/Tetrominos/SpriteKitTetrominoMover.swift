@@ -11,14 +11,14 @@ class SpriteKitTetrominoMover {
 
     func moveToDropCoordinates() {
         self.tetromino.position = CGPoint(
-            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 3),
+            x: topLeft.x + CGFloat(SpriteKitGameView.BLOCK_SIZE * 3),
             y: topLeft.y
         )
     }
 
     func moveToPreviewArea() {
         self.tetromino.position = CGPoint(
-            x: topLeft.x + CGFloat(SpriteKitGameScene.BLOCK_SIZE * 12),
+            x: topLeft.x + CGFloat(SpriteKitGameView.BLOCK_SIZE * 12),
             y: topLeft.y
         )
     }
@@ -26,7 +26,7 @@ class SpriteKitTetrominoMover {
     func moveDownOneRow() {
         self.tetromino.position = CGPoint(
             x: self.tetromino.position.x,
-            y: self.tetromino.position.y - CGFloat(SpriteKitGameScene.BLOCK_SIZE)
+            y: self.tetromino.position.y - CGFloat(SpriteKitGameView.BLOCK_SIZE)
         )
     }
 }

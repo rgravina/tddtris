@@ -10,8 +10,7 @@ class SpriteKitGameViewTest: XCTestCase {
         gameView = SpriteKitGameView()
         gameView.configure(
             FakeGame(),
-            frame: CGRectMake(0, 0, 100, 200),
-            timeKeeper: FakeTimeKeeper()
+            frame: CGRectMake(0, 0, 100, 200)
         )
     }
 }

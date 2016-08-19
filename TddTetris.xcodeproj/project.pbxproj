@@ -29,7 +29,6 @@
 		97D120A41D3C820A007A7E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D120A31D3C820A007A7E2B /* Assets.xcassets */; };
 		97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */; };
 		97D120BD1D3C8412007A7E2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */; };
-		97D120C41D3CC485007A7E2B /* SpriteKitGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120C21D3CC485007A7E2B /* SpriteKitGameScene.swift */; };
 		97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120C31D3CC485007A7E2B /* GameViewController.swift */; };
 		97D120C91D3CCF68007A7E2B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 97D120C61D3CCEF1007A7E2B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97D120CD1D3CCFE6007A7E2B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 97D120C61D3CCEF1007A7E2B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,7 +38,7 @@
 		97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D71D3D1AC3007A7E2B /* GameView.swift */; };
 		97D120DA1D3D1EF5007A7E2B /* GameViewerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D91D3D1EF5007A7E2B /* GameViewerTest.swift */; };
 		97D960D41D537B8F00F77DE0 /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D960D31D537B8F00F77DE0 /* TetrisGame.swift */; };
-		97DC642C1D3F36F900A17A17 /* GameSceneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC642B1D3F36F900A17A17 /* GameSceneTest.swift */; };
+		97DC642C1D3F36F900A17A17 /* FakeTetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC642B1D3F36F900A17A17 /* FakeTetrominoGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +101,6 @@
 		97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerTest.swift; sourceTree = "<group>"; };
 		97D120B31D3C820A007A7E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D120BC1D3C8412007A7E2B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		97D120C21D3CC485007A7E2B /* SpriteKitGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitGameScene.swift; sourceTree = "<group>"; };
 		97D120C31D3CC485007A7E2B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97D120C61D3CCEF1007A7E2B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		97D120D11D3CD4C1007A7E2B /* SpriteKitGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitGameView.swift; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		97D120D71D3D1AC3007A7E2B /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		97D120D91D3D1EF5007A7E2B /* GameViewerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewerTest.swift; sourceTree = "<group>"; };
 		97D960D31D537B8F00F77DE0 /* TetrisGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrisGame.swift; sourceTree = "<group>"; };
-		97DC642B1D3F36F900A17A17 /* GameSceneTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneTest.swift; sourceTree = "<group>"; };
+		97DC642B1D3F36F900A17A17 /* FakeTetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTetrominoGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				97D120D31D3CD5B8007A7E2B /* FakeGameViewer.swift */,
-				97DC642B1D3F36F900A17A17 /* GameSceneTest.swift */,
+				97DC642B1D3F36F900A17A17 /* FakeTetrominoGenerator.swift */,
 				97D120B11D3C820A007A7E2B /* GameViewControllerTest.swift */,
 				97D120D91D3D1EF5007A7E2B /* GameViewerTest.swift */,
 			);
@@ -252,7 +250,6 @@
 			children = (
 				97D120D71D3D1AC3007A7E2B /* GameView.swift */,
 				97D120C31D3CC485007A7E2B /* GameViewController.swift */,
-				97D120C21D3CC485007A7E2B /* SpriteKitGameScene.swift */,
 				97D120D11D3CD4C1007A7E2B /* SpriteKitGameView.swift */,
 			);
 			path = Screens;
@@ -415,7 +412,6 @@
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
 				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
 				975C59241D5C3D6100B3AB2A /* main.swift in Sources */,
-				97D120C41D3CC485007A7E2B /* SpriteKitGameScene.swift in Sources */,
 				97D120D21D3CD4C1007A7E2B /* SpriteKitGameView.swift in Sources */,
 				97CD4F751D4C5EB20055B47C /* SpriteKitTetrominoMover.swift in Sources */,
 				975349551D43B8990084B569 /* SquareTetromino.swift in Sources */,
@@ -437,8 +433,8 @@
 				97D120D61D3CDE9E007A7E2B /* ExtensionsForTest.swift in Sources */,
 				975C59221D5C0B0800B3AB2A /* FakeGame.swift in Sources */,
 				97D120D41D3CD5B8007A7E2B /* FakeGameViewer.swift in Sources */,
+				97DC642C1D3F36F900A17A17 /* FakeTetrominoGenerator.swift in Sources */,
 				972329F21D5A062400E23AA3 /* FakeTimeKeeper.swift in Sources */,
-				97DC642C1D3F36F900A17A17 /* GameSceneTest.swift in Sources */,
 				972329EA1D55DEFA00E23AA3 /* GameTest.swift in Sources */,
 				97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */,
 				97D120DA1D3D1EF5007A7E2B /* GameViewerTest.swift in Sources */,

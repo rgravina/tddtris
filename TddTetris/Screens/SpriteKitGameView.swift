@@ -1,27 +1,26 @@
 import SpriteKit
 
 class SpriteKitGameView: GameView {
+    static let BLOCK_SIZE = 36
+    static let BOARD_TOP_PADDING = 54
     var view: UIView! {
         get {
             return skview as UIView!
         }
     }
     private var skview: SKView!
-    private var scene: SpriteKitGameScene!
+    private var scene: SKScene!
     private var topLeft: CGPoint!
 
-    func configure(game: Game, frame: CGRect, timeKeeper: TimeKeeper) {
+    func configure(game: SKSceneDelegate, frame: CGRect) {
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false
         self.topLeft = CGPoint(
             x: CGFloat(0),
-            y: frame.height - CGFloat(SpriteKitGameScene.BOARD_TOP_PADDING)
+            y: frame.height - CGFloat(SpriteKitGameView.BOARD_TOP_PADDING)
         )
-        scene = SpriteKitGameScene(
-            game: game,
-            size: size(),
-            timeKeeper: timeKeeper
-        )
+        scene = SKScene(size: size())
+        scene.delegate = game
         scene.scaleMode = .AspectFill
     }
 
