@@ -2,7 +2,7 @@ import UIKit
 import SpriteKit
 
 class TetrisGame: NSObject, Game, SKSceneDelegate {
-    let viewer: GameView!
+    private let viewer: GameView!
     let tetrominoGenerator: TetrominoGenerator!
     let timeKeeper: TimeKeeper!
     var tetromino: Tetromino!
@@ -18,6 +18,12 @@ class TetrisGame: NSObject, Game, SKSceneDelegate {
 
     func configure(frame: CGRect) {
         viewer.configure(self, frame: frame)
+    }
+
+    var view: UIView {
+        get {
+            return viewer.view
+        }
     }
 
     func start() {

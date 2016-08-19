@@ -3,7 +3,13 @@ import SpriteKit
 @testable import TddTetris
 
 class FakeGame: NSObject, Game, SKSceneDelegate {
-    var viewer: GameView!
+    var view: UIView
+
+    override init() {
+        view = UIView()
+        super.init()
+    }
+
     func configure(frame: CGRect) {
     }
 

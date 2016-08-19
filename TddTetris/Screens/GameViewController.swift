@@ -29,6 +29,6 @@ class GameViewController: UIViewController {
     }
 
     private func addSubviews() {
-        view.addSubview(game.viewer.view)
+        view.addSubview(game.view)
     }
 }
