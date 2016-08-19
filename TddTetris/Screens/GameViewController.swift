@@ -2,7 +2,7 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-    let game: Game!
+    private let game: Game!
 
     init(game: Game) {
         self.game = game

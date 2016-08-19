@@ -3,9 +3,14 @@ import SpriteKit
 
 class TetrisGame: NSObject, Game, SKSceneDelegate {
     private let viewer: GameView!
-    let tetrominoGenerator: TetrominoGenerator!
-    let timeKeeper: TimeKeeper!
-    var tetromino: Tetromino!
+    private let tetrominoGenerator: TetrominoGenerator!
+    private let timeKeeper: TimeKeeper!
+    private var tetromino: Tetromino!
+    var view: UIView {
+        get {
+            return viewer.view
+        }
+    }
 
     init(viewer: GameView,
          tetrominoGenerator: TetrominoGenerator,
@@ -18,12 +23,6 @@ class TetrisGame: NSObject, Game, SKSceneDelegate {
 
     func configure(frame: CGRect) {
         viewer.configure(self, frame: frame)
-    }
-
-    var view: UIView {
-        get {
-            return viewer.view
-        }
     }
 
     func start() {

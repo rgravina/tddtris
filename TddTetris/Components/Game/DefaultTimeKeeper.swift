@@ -1,8 +1,8 @@
 import Foundation
 
 class DefaultTimeKeeper: TimeKeeper {
-    let tickLength = CFTimeInterval(0.6)
-    var lastTickAt: CFTimeInterval!
+    private let tickLength = CFTimeInterval(0.6)
+    private var lastTickAt: CFTimeInterval!
 
     func update(now: CFTimeInterval) -> Bool {
         if (lastTickAt == nil) {

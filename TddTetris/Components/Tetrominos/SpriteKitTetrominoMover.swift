@@ -1,8 +1,8 @@
 import SpriteKit
 
 class SpriteKitTetrominoMover {
-    var tetromino: Tetromino!
-    let topLeft: CGPoint!
+    private var tetromino: Tetromino!
+    private let topLeft: CGPoint!
 
     init(tetromino: Tetromino, topLeft: CGPoint) {
         self.tetromino = tetromino
