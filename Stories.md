@@ -1,6 +1,6 @@
 - [x] I want the game to launch when I start, and show an empty game background.
 - [x] I want an S block to appear at the top centre of the screen when the game starts.
-- [x] I want blocks to fall one row every 0.6
+- [x] I want blocks to fall one row every 0.6 seconds.
 - [ ] I want blocks to settle when they reach the bottom.
 - [ ] I want a new block to appear at the top after a block has settled.
 - [ ] I want blocks to settle when landing on top of other blocks.
