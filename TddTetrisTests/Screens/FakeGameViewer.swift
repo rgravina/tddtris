@@ -19,8 +19,8 @@ class FakeGameViewer: GameView {
     }
 
     var configure_wasCalled = false
-    var configure_args: (delegate: Game, frame: CGRect)!
-    func configure(game: Game, frame: CGRect) {
+    var configure_args: (delegate: TickHandler, frame: CGRect)!
+    func configure(game: TickHandler, frame: CGRect) {
         configure_wasCalled = true
         configure_args = (game, frame: frame)
     }

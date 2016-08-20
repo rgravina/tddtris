@@ -2,8 +2,8 @@ import XCTest
 import Nimble
 @testable import TddTetris
 
-class GameTest: XCTestCase {
-    var game: Game!
+class GameLancherTest: XCTestCase {
+    var launcher: Launcher!
     var frame: CGRect!
     var fakeGameViewer: FakeGameViewer!
     var fakeTetrominoGenerator: FakeTetrominoGenerator!
@@ -11,19 +11,17 @@ class GameTest: XCTestCase {
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
-        fakeTetrominoGenerator = FakeTetrominoGenerator()
         fakeTimeKeeper = FakeTimeKeeper()
-        game = TetrisGame(
-            viewer: fakeGameViewer,
-            tetrominoGenerator: fakeTetrominoGenerator,
-            timeKeeper: fakeTimeKeeper
+        launcher = GameLauncher(
+            view: fakeGameViewer,
+            tickHandler: FakeTickHandler()
         )
         frame = CGRect(
             origin: CGPoint(x: 0, y: 0),
             size: CGSize(width: 100, height: 100)
         )
-        game.configure(frame)
-        game.start()
+        launcher.configure(frame)
+        launcher.start()
     }
 
     func test_start_presentsSceme() {
@@ -32,10 +30,5 @@ class GameTest: XCTestCase {
 
     func test_configure_configuresView() {
         expect(self.fakeGameViewer.configure_wasCalled).to(equal(true))
-    }
-
-    func test_start_displaysNextTetromino() {
-        expect(self.fakeTetrominoGenerator.next_wasCalled).to(be(true))
-        expect(self.fakeGameViewer.displayNext_wasCalled).to(be(true))
     }
 }

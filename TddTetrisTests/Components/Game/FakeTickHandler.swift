@@ -1,7 +1,7 @@
 import UIKit
 @testable import TddTetris
 
-class FakeGame: Game {
+class FakeTickHandler: TickHandler {
     var view: UIView
 
     init () {

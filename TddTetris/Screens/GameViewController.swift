@@ -1,10 +1,10 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    private let game: Game!
+    private let launcher: Launcher!
 
-    init(game: Game) {
-        self.game = game
+    init(launcher: Launcher) {
+        self.launcher = launcher
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,11 +23,11 @@ class GameViewController: UIViewController {
     }
 
     private func configureSubviews() {
-        game.configure(view.frame)
-        game.start()
+        launcher.configure(view.frame)
+        launcher.start()
     }
 
     private func addSubviews() {
-        view.addSubview(game.view)
+        view.addSubview(launcher.view)
     }
 }

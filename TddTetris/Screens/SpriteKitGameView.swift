@@ -11,9 +11,9 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     private var skview: SKView!
     private var scene: SKScene!
     private var topLeft: CGPoint!
-    private var game: Game!
+    private var game: TickHandler!
 
-    func configure(game: Game, frame: CGRect) {
+    func configure(game: TickHandler, frame: CGRect) {
         self.game = game
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false

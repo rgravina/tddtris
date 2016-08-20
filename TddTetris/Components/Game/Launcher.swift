@@ -1,9 +1,7 @@
 import UIKit
 
-protocol Game {
+protocol Launcher {
     var view: UIView { get }
     func configure(frame: CGRect)
-    func update(currentTime: NSTimeInterval)
     func start()
-    func tick()
 }

@@ -10,14 +10,11 @@ class GameViewControllerTest: XCTestCase {
 
     override func setUp() {
         fakeGameViewer = FakeGameViewer()
-        fakeTetrominoGenerator = FakeTetrominoGenerator()
-        fakeTimeKeeper = FakeTimeKeeper()
-        let game = TetrisGame(
-            viewer: fakeGameViewer,
-            tetrominoGenerator: fakeTetrominoGenerator,
-            timeKeeper: fakeTimeKeeper
+        let launcher = GameLauncher(
+            view: fakeGameViewer,
+            tickHandler: FakeTickHandler()
         )
-        gameVC = GameViewController(game: game)
+        gameVC = GameViewController(launcher: launcher)
         gameVC.viewDidLoad()
     }
 
