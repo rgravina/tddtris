@@ -11,6 +11,8 @@ class SpyLauncher: Launcher {
     func configure(frame: CGRect) {
     }
 
+    var start_wasCalled = false
     func start() {
+        start_wasCalled = true
     }
 }

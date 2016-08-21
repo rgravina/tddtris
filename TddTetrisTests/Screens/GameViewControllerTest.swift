@@ -4,21 +4,19 @@ import Nimble
 
 class GameViewControllerTest: XCTestCase {
     var gameVC: GameViewController!
-    var spyGameView: SpyGameView!
-    var spyTetrominoGenerator: SpyTetrominoGenerator!
-    var spyTimeKeeper: SpyTimeKeeper!
+    var spyLauncher: SpyLauncher!
 
     override func setUp() {
-        spyGameView = SpyGameView()
-        let launcher = GameLauncher(
-            view: spyGameView,
-            tickHandler: SpyTickHandler()
-        )
-        gameVC = GameViewController(launcher: launcher)
+        spyLauncher = SpyLauncher()
+        gameVC = GameViewController(launcher: spyLauncher)
         gameVC.viewDidLoad()
     }
 
+    func test_viewDidLoad_callsStart() {
+        expect(self.spyLauncher.start_wasCalled).to(equal(true))
+    }
+
     func test_viewDidLoad_addsSubviews() {
-        expect(self.gameVC.view).to(containSubview(spyGameView.view))
+        expect(self.gameVC.view).to(containSubview(spyLauncher.view))
     }
 }
