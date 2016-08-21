@@ -8,13 +8,15 @@ class GameLancherTest: XCTestCase {
     var spyGameView: SpyGameView!
     var spyTetrominoGenerator: SpyTetrominoGenerator!
     var spyTimeKeeper: SpyTimeKeeper!
+    var spyTickHandler: SpyTickHandler!
 
     override func setUp() {
         spyGameView = SpyGameView()
         spyTimeKeeper = SpyTimeKeeper()
+        spyTickHandler = SpyTickHandler()
         launcher = GameLauncher(
             view: spyGameView,
-            tickHandler: SpyTickHandler()
+            tickHandler: spyTickHandler
         )
         frame = CGRect(
             origin: CGPoint(x: 0, y: 0),
@@ -24,11 +26,13 @@ class GameLancherTest: XCTestCase {
         launcher.start()
     }
 
-    func test_start_presentsSceme() {
-        expect(self.spyGameView.presentScene_wasCalled).to(equal(true))
+    func test_configure_configuresGameView() {
+        let args = self.spyGameView.configure_args
+        expect(args.delegate as! SpyTickHandler === self.spyTickHandler).to(equal(true))
+        expect(args.frame).to(equal(frame))
     }
 
-    func test_configure_configuresView() {
-        expect(self.spyGameView.configure_wasCalled).to(equal(true))
+    func test_start_presentsScene() {
+        expect(self.spyGameView.presentScene_wasCalled).to(equal(true))
     }
 }

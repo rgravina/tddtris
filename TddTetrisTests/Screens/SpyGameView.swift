@@ -22,7 +22,7 @@ class SpyGameView: GameView {
     var configure_args: (delegate: TickHandler, frame: CGRect)!
     func configure(game: TickHandler, frame: CGRect) {
         configure_wasCalled = true
-        configure_args = (game, frame: frame)
+        configure_args = (delegate: game, frame: frame)
     }
 
     var displayNext_wasCalled = false
