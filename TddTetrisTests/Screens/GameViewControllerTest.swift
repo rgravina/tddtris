@@ -12,6 +12,10 @@ class GameViewControllerTest: XCTestCase {
         gameVC.viewDidLoad()
     }
 
+    func test_viewDidLoad_passesFrameToConfigure() {
+        expect(self.spyLauncher.configure_arguments).to(equal(gameVC.view.frame))
+    }
+
     func test_viewDidLoad_callsStart() {
         expect(self.spyLauncher.start_wasCalled).to(equal(true))
     }
