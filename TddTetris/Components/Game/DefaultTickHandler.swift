@@ -25,6 +25,7 @@ class DefaultTickHandler: TickHandler {
         if (tetromino == nil) {
             tetromino = tetrominoGenerator.next()
             view.displayNext(tetromino)
+            return
         }
         view.moveDownOneRow(tetromino)
     }
