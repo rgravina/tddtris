@@ -1,7 +1,7 @@
 import UIKit
 @testable import TddTetris
 
-class FakeLauncher: Launcher {
+class SpyLauncher: Launcher {
     var view: UIView
 
     init () {

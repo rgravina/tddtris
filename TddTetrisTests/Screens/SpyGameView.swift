@@ -1,7 +1,7 @@
 import UIKit
 @testable import TddTetris
 
-class FakeGameViewer: GameView {
+class SpyGameView: GameView {
     var view: UIView!
 
     init() {

@@ -1,7 +1,7 @@
 import Foundation
 @testable import TddTetris
 
-class FakeTimeKeeper: TimeKeeper {
+class SpyTimeKeeper: TimeKeeper {
     var start_wasCalled = false
     func start() {
         start_wasCalled = true

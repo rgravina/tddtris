@@ -1,7 +1,7 @@
 import UIKit
 @testable import TddTetris
 
-class FakeTickHandler: TickHandler {
+class SpyTickHandler: TickHandler {
     func configure(frame: CGRect) {
     }
 

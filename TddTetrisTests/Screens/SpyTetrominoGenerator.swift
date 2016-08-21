@@ -2,7 +2,7 @@ import XCTest
 import Nimble
 @testable import TddTetris
 
-class FakeTetrominoGenerator: TetrominoGenerator {
+class SpyTetrominoGenerator: TetrominoGenerator {
     var next_wasCalled = false
     var next_return = SquareTetromino()
     func next() -> Tetromino {

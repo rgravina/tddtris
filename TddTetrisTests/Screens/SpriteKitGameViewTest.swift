@@ -8,7 +8,7 @@ class SpriteKitGameViewTest: XCTestCase {
     override func setUp() {
         gameView = SpriteKitGameView()
         gameView.configure(
-            FakeTickHandler(),
+            SpyTickHandler(),
             frame: CGRectMake(0, 0, 100, 200)
         )
     }

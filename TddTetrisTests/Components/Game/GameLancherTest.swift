@@ -5,16 +5,16 @@ import Nimble
 class GameLancherTest: XCTestCase {
     var launcher: Launcher!
     var frame: CGRect!
-    var fakeGameViewer: FakeGameViewer!
-    var fakeTetrominoGenerator: FakeTetrominoGenerator!
-    var fakeTimeKeeper: FakeTimeKeeper!
+    var spyGameView: SpyGameView!
+    var spyTetrominoGenerator: SpyTetrominoGenerator!
+    var spyTimeKeeper: SpyTimeKeeper!
 
     override func setUp() {
-        fakeGameViewer = FakeGameViewer()
-        fakeTimeKeeper = FakeTimeKeeper()
+        spyGameView = SpyGameView()
+        spyTimeKeeper = SpyTimeKeeper()
         launcher = GameLauncher(
-            view: fakeGameViewer,
-            tickHandler: FakeTickHandler()
+            view: spyGameView,
+            tickHandler: SpyTickHandler()
         )
         frame = CGRect(
             origin: CGPoint(x: 0, y: 0),
@@ -25,10 +25,10 @@ class GameLancherTest: XCTestCase {
     }
 
     func test_start_presentsSceme() {
-        expect(self.fakeGameViewer.presentScene_wasCalled).to(equal(true))
+        expect(self.spyGameView.presentScene_wasCalled).to(equal(true))
     }
 
     func test_configure_configuresView() {
-        expect(self.fakeGameViewer.configure_wasCalled).to(equal(true))
+        expect(self.spyGameView.configure_wasCalled).to(equal(true))
     }
 }
