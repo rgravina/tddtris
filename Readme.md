@@ -1,10 +1,6 @@
 # Tddtris
 
-Tddtris is Tetris clone for the iPhone written in Swift. Game settings, assets and some implementation ideas are based on the excellent [Swiftris](https://github.com/Bloc/swiftris) project and tutorial.
-
-## Stories
-
-See [Stories](Stories.md).
+Tddtris is Tetris clone for the iPhone written in Swift. Game settings, assets and some implementation ideas are based on the excellent [Swiftris](https://github.com/Bloc/swiftris) project and tutorial. See [Stories](Stories.md) for list of user stories.
 
 ## Design
 
