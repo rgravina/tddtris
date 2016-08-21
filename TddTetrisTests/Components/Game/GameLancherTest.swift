@@ -6,13 +6,10 @@ class GameLancherTest: XCTestCase {
     var launcher: Launcher!
     var frame: CGRect!
     var spyGameView: SpyGameView!
-    var spyTetrominoGenerator: SpyTetrominoGenerator!
-    var spyTimeKeeper: SpyTimeKeeper!
     var spyTickHandler: SpyTickHandler!
 
     override func setUp() {
         spyGameView = SpyGameView()
-        spyTimeKeeper = SpyTimeKeeper()
         spyTickHandler = SpyTickHandler()
         launcher = GameLauncher(
             view: spyGameView,
