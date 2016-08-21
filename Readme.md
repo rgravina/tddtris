@@ -11,7 +11,7 @@ This game only has one view controller (`GameViewController`) which renders the 
 * `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene.
 * `DefaultTickHandler` - handles the 'tick' of the game.
 * `DefaultTimeKeeper` - keeps track of the last tick time.
-* `GameLauncher` - sets `DefaultTickHandler` and the delegate to handle SpriteKit updates to get the game started.
+* `GameLauncher` - sets `DefaultTickHandler` as the delegate to handle game ticks and gets the game started.
 
 ```swift
 let view = SpriteKitGameView()
