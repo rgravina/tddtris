@@ -1,24 +1,21 @@
 # Tddtris
 
-Tddtris is Tetris clone for the iPhone written in Swift. The game settings (like play area, speed), assets (images, sounds), and some implementation ideas are based on the excellent [Swiftris](https://github.com/Bloc/swiftris) project and tutorial.
+Tddtris is Tetris clone for the iPhone written in Swift. Game settings, assets and some implementation ideas are based on the excellent [Swiftris](https://github.com/Bloc/swiftris) project and tutorial.
 
 ## Stories
 
-While test driving this game I found it useful to define a set of user stories which gradually required the games features to be developed.
-
-See [Stories](Stories.md) for a list and which have been completed so far.
+See [Stories](Stories.md).
 
 ## Design
 
-This game only has one view controller (`GameViewController`) which renders the one Sprite Kit scene used for the entire game.
+This game only has one view controller (`GameViewController`) which renders the Sprite Kit scene used for the entire game.
 
-`AppDelegate.swift` instantiates all the dependencies required to begin the game, so it is a great place to start when reading the code.
+`AppDelegate.swift` instantiates all the dependencies required to begin the game.
 
-* `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene, and methods for moving tertrominos around.
-* `DefaultTickHandler` - handles the tick of the game, and decides what action to take next (e.g. move the falling tetromino down one row)
-* `DefaultTimeKeeper` - keeps track of the last tick time and can answer the question of if you should tick again.
-* `GameLauncher` - adds the `SKView` to the main view controllers view.
-
+* `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene.
+* `DefaultTickHandler` - handles the 'tick' of the game.
+* `DefaultTimeKeeper` - keeps track of the last tick time.
+* `GameLauncher` - sets `DefaultTickHandler` and the delegate to handle SpriteKit updates to get the game started.
 
 ```swift
 let view = SpriteKitGameView()
