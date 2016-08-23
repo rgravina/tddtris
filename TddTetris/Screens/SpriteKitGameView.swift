@@ -17,7 +17,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         self.game = game
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false
-        self.topLeft = CGPoint(
+        topLeft = CGPoint(
             x: CGFloat(0),
             y: frame.height - CGFloat(SpriteKitGameView.BOARD_TOP_PADDING)
         )
@@ -39,11 +39,17 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     }
 
     func displayNext(tetromino: Tetromino) {
-        SpriteKitTetrominoMover(tetromino: tetromino, topLeft: topLeft).moveToDropCoordinates()
+        SpriteKitTetrominoMover(
+            tetromino: tetromino,
+            topLeft: topLeft
+        ).moveToDropCoordinates()
         scene.addChild(tetromino as! SKNode)
     }
 
     func moveDownOneRow(tetromino: Tetromino) {
-        SpriteKitTetrominoMover(tetromino: tetromino, topLeft: topLeft).moveDownOneRow()
+        SpriteKitTetrominoMover(
+            tetromino: tetromino,
+            topLeft: topLeft
+        ).moveDownOneRow()
     }
 }
