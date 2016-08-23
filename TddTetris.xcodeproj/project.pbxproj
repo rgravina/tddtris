@@ -42,6 +42,7 @@
 		97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D71D3D1AC3007A7E2B /* GameView.swift */; };
 		97D120DA1D3D1EF5007A7E2B /* SpriteKitGameViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D120D91D3D1EF5007A7E2B /* SpriteKitGameViewTest.swift */; };
 		97DC642C1D3F36F900A17A17 /* SpyTetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC642B1D3F36F900A17A17 /* SpyTetrominoGenerator.swift */; };
+		97E0CC681D6C7CB7000B2693 /* DefaultTickHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0CC671D6C7CB7000B2693 /* DefaultTickHandlerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		97D120D71D3D1AC3007A7E2B /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		97D120D91D3D1EF5007A7E2B /* SpriteKitGameViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitGameViewTest.swift; sourceTree = "<group>"; };
 		97DC642B1D3F36F900A17A17 /* SpyTetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyTetrominoGenerator.swift; sourceTree = "<group>"; };
+		97E0CC671D6C7CB7000B2693 /* DefaultTickHandlerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTickHandlerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		972329E81D55DEE700E23AA3 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				97E0CC671D6C7CB7000B2693 /* DefaultTickHandlerTest.swift */,
 				972329F31D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift */,
 				972329E91D55DEFA00E23AA3 /* GameLancherTest.swift */,
 				977C672B1D68A95000E1CE7D /* SpyLauncher.swift */,
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9753495B1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift in Sources */,
+				97E0CC681D6C7CB7000B2693 /* DefaultTickHandlerTest.swift in Sources */,
 				972329F41D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift in Sources */,
 				97D120D61D3CDE9E007A7E2B /* ExtensionsForTest.swift in Sources */,
 				972329EA1D55DEFA00E23AA3 /* GameLancherTest.swift in Sources */,
