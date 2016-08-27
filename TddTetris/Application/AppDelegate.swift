@@ -8,7 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tickHandler = DefaultTickHandler(
             view: view,
             tetrominoGenerator: DefaultTetrominoGenerator(),
-            timeKeeper: DefaultTimeKeeper()
+            timeKeeper: DefaultTimeKeeper(),
+            actionSelector: DefaultActionSelector()
         )
         let launcher = GameLauncher(
             view: view,
