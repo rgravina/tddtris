@@ -1,5 +1,8 @@
 struct DefaultActionSelector: ActionSelector {
-    func next() -> Action {
-        return NextTetrominoAction()
+    func next(state: GameState) -> Action {
+        if state.tetromino == nil {
+            return NextTetrominoAction()
+        }
+        return MoveTetrominoDownOneRowAction()
     }
 }

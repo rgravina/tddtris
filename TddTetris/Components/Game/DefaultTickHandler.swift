@@ -1,11 +1,11 @@
 import UIKit
 
 class DefaultTickHandler: TickHandler {
-    private let view: GameView
-    private let tetrominoGenerator: TetrominoGenerator
     private let timeKeeper: TimeKeeper
-    private var tetromino: Tetromino!
     private var actionSelector: ActionSelector!
+    private let tetrominoGenerator: TetrominoGenerator
+    private let view: GameView
+    private var gameState = GameState()
 
     init (view: GameView,
           tetrominoGenerator: TetrominoGenerator,
@@ -25,14 +25,11 @@ class DefaultTickHandler: TickHandler {
     }
 
     func tick() {
-        let nextAction = actionSelector.next()
-        nextAction.perform()
-
-        if (tetromino == nil) {
-            tetromino = tetrominoGenerator.next()
-            view.displayNext(tetromino)
-            return
-        }
-        view.moveDownOneRow(tetromino)
+        let nextAction = actionSelector.next(gameState)
+        gameState = nextAction.perform(
+            gameState,
+            tetrominoGenerator: tetrominoGenerator,
+            view: view
+        )
     }
 }

@@ -27,21 +27,4 @@ class DefaultTickHandlerTest: XCTestCase {
         expect(self.actionSelector.next_wasCalled).to(equal(true))
         expect(nextAction.perform_wasCalled).to(equal(true))
     }
-
-    func test_tick_generatesNewTetrominoWhenBlank() {
-        tickHandler.tick()
-
-        expect(self.tetrominoGenerator.next_wasCalled).to(equal(true))
-    }
-
-    
-    func test_tick_movesTetrominoWhenNotBlank() {
-        let tetromino = STetromino()
-        tetrominoGenerator.next_return = tetromino
-
-        tickHandler.tick()
-        tickHandler.tick()
-
-        expect(self.view.moveDownOneRow_arg as! STetromino === tetromino).to(equal(true))
-    }
 }

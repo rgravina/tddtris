@@ -1,3 +1,3 @@
 protocol Action {
-    func perform()
+    func perform(state: GameState, tetrominoGenerator: TetrominoGenerator, view: GameView) -> GameState
 }
