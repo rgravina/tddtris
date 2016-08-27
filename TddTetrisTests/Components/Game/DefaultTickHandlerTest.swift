@@ -11,8 +11,6 @@ class DefaultTickHandlerTest: XCTestCase {
 
     override func setUp() {
         tickHandler = DefaultTickHandler(
-            view: view,
-            tetrominoGenerator: tetrominoGenerator,
             timeKeeper: timeKeeper,
             actionSelector: actionSelector
         )

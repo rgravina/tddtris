@@ -1,5 +1,5 @@
 struct NoAction: Action {
-    func perform(state: GameState, tetrominoGenerator: TetrominoGenerator, view: GameView) -> GameState {
+    func perform(state: GameState) -> GameState {
         return state
     }
 }
