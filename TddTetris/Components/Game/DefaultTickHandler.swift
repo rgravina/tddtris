@@ -19,7 +19,8 @@ class DefaultTickHandler: TickHandler {
     }
 
     func tick() {
-        let nextAction = actionSelector.next(gameState)
-        gameState = nextAction.perform(gameState)
+        gameState = actionSelector
+            .next(gameState)
+            .perform(gameState)
     }
 }
