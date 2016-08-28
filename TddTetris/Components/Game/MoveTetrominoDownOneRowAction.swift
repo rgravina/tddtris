@@ -18,7 +18,8 @@ struct MoveTetrominoDownOneRowAction: Action {
                 (tetromino.blocks[1].column, tetromino.blocks[1].row + 1),
                 (tetromino.blocks[2].column, tetromino.blocks[2].row + 1),
                 (tetromino.blocks[3].column, tetromino.blocks[3].row + 1)
-            ]
+            ],
+            height: 2
         )
         nextState.tetromino = movedTemtromino
         for position in tetromino.blocks {

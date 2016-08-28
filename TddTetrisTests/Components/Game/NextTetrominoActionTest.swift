@@ -35,7 +35,8 @@ class NextTetrominoActionTest: XCTestCase {
                 (column: 4, row: 0),
                 (column: 4, row: 1),
                 (column: 5, row: 0)
-            ]
+            ],
+            height: 2
         )
 
         let nextState = action.perform(gameState)

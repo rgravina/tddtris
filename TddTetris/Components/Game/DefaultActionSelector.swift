@@ -20,7 +20,7 @@ struct DefaultActionSelector: ActionSelector {
 
         let tetromino = maybeTetromino!
 
-        if (tetromino.position.row == GameState.ROWS) {
+        if (tetromino.position.row == GameState.ROWS - tetromino.height) {
             return SettleTetrominoAction()
         }
 
