@@ -3,17 +3,17 @@
 - [x] I want blocks to fall one row every 0.6 seconds.
 - [x] I want blocks to settle when they reach the bottom.
 - [x] I want a new block to appear at the top after a block has settled.
-- [ ] I want blocks to settle when landing on top of other blocks.
+- [x] I want blocks to settle when landing on top of other blocks.
 - [ ] I want to be able to move the block left and right as it falls.
-- [ ] I want rows to disappear when they fill.
 - [ ] I want to be able to rotate a block.
-- [ ] I want the game to end when blocks reach the top of the game area.
 - [ ] I want to play the game with the Z block.
 - [ ] I want to play the game with the square block.
 - [ ] I want to play the game with the line block.
 - [ ] I want to play the game with the T block.
 - [ ] I want to play the game with the L block.
 - [ ] I want to play the game with the J block.
+- [ ] I want rows to disappear when they fill.
+- [ ] I want the game to end when blocks reach the top of the game area.
 - [ ] I want to get points when I complete rows.
 - [ ] I want to see a preview of the next randomly chosen block.
 - [ ] I want blocks to have random colors.
