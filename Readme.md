@@ -11,7 +11,7 @@ This game only has one view controller (`GameViewController`) which renders the 
 * `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene.
 * `DefaultTickHandler` - handles the 'tick' of the game.
 * `DefaultTimeKeeper` - keeps track of the last tick time.
-* `DefaultActionSelector` - a factory which takes in dependencies needed to handle actions (the game view, a tetromino generator) and generates an an action object.
+* `DefaultActionSelector` - a factory which takes in dependencies needed to handle actions and generates an an action object.
 * `DefaultTetrominoGenerator` - generates a random tetromino.
 * `DefaultCollisionDetector` - determines if the next move would result in a collision.
 * `GameLauncher` - sets `DefaultTickHandler` as the delegate to handle game ticks and gets the game started.
