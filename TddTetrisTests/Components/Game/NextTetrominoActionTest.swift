@@ -30,13 +30,13 @@ class NextTetrominoActionTest: XCTestCase {
         let gameState = GameState()
         tetrominoGenerator.next_return = STetromino(
             position: (0, 0),
+            height: 2,
             blocks: [
                 (column: 3, row: 1),
                 (column: 4, row: 0),
                 (column: 4, row: 1),
                 (column: 5, row: 0)
-            ],
-            height: 2
+            ]
         )
 
         let nextState = action.perform(gameState)
