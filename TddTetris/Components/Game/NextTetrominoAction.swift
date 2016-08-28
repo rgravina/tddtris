@@ -9,8 +9,12 @@ struct NextTetrominoAction: Action {
 
     func perform(state: GameState) -> GameState {
         var nextState = state
-        nextState.tetromino = tetrominoGenerator.next()
-        view.displayNext(nextState.tetromino!)
+        let tetromino = tetrominoGenerator.next()
+        nextState.tetromino = tetromino
+        for position in tetromino.blocks {
+            nextState.cells[position.column][position.row] = true
+        }
+        view.displayNext(tetromino)
         return nextState
     }
 }

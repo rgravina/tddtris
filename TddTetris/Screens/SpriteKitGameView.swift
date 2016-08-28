@@ -7,7 +7,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             return skview as UIView!
         }
     }
-    private static let BOARD_TOP_PADDING = 54
+    private static let BOARD_TOP_PADDING = 38
     private static let BOARD_LEFT_PADDING = 12
     private var skview: SKView!
     private var scene: SKScene!

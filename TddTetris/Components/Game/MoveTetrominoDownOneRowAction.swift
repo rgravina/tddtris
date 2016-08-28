@@ -12,7 +12,8 @@ struct MoveTetrominoDownOneRowAction: Action {
             position: (
                 tetromino.position.column,
                 tetromino.position.row + 1
-            )
+            ),
+            blocks: tetromino.blocks
         )
         view.moveDownOneRow()
         return nextState

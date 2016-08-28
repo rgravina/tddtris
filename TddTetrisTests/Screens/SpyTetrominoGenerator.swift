@@ -4,7 +4,7 @@ import Nimble
 
 class SpyTetrominoGenerator: TetrominoGenerator {
     var next_wasCalled = false
-    var next_return:Tetromino = STetromino(position: (0, 0))
+    var next_return:Tetromino = STetromino()
     func next() -> Tetromino {
         next_wasCalled = true
         return next_return
