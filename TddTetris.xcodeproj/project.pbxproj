@@ -59,6 +59,7 @@
 		97F2EFF51D72A66500154407 /* SettleTetrominoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFF41D72A66500154407 /* SettleTetrominoAction.swift */; };
 		97F2EFF71D72AA6A00154407 /* MoveTetrominoDownOneRowActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFF61D72AA6A00154407 /* MoveTetrominoDownOneRowActionTest.swift */; };
 		97F2EFF91D72B20800154407 /* SettleTetrominoActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFF81D72B20800154407 /* SettleTetrominoActionTest.swift */; };
+		97F2EFFB1D72BB9800154407 /* NextTetrominoActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFFA1D72BB9800154407 /* NextTetrominoActionTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		97F2EFF41D72A66500154407 /* SettleTetrominoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettleTetrominoAction.swift; sourceTree = "<group>"; };
 		97F2EFF61D72AA6A00154407 /* MoveTetrominoDownOneRowActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoDownOneRowActionTest.swift; sourceTree = "<group>"; };
 		97F2EFF81D72B20800154407 /* SettleTetrominoActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettleTetrominoActionTest.swift; sourceTree = "<group>"; };
+		97F2EFFA1D72BB9800154407 /* NextTetrominoActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTetrominoActionTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				972329F31D5A081D00E23AA3 /* DefaultTimeKeeperTest.swift */,
 				972329E91D55DEFA00E23AA3 /* GameLancherTest.swift */,
 				97F2EFF61D72AA6A00154407 /* MoveTetrominoDownOneRowActionTest.swift */,
+				97F2EFFA1D72BB9800154407 /* NextTetrominoActionTest.swift */,
 				97F2EFF81D72B20800154407 /* SettleTetrominoActionTest.swift */,
 				973211DF1D716EDA00E9C4F8 /* SpyAction.swift */,
 				973211D31D716A9D00E9C4F8 /* SpyActionSelector.swift */,
@@ -510,6 +513,7 @@
 				972329EA1D55DEFA00E23AA3 /* GameLancherTest.swift in Sources */,
 				97D120B21D3C820A007A7E2B /* GameViewControllerTest.swift in Sources */,
 				97F2EFF71D72AA6A00154407 /* MoveTetrominoDownOneRowActionTest.swift in Sources */,
+				97F2EFFB1D72BB9800154407 /* NextTetrominoActionTest.swift in Sources */,
 				97F2EFF91D72B20800154407 /* SettleTetrominoActionTest.swift in Sources */,
 				97D120DA1D3D1EF5007A7E2B /* SpriteKitGameViewTest.swift in Sources */,
 				97CD4F731D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift in Sources */,
