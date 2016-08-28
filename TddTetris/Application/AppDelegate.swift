@@ -7,7 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let view = SpriteKitGameView()
         let actionSelector = DefaultActionSelector(
             view: view,
-            tetrominoGenerator: DefaultTetrominoGenerator()
+            tetrominoGenerator: DefaultTetrominoGenerator(),
+            collisionDetector: DefaultCollisionDetector()
         )
         let tickHandler = DefaultTickHandler(
             timeKeeper: DefaultTimeKeeper(),

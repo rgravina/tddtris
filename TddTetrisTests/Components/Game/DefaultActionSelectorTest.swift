@@ -4,13 +4,19 @@ import Nimble
 
 class DefaultActionSelectorTest: XCTestCase {
     var view: GameView!
-    var tetrominoGenerator: TetrominoGenerator!
+    var tetrominoGenerator: SpyTetrominoGenerator!
     var actionSelector: DefaultActionSelector!
+    var collisionDetector: SpyCollisionDetector!
 
     override func setUp() {
         view = SpyGameView()
         tetrominoGenerator = SpyTetrominoGenerator()
-        actionSelector = DefaultActionSelector(view: view, tetrominoGenerator: tetrominoGenerator)
+        collisionDetector = SpyCollisionDetector()
+        actionSelector = DefaultActionSelector(
+            view: view,
+            tetrominoGenerator: tetrominoGenerator,
+            collisionDetector: collisionDetector
+        )
     }
 
     func test_next_returnsNextTetrominoActionWhenNoTetromino() {
@@ -28,11 +34,10 @@ class DefaultActionSelectorTest: XCTestCase {
         expect(action as? MoveTetrominoDownOneRowAction).toNot(beNil())
     }
 
-    func test_next_returnsSettleTetrominoActionWhenTetrominoReacheesBottom() {
-        var tetromino = STetromino()
-        tetromino.position = (0, 18)
+    func test_next_returnsSettleTetrominoActionWhenTetrominoWillCollide() {
+        collisionDetector.wouldCollide_returnValue = true
         var gameState = GameState()
-        gameState.tetromino = tetromino
+        gameState.tetromino =  STetromino()
         let action = actionSelector.next(gameState)
 
         expect(action as? SettleTetrominoAction).toNot(beNil())

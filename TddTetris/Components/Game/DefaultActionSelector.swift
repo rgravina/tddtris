@@ -1,11 +1,15 @@
 struct DefaultActionSelector: ActionSelector {
     let view: GameView
     let tetrominoGenerator: TetrominoGenerator
+    let collisionDetector: CollisionDetector
 
     init(view: GameView,
-         tetrominoGenerator: TetrominoGenerator) {
+         tetrominoGenerator: TetrominoGenerator,
+         collisionDetector: CollisionDetector
+    ) {
         self.view = view
         self.tetrominoGenerator = tetrominoGenerator
+        self.collisionDetector = collisionDetector
     }
 
     func next(state: GameState) -> Action {
@@ -20,7 +24,9 @@ struct DefaultActionSelector: ActionSelector {
 
         let tetromino = maybeTetromino!
 
-        if (tetromino.position.row == GameState.ROWS - tetromino.height) {
+        if (collisionDetector.wouldCollide(
+            state,
+            position: tetromino.position)) {
             return SettleTetrominoAction()
         }
 
