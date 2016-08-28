@@ -7,14 +7,14 @@ struct MoveTetrominoDownOneRowAction: Action {
 
     func perform(state: GameState) -> GameState {
         let tetromino = state.tetromino!
-        var newState = state
-        newState.tetromino = STetromino(
+        var nextState = state
+        nextState.tetromino = STetromino(
             position: (
                 tetromino.position.column,
                 tetromino.position.row + 1
             )
         )
         view.moveDownOneRow()
-        return newState
+        return nextState
     }
 }

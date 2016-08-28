@@ -14,8 +14,8 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
         var gameState = GameState()
         gameState.tetromino = STetromino(position: (0, 0))
 
-        let newState = action.perform(gameState)
+        let nextState = action.perform(gameState)
 
-        expect(newState.tetromino!.position.row).to(equal((1)))
+        expect(nextState.tetromino!.position.row).to(equal((1)))
     }
 }

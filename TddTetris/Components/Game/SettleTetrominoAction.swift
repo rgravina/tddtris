@@ -1,5 +1,7 @@
 struct SettleTetrominoAction: Action {
     func perform(state: GameState) -> GameState {
-        return state
+        var nextState = state
+        nextState.tetromino = nil
+        return nextState
     }
 }

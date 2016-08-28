@@ -8,9 +8,9 @@ struct NextTetrominoAction: Action {
     }
 
     func perform(state: GameState) -> GameState {
-        var newState = state
-        newState.tetromino = tetrominoGenerator.next()
-        view.displayNext(newState.tetromino!)
-        return newState
+        var nextState = state
+        nextState.tetromino = tetrominoGenerator.next()
+        view.displayNext(nextState.tetromino!)
+        return nextState
     }
 }
