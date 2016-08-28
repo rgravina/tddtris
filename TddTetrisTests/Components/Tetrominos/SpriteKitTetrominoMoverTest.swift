@@ -3,11 +3,11 @@ import Nimble
 @testable import TddTetris
 
 class SpriteKitTetrominoMoverTest: XCTestCase {
-    var tetromino: Tetromino!
+    var tetromino: SpriteKitTetromino!
     var mover: SpriteKitTetrominoMover!
 
     override func setUp() {
-        tetromino = SquareTetromino()
+        tetromino = SpriteKitSquareTetromino()
         mover = SpriteKitTetrominoMover(tetromino: tetromino,
                            topLeft: CGPoint(x: 10, y: 300)
         )

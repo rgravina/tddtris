@@ -6,5 +6,5 @@ protocol GameView {
     func configure(game: TickHandler, frame: CGRect)
     func size() -> CGSize
     func displayNext(tetromino: Tetromino)
-    func moveDownOneRow(tetromino: Tetromino)
+    func moveDownOneRow()
 }

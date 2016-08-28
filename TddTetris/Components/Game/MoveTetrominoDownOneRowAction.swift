@@ -6,7 +6,7 @@ struct MoveTetrominoDownOneRowAction: Action {
     }
 
     func perform(state: GameState) -> GameState {
-        view.moveDownOneRow(state.tetromino!)
+        view.moveDownOneRow()
         return state
     }
 }

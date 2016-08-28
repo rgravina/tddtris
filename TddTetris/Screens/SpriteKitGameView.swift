@@ -12,6 +12,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     private var scene: SKScene!
     private var topLeft: CGPoint!
     private var game: TickHandler!
+    private var skTetromino: SpriteKitTetromino!
 
     func configure(game: TickHandler, frame: CGRect) {
         self.game = game
@@ -39,16 +40,17 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     }
 
     func displayNext(tetromino: Tetromino) {
+        skTetromino = SpriteKitSTetromino()
         SpriteKitTetrominoMover(
-            tetromino: tetromino,
+            tetromino: skTetromino,
             topLeft: topLeft
         ).moveToDropCoordinates()
-        scene.addChild(tetromino as! SKNode)
+        scene.addChild(skTetromino as! SKNode)
     }
 
-    func moveDownOneRow(tetromino: Tetromino) {
+    func moveDownOneRow() {
         SpriteKitTetrominoMover(
-            tetromino: tetromino,
+            tetromino: skTetromino,
             topLeft: topLeft
         ).moveDownOneRow()
     }

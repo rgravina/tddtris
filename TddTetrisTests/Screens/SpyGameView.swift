@@ -33,10 +33,7 @@ class SpyGameView: GameView {
     }
 
     var moveDownOneRow_wasCalled = false
-    var moveDownOneRow_arg: Tetromino!
-    func moveDownOneRow(tetromino: Tetromino) {
+    func moveDownOneRow() {
         moveDownOneRow_wasCalled = true
-        moveDownOneRow_arg = tetromino
     }
-
 }
