@@ -9,25 +9,29 @@ This game only has one view controller (`GameViewController`) which renders the 
 `AppDelegate.swift` instantiates all the dependencies required to begin the game.
 
 * `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene.
-* `DefaultTetrominoGenerator` - generates a random tetromino.
-* `DefaultActionSelector` - a factory which takes in dependencies needed to handle actions (the game view, a tetromino generator) and generates an an action object.
 * `DefaultTickHandler` - handles the 'tick' of the game.
 * `DefaultTimeKeeper` - keeps track of the last tick time.
+* `DefaultActionSelector` - a factory which takes in dependencies needed to handle actions (the game view, a tetromino generator) and generates an an action object.
+* `DefaultTetrominoGenerator` - generates a random tetromino.
+* `DefaultCollisionDetector` - determines if the next move would result in a collision.
 * `GameLauncher` - sets `DefaultTickHandler` as the delegate to handle game ticks and gets the game started.
 
 ```swift
 let view = SpriteKitGameView()
-let actionSelector = DefaultActionSelector(
-    view: view,
-    tetrominoGenerator: DefaultTetrominoGenerator()
-)
+
 let tickHandler = DefaultTickHandler(
     timeKeeper: DefaultTimeKeeper(),
-    actionSelector: actionSelector
+    actionSelector: DefaultActionSelector(
+        view: view,
+        tetrominoGenerator: DefaultTetrominoGenerator(),
+        collisionDetector: DefaultCollisionDetector()
+    )
 )
-let launcher = GameLauncher(
-    view: view,
-    tickHandler: tickHandler
+
+let gameVC = GameViewController(
+    launcher: GameLauncher(
+        view: view,
+        tickHandler: tickHandler
+    )
 )
-let gameVC = GameViewController(launcher: launcher)
 ```

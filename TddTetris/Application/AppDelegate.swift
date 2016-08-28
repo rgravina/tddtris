@@ -5,20 +5,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let view = SpriteKitGameView()
-        let actionSelector = DefaultActionSelector(
-            view: view,
-            tetrominoGenerator: DefaultTetrominoGenerator(),
-            collisionDetector: DefaultCollisionDetector()
-        )
+
         let tickHandler = DefaultTickHandler(
             timeKeeper: DefaultTimeKeeper(),
-            actionSelector: actionSelector
+            actionSelector: DefaultActionSelector(
+                view: view,
+                tetrominoGenerator: DefaultTetrominoGenerator(),
+                collisionDetector: DefaultCollisionDetector()
+            )
         )
-        let launcher = GameLauncher(
-            view: view,
-            tickHandler: tickHandler
+
+        let gameVC = GameViewController(
+            launcher: GameLauncher(
+                view: view,
+                tickHandler: tickHandler
+            )
         )
-        let gameVC = GameViewController(launcher: launcher)
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = gameVC
