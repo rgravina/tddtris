@@ -1,13 +1,14 @@
 import SpriteKit
 
 class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
-    static let BLOCK_SIZE = 36
+    static let BLOCK_SIZE = 24
     var view: UIView! {
         get {
             return skview as UIView!
         }
     }
     private static let BOARD_TOP_PADDING = 54
+    private static let BOARD_LEFT_PADDING = 12
     private var skview: SKView!
     private var scene: SKScene!
     private var topLeft: CGPoint!
@@ -19,7 +20,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         skview = SKView(frame: frame)
         view.multipleTouchEnabled = false
         topLeft = CGPoint(
-            x: CGFloat(0),
+            x: CGFloat(CGFloat(SpriteKitGameView.BOARD_LEFT_PADDING)),
             y: frame.height - CGFloat(SpriteKitGameView.BOARD_TOP_PADDING)
         )
         scene = SKScene(size: size())

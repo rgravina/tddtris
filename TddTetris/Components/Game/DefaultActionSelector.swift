@@ -9,9 +9,21 @@ struct DefaultActionSelector: ActionSelector {
     }
 
     func next(state: GameState) -> Action {
-        if state.tetromino == nil {
-            return NextTetrominoAction(view: view,  tetrominoGenerator: tetrominoGenerator)
+        let maybeTetromino = state.tetromino
+
+        if maybeTetromino == nil {
+            return NextTetrominoAction(
+                view: view,
+                tetrominoGenerator: tetrominoGenerator
+            )
         }
+
+        let tetromino = maybeTetromino!
+
+        if (tetromino.position.row == GameState.ROWS) {
+            return SettleTetrominoAction()
+        }
+
         return MoveTetrominoDownOneRowAction(view: view)
     }
 }

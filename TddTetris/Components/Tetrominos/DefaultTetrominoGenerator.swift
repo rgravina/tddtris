@@ -1,5 +1,5 @@
 class DefaultTetrominoGenerator: TetrominoGenerator {
     func next() -> Tetromino {
-        return STetromino()
+        return STetromino(position: (0, 0))
     }
 }

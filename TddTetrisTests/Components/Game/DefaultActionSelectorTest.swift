@@ -11,7 +11,7 @@ class DefaultActionSelectorTest: XCTestCase {
         tetrominoGenerator = SpyTetrominoGenerator()
     }
 
-    func test_next_returnsNextTetrominoActionWhenNoTetromino() {
+    func test_next_returnsNextTetrominoActionWhernNoTetromino() {
         let gameState = GameState()
         let actionSelector = DefaultActionSelector(view: view, tetrominoGenerator: tetrominoGenerator)
         let action = actionSelector.next(gameState)
@@ -21,10 +21,19 @@ class DefaultActionSelectorTest: XCTestCase {
 
 
     func test_next_returnsMoveTetrominoDownOneRowActionWhenTetrominoExists() {
-        let gameState = GameState(tetromino: STetromino())
+        let gameState = GameState(tetromino: STetromino(position: (0, 0)))
         let actionSelector = DefaultActionSelector(view: view, tetrominoGenerator: tetrominoGenerator)
         let action = actionSelector.next(gameState)
 
         expect(action as? MoveTetrominoDownOneRowAction).toNot(beNil())
+    }
+
+    func test_next_returnsSettleTetrominoActionWhenTetrominoReacheesBottom() {
+        let tetromino = STetromino(position: (0, 20))
+        let gameState = GameState(tetromino: tetromino)
+        let actionSelector = DefaultActionSelector(view: view, tetrominoGenerator: tetrominoGenerator)
+        let action = actionSelector.next(gameState)
+
+        expect(action as? SettleTetrominoAction).toNot(beNil())
     }
 }
