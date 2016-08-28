@@ -28,7 +28,15 @@ class DefaultActionSelectorTest: XCTestCase {
 
     func test_next_returnsMoveTetrominoDownOneRowActionWhenTetrominoExists() {
         var gameState = GameState()
-        gameState.tetromino =  STetromino()
+        gameState.tetromino =  STetromino(
+            position: (0, 0),
+            blocks: [
+                (column: 0, row: 0),
+                (column: 0, row: 0),
+                (column: 0, row: 0),
+                (column: 0, row: 0)
+            ]
+        )
         let action = actionSelector.next(gameState)
 
         expect(action as? MoveTetrominoDownOneRowAction).toNot(beNil())
@@ -37,7 +45,15 @@ class DefaultActionSelectorTest: XCTestCase {
     func test_next_returnsSettleTetrominoActionWhenTetrominoWillCollide() {
         collisionDetector.wouldCollide_returnValue = true
         var gameState = GameState()
-        gameState.tetromino =  STetromino()
+        gameState.tetromino =  STetromino(
+            position: (0, 0),
+            blocks: [
+                (column: 0, row: 0),
+                (column: 0, row: 0),
+                (column: 0, row: 0),
+                (column: 0, row: 0)
+            ]
+        )
         let action = actionSelector.next(gameState)
 
         expect(action as? SettleTetrominoAction).toNot(beNil())

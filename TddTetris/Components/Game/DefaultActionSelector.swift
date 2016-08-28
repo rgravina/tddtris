@@ -24,10 +24,13 @@ struct DefaultActionSelector: ActionSelector {
 
         let tetromino = maybeTetromino!
 
-        if (collisionDetector.wouldCollide(
-            state,
-            position: tetromino.position)) {
-            return SettleTetrominoAction()
+        for position in tetromino.lowerBlocks {
+            if collisionDetector.wouldCollide(
+                state,
+                position: position
+            ) {
+                return SettleTetrominoAction()
+            }
         }
 
         return MoveTetrominoDownOneRowAction(view: view)
