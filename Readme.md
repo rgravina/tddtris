@@ -14,7 +14,8 @@ This game only has one view controller (`GameViewController`) which renders the 
 * `DefaultActionSelector` - a factory which takes in dependencies needed to handle actions and generates an an action object.
 * `DefaultTetrominoGenerator` - generates a random tetromino.
 * `DefaultCollisionDetector` - determines if the next move would result in a collision.
-* `GameLauncher` - sets `DefaultTickHandler` as the delegate to handle game ticks and gets the game started.
+* `DefaultInputHandler` - handles left and right swipes.
+* `GameLauncher` - sets `DefaultTickHandler` to handle game ticks, `DefaultInputHandler` to handle user input and gets the game started.
 
 ```swift
 let view = SpriteKitGameView()
@@ -31,7 +32,8 @@ let tickHandler = DefaultTickHandler(
 let gameVC = GameViewController(
     launcher: GameLauncher(
         view: view,
-        tickHandler: tickHandler
+        tickHandler: tickHandler,
+        inputHandler: DefaultInputHandler()
     )
 )
 ```
