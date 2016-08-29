@@ -7,13 +7,16 @@ class GameLancherTest: XCTestCase {
     var frame: CGRect!
     var spyGameView: SpyGameView!
     var spyTickHandler: SpyTickHandler!
+    var spyInputHandler: SpyInputHandler!
 
     override func setUp() {
         spyGameView = SpyGameView()
         spyTickHandler = SpyTickHandler()
+        spyInputHandler = SpyInputHandler()
         launcher = GameLauncher(
             view: spyGameView,
-            tickHandler: spyTickHandler
+            tickHandler: spyTickHandler,
+            inputHandler: spyInputHandler
         )
         frame = CGRect(
             origin: CGPoint(x: 0, y: 0),

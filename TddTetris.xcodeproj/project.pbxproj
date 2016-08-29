@@ -20,6 +20,9 @@
 		973211DC1D716BF200E9C4F8 /* NextTetrominoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */; };
 		973211DE1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DD1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift */; };
 		973211E01D716EDA00E9C4F8 /* SpyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DF1D716EDA00E9C4F8 /* SpyAction.swift */; };
+		973CB7311D746EF300E3B29D /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7301D746EF300E3B29D /* InputHandler.swift */; };
+		973CB7331D74703C00E3B29D /* DefaultInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */; };
+		973CB7351D7470E400E3B29D /* SpyInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7341D7470E400E3B29D /* SpyInputHandler.swift */; };
 		975349511D43A3530084B569 /* TetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* TetrominoGenerator.swift */; };
 		975349531D43A3A50084B569 /* DefaultTetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349521D43A3A50084B569 /* DefaultTetrominoGenerator.swift */; };
 		975349551D43B8990084B569 /* SpriteKitSquareTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349541D43B8990084B569 /* SpriteKitSquareTetromino.swift */; };
@@ -113,6 +116,9 @@
 		973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTetrominoAction.swift; sourceTree = "<group>"; };
 		973211DD1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultActionSelectorTest.swift; sourceTree = "<group>"; };
 		973211DF1D716EDA00E9C4F8 /* SpyAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyAction.swift; sourceTree = "<group>"; };
+		973CB7301D746EF300E3B29D /* InputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputHandler.swift; sourceTree = "<group>"; };
+		973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultInputHandler.swift; sourceTree = "<group>"; };
+		973CB7341D7470E400E3B29D /* SpyInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyInputHandler.swift; sourceTree = "<group>"; };
 		975349501D43A3530084B569 /* TetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrominoGenerator.swift; sourceTree = "<group>"; };
 		975349521D43A3A50084B569 /* DefaultTetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTetrominoGenerator.swift; sourceTree = "<group>"; };
 		975349541D43B8990084B569 /* SpriteKitSquareTetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitSquareTetromino.swift; sourceTree = "<group>"; };
@@ -344,15 +350,18 @@
 				9754CBCA1D72EE70000B4106 /* CollisionDetector.swift */,
 				973211D91D716BC200E9C4F8 /* DefaultActionSelector.swift */,
 				9754CBCE1D72F130000B4106 /* DefaultCollisionDetector.swift */,
+				973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */,
 				977C67271D68618800E1CE7D /* DefaultTickHandler.swift */,
 				972329EF1D59F3CE00E23AA3 /* DefaultTimeKeeper.swift */,
 				977C67251D6838B500E1CE7D /* GameLauncher.swift */,
 				97C9C65B1D7174B80051B329 /* GameState.swift */,
+				973CB7301D746EF300E3B29D /* InputHandler.swift */,
 				975C591F1D5C09C800B3AB2A /* Launcher.swift */,
 				97C9C65F1D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift */,
 				973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */,
 				97C9C65D1D71765A0051B329 /* NoAction.swift */,
 				97F2EFF41D72A66500154407 /* SettleTetrominoAction.swift */,
+				973CB7341D7470E400E3B29D /* SpyInputHandler.swift */,
 				977C67291D68A51600E1CE7D /* TickHandler.swift */,
 				972329ED1D5888D000E23AA3 /* TimeKeeper.swift */,
 			);
@@ -487,6 +496,7 @@
 				9754CBCB1D72EE70000B4106 /* CollisionDetector.swift in Sources */,
 				973211DA1D716BC200E9C4F8 /* DefaultActionSelector.swift in Sources */,
 				9754CBCF1D72F130000B4106 /* DefaultCollisionDetector.swift in Sources */,
+				973CB7331D74703C00E3B29D /* DefaultInputHandler.swift in Sources */,
 				975349531D43A3A50084B569 /* DefaultTetrominoGenerator.swift in Sources */,
 				977C67281D68618800E1CE7D /* DefaultTickHandler.swift in Sources */,
 				972329F01D59F3CE00E23AA3 /* DefaultTimeKeeper.swift in Sources */,
@@ -494,6 +504,7 @@
 				97C9C65C1D7174B80051B329 /* GameState.swift in Sources */,
 				97D120D81D3D1AC3007A7E2B /* GameView.swift in Sources */,
 				97D120C51D3CC485007A7E2B /* GameViewController.swift in Sources */,
+				973CB7311D746EF300E3B29D /* InputHandler.swift in Sources */,
 				975C59201D5C09C800B3AB2A /* Launcher.swift in Sources */,
 				975C59241D5C3D6100B3AB2A /* main.swift in Sources */,
 				97C9C6601D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift in Sources */,
@@ -505,6 +516,7 @@
 				972329EC1D56F03E00E23AA3 /* SpriteKitSTetromino.swift in Sources */,
 				97CD4F771D4C63260055B47C /* SpriteKitTetromino.swift in Sources */,
 				97CD4F751D4C5EB20055B47C /* SpriteKitTetrominoMover.swift in Sources */,
+				973CB7351D7470E400E3B29D /* SpyInputHandler.swift in Sources */,
 				97F2EFF31D72A31B00154407 /* SquareTetromino.swift in Sources */,
 				97F2EFF11D72A2E500154407 /* STetromino.swift in Sources */,
 				975C59261D5C3DA300B3AB2A /* TestingAppDelegate.swift in Sources */,

@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let gameVC = GameViewController(
             launcher: GameLauncher(
                 view: view,
-                tickHandler: tickHandler
+                tickHandler: tickHandler,
+                inputHandler: DefaultInputHandler()
             )
         )
 

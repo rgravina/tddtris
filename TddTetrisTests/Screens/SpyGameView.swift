@@ -19,10 +19,10 @@ class SpyGameView: GameView {
     }
 
     var configure_wasCalled = false
-    var configure_args: (delegate: TickHandler, frame: CGRect)!
-    func configure(game: TickHandler, frame: CGRect) {
+    var configure_args: (delegate: TickHandler, inputHandler: InputHandler, frame: CGRect)!
+    func configure(game: TickHandler, inputHandler: InputHandler, frame: CGRect) {
         configure_wasCalled = true
-        configure_args = (delegate: game, frame: frame)
+        configure_args = (delegate: game, inputHandler: inputHandler, frame: frame)
     }
 
     var displayNext_wasCalled = false
