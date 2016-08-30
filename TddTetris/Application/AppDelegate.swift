@@ -5,6 +5,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let view = SpriteKitGameView()
+        let gameState = GameState()
 
         let tickHandler = DefaultTickHandler(
             timeKeeper: DefaultTimeKeeper(),
@@ -12,14 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 view: view,
                 tetrominoGenerator: DefaultTetrominoGenerator(),
                 collisionDetector: DefaultCollisionDetector()
-            )
+            ),
+            gameState: gameState
         )
 
         let gameVC = GameViewController(
             launcher: GameLauncher(
                 view: view,
                 tickHandler: tickHandler,
-                inputHandler: DefaultInputHandler()
+                inputHandler: DefaultInputHandler(
+                    view: view,
+                    gameState: gameState
+                )
             )
         )
 

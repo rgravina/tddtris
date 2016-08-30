@@ -1,4 +1,4 @@
-struct MoveTetrominoDownOneRowAction: Action {
+struct MoveTetrominoLeftOneColumnAction: Action {
     let view: GameView
 
     init(view: GameView) {
@@ -9,14 +9,18 @@ struct MoveTetrominoDownOneRowAction: Action {
         let tetromino = state.tetromino!
         let movedTemtromino = STetromino(
             position: (
-                tetromino.position.column,
-                tetromino.position.row + 1
+                tetromino.position.column - 1,
+                tetromino.position.row
             ),
             blocks: [
-                (tetromino.blocks[0].column, tetromino.blocks[0].row + 1),
-                (tetromino.blocks[1].column, tetromino.blocks[1].row + 1),
-                (tetromino.blocks[2].column, tetromino.blocks[2].row + 1),
-                (tetromino.blocks[3].column, tetromino.blocks[3].row + 1)
+                (tetromino.blocks[0].column - 1,
+                    tetromino.blocks[0].row),
+                (tetromino.blocks[1].column - 1,
+                    tetromino.blocks[1].row),
+                (tetromino.blocks[2].column - 1,
+                    tetromino.blocks[2].row),
+                (tetromino.blocks[3].column - 1,
+                    tetromino.blocks[3].row)
             ]
         )
         state.tetromino = movedTemtromino
@@ -26,7 +30,7 @@ struct MoveTetrominoDownOneRowAction: Action {
         for position in movedTemtromino.blocks {
             state.cells[position.column][position.row] = true
         }
-        view.moveDownOneRow()
+        view.moveLeftOneColumn()
         return state
     }
 }

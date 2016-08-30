@@ -81,4 +81,11 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             topLeft: topLeft
         ).moveDownOneRow()
     }
+
+    func moveLeftOneColumn() {
+        SpriteKitTetrominoMover(
+            tetromino: skTetromino,
+            topLeft: topLeft
+            ).moveLeftOneColumn()
+    }
 }

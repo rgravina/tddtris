@@ -12,7 +12,8 @@ class DefaultTickHandlerTest: XCTestCase {
     override func setUp() {
         tickHandler = DefaultTickHandler(
             timeKeeper: timeKeeper,
-            actionSelector: actionSelector
+            actionSelector: actionSelector,
+            gameState: GameState()
         )
     }
 

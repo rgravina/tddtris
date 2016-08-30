@@ -11,7 +11,7 @@ class SettleTetrominoActionTest: XCTestCase {
     }
 
     func test_perform_clearsTetromino() {
-        var gameState = GameState()
+        let gameState = GameState()
         gameState.tetromino = STetromino()
 
         let nextState = action.perform(gameState)

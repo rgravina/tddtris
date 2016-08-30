@@ -20,6 +20,7 @@
 		973211DC1D716BF200E9C4F8 /* NextTetrominoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */; };
 		973211DE1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DD1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift */; };
 		973211E01D716EDA00E9C4F8 /* SpyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973211DF1D716EDA00E9C4F8 /* SpyAction.swift */; };
+		973716BB1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973716BA1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift */; };
 		973CB7311D746EF300E3B29D /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7301D746EF300E3B29D /* InputHandler.swift */; };
 		973CB7331D74703C00E3B29D /* DefaultInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */; };
 		973CB7351D7470E400E3B29D /* SpyInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7341D7470E400E3B29D /* SpyInputHandler.swift */; };
@@ -116,6 +117,7 @@
 		973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTetrominoAction.swift; sourceTree = "<group>"; };
 		973211DD1D716D1000E9C4F8 /* DefaultActionSelectorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultActionSelectorTest.swift; sourceTree = "<group>"; };
 		973211DF1D716EDA00E9C4F8 /* SpyAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyAction.swift; sourceTree = "<group>"; };
+		973716BA1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoLeftOneColumnAction.swift; sourceTree = "<group>"; };
 		973CB7301D746EF300E3B29D /* InputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputHandler.swift; sourceTree = "<group>"; };
 		973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultInputHandler.swift; sourceTree = "<group>"; };
 		973CB7341D7470E400E3B29D /* SpyInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyInputHandler.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				973CB7301D746EF300E3B29D /* InputHandler.swift */,
 				975C591F1D5C09C800B3AB2A /* Launcher.swift */,
 				97C9C65F1D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift */,
+				973716BA1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift */,
 				973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */,
 				97C9C65D1D71765A0051B329 /* NoAction.swift */,
 				97F2EFF41D72A66500154407 /* SettleTetrominoAction.swift */,
@@ -508,6 +511,7 @@
 				975C59201D5C09C800B3AB2A /* Launcher.swift in Sources */,
 				975C59241D5C3D6100B3AB2A /* main.swift in Sources */,
 				97C9C6601D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift in Sources */,
+				973716BB1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift in Sources */,
 				973211DC1D716BF200E9C4F8 /* NextTetrominoAction.swift in Sources */,
 				97C9C65E1D71765A0051B329 /* NoAction.swift in Sources */,
 				97F2EFF51D72A66500154407 /* SettleTetrominoAction.swift in Sources */,

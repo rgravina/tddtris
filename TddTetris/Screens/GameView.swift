@@ -7,4 +7,5 @@ protocol GameView {
     func size() -> CGSize
     func displayNext(tetromino: Tetromino)
     func moveDownOneRow()
+    func moveLeftOneColumn()
 }

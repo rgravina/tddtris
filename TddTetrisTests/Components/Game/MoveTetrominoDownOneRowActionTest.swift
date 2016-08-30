@@ -11,7 +11,7 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
     }
 
     func test_perform_movesTetrominoPostitionDownOneRow() {
-        var gameState = GameState()
+        let gameState = GameState()
         gameState.tetromino = STetromino(
             position: (0, 0),
             blocks: [
@@ -28,7 +28,7 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
     }
 
     func test_perform_updatesGameState() {
-        var gameState = GameState()
+        let gameState = GameState()
         gameState.tetromino = STetromino(
             position: (3, 0),
             blocks: [
