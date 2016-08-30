@@ -12,5 +12,7 @@ class DefaultInputHandler: InputHandler {
     }
 
     func didSwipeRight() {
+        let action = MoveTetrominoRightOneColumnAction(view: view)
+        action.perform(gameState)
     }
 }

@@ -41,4 +41,9 @@ class SpyGameView: GameView {
     func moveLeftOneColumn() {
         moveLeftOneColumn_wasCalled = true
     }
+
+    var moveRightOneColumn_wasCalled = false
+    func moveRightOneColumn() {
+        moveRightOneColumn_wasCalled = true
+    }
 }

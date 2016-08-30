@@ -8,4 +8,5 @@ protocol GameView {
     func displayNext(tetromino: Tetromino)
     func moveDownOneRow()
     func moveLeftOneColumn()
+    func moveRightOneColumn()
 }

@@ -36,4 +36,11 @@ class SpriteKitTetrominoMover {
             y: self.tetromino.position.y
         )
     }
+
+    func moveRightOneColumn() {
+        tetromino.position = CGPoint(
+            x: self.tetromino.position.x + CGFloat(SpriteKitGameView.BLOCK_SIZE),
+            y: self.tetromino.position.y
+        )
+    }
 }

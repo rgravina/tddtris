@@ -88,4 +88,10 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             topLeft: topLeft
             ).moveLeftOneColumn()
     }
-}
+
+    func moveRightOneColumn() {
+        SpriteKitTetrominoMover(
+            tetromino: skTetromino,
+            topLeft: topLeft
+            ).moveRightOneColumn()
+    }}
