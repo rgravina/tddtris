@@ -7,13 +7,12 @@ class NextTetrominoAction: Action {
         self.tetrominoGenerator = tetrominoGenerator
     }
 
-    func perform(state: GameState) -> GameState {
+    func perform(state: GameState) {
         let tetromino = tetrominoGenerator.next()
         state.tetromino = tetromino
         for position in tetromino.blocks {
             state.cells[position.column][position.row] = true
         }
         view.displayNext(tetromino)
-        return state
     }
 }

@@ -5,10 +5,10 @@ class MoveTetrominoLeftOneColumnAction: Action {
         self.view = view
     }
 
-    func perform(state: GameState) -> GameState {
+    func perform(state: GameState) {
         let tetromino = state.tetromino!
         if tetromino.position.column == 0 {
-            return state
+            return
         }
         let movedTemtromino = STetromino(
             position: (
@@ -34,6 +34,5 @@ class MoveTetrominoLeftOneColumnAction: Action {
             state.cells[position.column][position.row] = true
         }
         view.moveLeftOneColumn()
-        return state
     }
 }

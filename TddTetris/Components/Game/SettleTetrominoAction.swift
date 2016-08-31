@@ -1,6 +1,5 @@
 class SettleTetrominoAction: Action {
-    func perform(state: GameState) -> GameState {
+    func perform(state: GameState) {
         state.tetromino = nil
-        return state
     }
 }

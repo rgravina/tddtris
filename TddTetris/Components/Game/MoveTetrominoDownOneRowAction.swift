@@ -5,7 +5,7 @@ class MoveTetrominoDownOneRowAction: Action {
         self.view = view
     }
 
-    func perform(state: GameState) -> GameState {
+    func perform(state: GameState) {
         let tetromino = state.tetromino!
         let movedTemtromino = STetromino(
             position: (
@@ -27,6 +27,5 @@ class MoveTetrominoDownOneRowAction: Action {
             state.cells[position.column][position.row] = true
         }
         view.moveDownOneRow()
-        return state
     }
 }

@@ -14,8 +14,8 @@ class SettleTetrominoActionTest: XCTestCase {
         let gameState = GameState()
         gameState.tetromino = STetromino()
 
-        let nextState = action.perform(gameState)
+        action.perform(gameState)
 
-        expect(nextState.tetromino).to(beNil())
+        expect(gameState.tetromino).to(beNil())
     }
 }

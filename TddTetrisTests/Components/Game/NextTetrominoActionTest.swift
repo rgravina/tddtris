@@ -20,10 +20,10 @@ class NextTetrominoActionTest: XCTestCase {
         let tetromino = STetromino()
         tetrominoGenerator.next_return = tetromino
 
-        let nextState = action.perform(gameState)
+        action.perform(gameState)
 
         expect(self.tetrominoGenerator.next_wasCalled).to(beTrue())
-        expect(nextState.tetromino as? STetromino).toNot(beNil())
+        expect(gameState.tetromino as? STetromino).toNot(beNil())
     }
 
     func test_perform_updatesGameState() {
@@ -38,13 +38,13 @@ class NextTetrominoActionTest: XCTestCase {
             ]
         )
 
-        let nextState = action.perform(gameState)
+        action.perform(gameState)
 
-        expect(nextState.cells[3][0]).to(beFalse())
-        expect(nextState.cells[3][1]).to(beTrue())
-        expect(nextState.cells[4][0]).to(beTrue())
-        expect(nextState.cells[4][1]).to(beTrue())
-        expect(nextState.cells[5][0]).to(beTrue())
-        expect(nextState.cells[5][1]).to(beFalse())
+        expect(gameState.cells[3][0]).to(beFalse())
+        expect(gameState.cells[3][1]).to(beTrue())
+        expect(gameState.cells[4][0]).to(beTrue())
+        expect(gameState.cells[4][1]).to(beTrue())
+        expect(gameState.cells[5][0]).to(beTrue())
+        expect(gameState.cells[5][1]).to(beFalse())
     }
 }
