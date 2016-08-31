@@ -1,4 +1,4 @@
-struct DefaultActionSelector: ActionSelector {
+class DefaultActionSelector: ActionSelector {
     let view: GameView
     let tetrominoGenerator: TetrominoGenerator
     let collisionDetector: CollisionDetector

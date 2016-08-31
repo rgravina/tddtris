@@ -1,4 +1,4 @@
-struct MoveTetrominoDownOneRowAction: Action {
+class MoveTetrominoDownOneRowAction: Action {
     let view: GameView
 
     init(view: GameView) {

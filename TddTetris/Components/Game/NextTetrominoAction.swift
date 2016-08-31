@@ -1,4 +1,4 @@
-struct NextTetrominoAction: Action {
+class NextTetrominoAction: Action {
     let view: GameView
     let tetrominoGenerator: TetrominoGenerator
 
