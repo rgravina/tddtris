@@ -44,6 +44,14 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         expect(gameState.tetromino!.position.column).to(equal((7)))
     }
 
+    func test_perform_doesNothingWhenThereIsNoTetromino() {
+        let gameState = GameState()
+
+        action.perform(gameState)
+
+        expect(gameState.tetromino).to(beNil())
+    }
+
     func test_perform_updatesGameState() {
         let gameState = GameState()
         gameState.tetromino = STetromino(

@@ -6,6 +6,9 @@ class MoveTetrominoRightOneColumnAction: Action {
     }
 
     func perform(state: GameState) {
+        if (state.tetromino == nil) {
+            return
+        }
         let tetromino = state.tetromino!
         if tetromino.position.column == GameState.COLUMNS - 3 {
             return

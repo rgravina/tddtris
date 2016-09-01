@@ -6,6 +6,9 @@ class MoveTetrominoDownOneRowAction: Action {
     }
 
     func perform(state: GameState) {
+        if (state.tetromino == nil) {
+            return
+        }
         let tetromino = state.tetromino!
         let movedTemtromino = STetromino(
             position: (
