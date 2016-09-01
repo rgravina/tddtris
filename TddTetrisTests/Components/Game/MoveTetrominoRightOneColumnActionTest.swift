@@ -27,6 +27,23 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         expect(gameState.tetromino!.position.column).to(equal((1)))
     }
 
+    func test_perform_stopsMovingAtEdge() {
+        let gameState = GameState()
+        gameState.tetromino = STetromino(
+            position: (7, 0),
+            blocks: [
+                (column: 3, row: 1),
+                (column: 4, row: 0),
+                (column: 4, row: 1),
+                (column: 5, row: 0)
+            ]
+        )
+
+        action.perform(gameState)
+
+        expect(gameState.tetromino!.position.column).to(equal((7)))
+    }
+
     func test_perform_updatesGameState() {
         let gameState = GameState()
         gameState.tetromino = STetromino(
