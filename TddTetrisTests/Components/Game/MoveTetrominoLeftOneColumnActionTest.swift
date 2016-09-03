@@ -4,12 +4,6 @@ import Nimble
 @testable import TddTetris
 
 class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
-    var action: MoveTetrominoLeftOneColumnAction!
-
-    override func setUp() {
-        action = MoveTetrominoLeftOneColumnAction(view: SpyGameView())
-    }
-
     func test_perform_movesTetrominoPostitionLeftOneColumn() {
         let gameState = GameState()
         gameState.tetromino = STetromino(
@@ -22,7 +16,12 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoLeftOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino!.position.column).to(equal((0)))
     }
@@ -39,7 +38,12 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoLeftOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino!.position.column).to(equal((0)))
     }
@@ -47,7 +51,12 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
     func test_perform_doesNothingWhenThereIsNoTetromino() {
         let gameState = GameState()
 
-        action.perform(gameState)
+        let action = MoveTetrominoLeftOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino).to(beNil())
     }
@@ -55,7 +64,12 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
     func test_perform_doesNothingIfWouldCollide() {
         let gameState = GameState()
 
-        action.perform(gameState)
+        let action = MoveTetrominoLeftOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino).to(beNil())
     }
@@ -72,7 +86,12 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoLeftOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.cells[3][0]).to(beTrue())
         expect(gameState.cells[4][0]).to(beTrue())

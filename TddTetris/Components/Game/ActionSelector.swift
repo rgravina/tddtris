@@ -1,3 +1,3 @@
 protocol ActionSelector {
-    func next(state: GameState) -> Action
+    func next() -> Action
 }

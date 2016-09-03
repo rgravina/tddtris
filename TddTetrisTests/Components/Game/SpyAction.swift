@@ -2,7 +2,7 @@
 
 class SpyAction: Action {
     var perform_wasCalled = false
-    func perform(state: GameState) {
+    func perform() {
         perform_wasCalled = true
     }
 }

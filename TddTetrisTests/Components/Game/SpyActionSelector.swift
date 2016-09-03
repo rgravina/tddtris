@@ -3,7 +3,7 @@
 class SpyActionSelector: ActionSelector {
     var next_wasCalled = false
     var next_returnValue = SpyAction()
-    func next(state: GameState) -> Action {
+    func next() -> Action {
         next_wasCalled = true
         return next_returnValue
     }

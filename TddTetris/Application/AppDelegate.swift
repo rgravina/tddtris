@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             timeKeeper: DefaultTimeKeeper(),
             actionSelector: DefaultActionSelector(
                 view: view,
+                state: gameState,
                 tetrominoGenerator: DefaultTetrominoGenerator(),
                 collisionDetector: DefaultCollisionDetector()
             ),

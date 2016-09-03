@@ -4,12 +4,6 @@ import Nimble
 @testable import TddTetris
 
 class MoveTetrominoDownOneRowActionTest: XCTestCase {
-    var action: MoveTetrominoDownOneRowAction!
-
-    override func setUp() {
-        action = MoveTetrominoDownOneRowAction(view: SpyGameView())
-    }
-
     func test_perform_movesTetrominoPostitionDownOneRow() {
         let gameState = GameState()
         gameState.tetromino = STetromino(
@@ -22,7 +16,13 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+
+        let action = MoveTetrominoDownOneRowAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino!.position.row).to(equal((1)))
     }
@@ -39,7 +39,13 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+
+        let action = MoveTetrominoDownOneRowAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+        
+        action.perform()
 
         expect(gameState.cells[3][0]).to(beFalse())
         expect(gameState.cells[4][0]).to(beFalse())

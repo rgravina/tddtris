@@ -1,5 +1,11 @@
 class SettleTetrominoAction: Action {
-    func perform(state: GameState) {
+    let state: GameState
+
+    init(state: GameState) {
+        self.state = state
+    }
+
+    func perform() {
         state.tetromino = nil
     }
 }

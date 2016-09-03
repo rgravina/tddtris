@@ -4,15 +4,10 @@ import Nimble
 @testable import TddTetris
 
 class NextTetrominoActionTest: XCTestCase {
-    var action: NextTetrominoAction!
     var tetrominoGenerator: SpyTetrominoGenerator!
 
     override func setUp() {
         tetrominoGenerator = SpyTetrominoGenerator()
-        action = NextTetrominoAction(
-            view: SpyGameView(),
-            tetrominoGenerator: tetrominoGenerator
-        )
     }
 
     func test_perform_generatesNewTetromino() {
@@ -20,7 +15,13 @@ class NextTetrominoActionTest: XCTestCase {
         let tetromino = STetromino()
         tetrominoGenerator.next_return = tetromino
 
-        action.perform(gameState)
+        let action = NextTetrominoAction(
+            view: SpyGameView(),
+            state: gameState,
+            tetrominoGenerator: tetrominoGenerator
+        )
+
+        action.perform()
 
         expect(self.tetrominoGenerator.next_wasCalled).to(beTrue())
         expect(gameState.tetromino as? STetromino).toNot(beNil())
@@ -38,7 +39,13 @@ class NextTetrominoActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = NextTetrominoAction(
+            view: SpyGameView(),
+            state: gameState,
+            tetrominoGenerator: tetrominoGenerator
+        )
+
+        action.perform()
 
         expect(gameState.cells[3][0]).to(beFalse())
         expect(gameState.cells[3][1]).to(beTrue())

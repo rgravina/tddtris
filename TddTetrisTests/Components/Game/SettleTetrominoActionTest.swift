@@ -4,17 +4,14 @@ import Nimble
 @testable import TddTetris
 
 class SettleTetrominoActionTest: XCTestCase {
-    var action: SettleTetrominoAction!
-
-    override func setUp() {
-        action = SettleTetrominoAction()
-    }
-
     func test_perform_clearsTetromino() {
         let gameState = GameState()
         gameState.tetromino = STetromino()
 
-        action.perform(gameState)
+        let action = SettleTetrominoAction(
+            state: gameState
+        )
+        action.perform()
 
         expect(gameState.tetromino).to(beNil())
     }

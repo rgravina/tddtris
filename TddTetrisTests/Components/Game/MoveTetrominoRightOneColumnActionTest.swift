@@ -4,12 +4,6 @@ import Nimble
 @testable import TddTetris
 
 class MoveTetrominoRightOneColumnActionTest: XCTestCase {
-    var action: MoveTetrominoRightOneColumnAction!
-
-    override func setUp() {
-        action = MoveTetrominoRightOneColumnAction(view: SpyGameView())
-    }
-
     func test_perform_movesTetrominoPostitionRightOneColumn() {
         let gameState = GameState()
         gameState.tetromino = STetromino(
@@ -22,7 +16,12 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoRightOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino!.position.column).to(equal((1)))
     }
@@ -39,7 +38,12 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoRightOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino!.position.column).to(equal((7)))
     }
@@ -47,7 +51,12 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
     func test_perform_doesNothingWhenThereIsNoTetromino() {
         let gameState = GameState()
 
-        action.perform(gameState)
+        let action = MoveTetrominoRightOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.tetromino).to(beNil())
     }
@@ -64,7 +73,12 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
             ]
         )
 
-        action.perform(gameState)
+        let action = MoveTetrominoRightOneColumnAction(
+            view: SpyGameView(),
+            state: gameState
+        )
+
+        action.perform()
 
         expect(gameState.cells[5][0]).to(beTrue())
         expect(gameState.cells[6][0]).to(beTrue())

@@ -1,11 +1,16 @@
 class MoveTetrominoLeftOneColumnAction: Action {
     let view: GameView
+    let state: GameState
 
-    init(view: GameView) {
+    init(
+        view: GameView,
+        state: GameState
+    ) {
         self.view = view
+        self.state = state
     }
 
-    func perform(state: GameState) {
+    func perform() {
         if (state.tetromino == nil) {
             return
         }

@@ -1,3 +1,3 @@
 protocol Action {
-    func perform(state: GameState)
+    func perform()
 }

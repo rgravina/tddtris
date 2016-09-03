@@ -21,8 +21,6 @@ class DefaultTickHandler: TickHandler {
     }
 
     func tick() {
-        actionSelector
-            .next(gameState)
-            .perform(gameState)
+        actionSelector.next().perform()
     }
 }

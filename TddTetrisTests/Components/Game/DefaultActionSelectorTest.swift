@@ -5,23 +5,24 @@ import Nimble
 class DefaultActionSelectorTest: XCTestCase {
     var view: GameView!
     var tetrominoGenerator: SpyTetrominoGenerator!
-    var actionSelector: DefaultActionSelector!
     var collisionDetector: SpyCollisionDetector!
 
     override func setUp() {
         view = SpyGameView()
         tetrominoGenerator = SpyTetrominoGenerator()
         collisionDetector = SpyCollisionDetector()
-        actionSelector = DefaultActionSelector(
-            view: view,
-            tetrominoGenerator: tetrominoGenerator,
-            collisionDetector: collisionDetector
-        )
     }
 
     func test_next_returnsNextTetrominoActionWhenNoTetromino() {
         let gameState = GameState()
-        let action = actionSelector.next(gameState)
+        let actionSelector = DefaultActionSelector(
+            view: view,
+            state: gameState,
+            tetrominoGenerator: tetrominoGenerator,
+            collisionDetector: collisionDetector
+        )
+
+        let action = actionSelector.next()
 
         expect(action as? NextTetrominoAction).toNot(beNil())
     }
@@ -37,7 +38,15 @@ class DefaultActionSelectorTest: XCTestCase {
                 (column: 0, row: 0)
             ]
         )
-        let action = actionSelector.next(gameState)
+
+        let actionSelector = DefaultActionSelector(
+            view: view,
+            state: gameState,
+            tetrominoGenerator: tetrominoGenerator,
+            collisionDetector: collisionDetector
+        )
+
+        let action = actionSelector.next()
 
         expect(action as? MoveTetrominoDownOneRowAction).toNot(beNil())
     }
@@ -54,7 +63,15 @@ class DefaultActionSelectorTest: XCTestCase {
                 (column: 0, row: 0)
             ]
         )
-        let action = actionSelector.next(gameState)
+
+        let actionSelector = DefaultActionSelector(
+            view: view,
+            state: gameState,
+            tetrominoGenerator: tetrominoGenerator,
+            collisionDetector: collisionDetector
+        )
+
+        let action = actionSelector.next()
 
         expect(action as? SettleTetrominoAction).toNot(beNil())
     }
