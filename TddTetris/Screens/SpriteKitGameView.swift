@@ -1,14 +1,14 @@
 import SpriteKit
 
 class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
-    static let BLOCK_SIZE = 24
+    static let BLOCK_SIZE = 28
     var view: UIView! {
         get {
             return skview as UIView!
         }
     }
-    private static let BOARD_TOP_PADDING = 38
-    private static let BOARD_LEFT_PADDING = 12
+    private static let BOARD_TOP_PADDING = 46
+    private static let BOARD_LEFT_PADDING = 16
     private var skview: SKView!
     private var scene: SKScene!
     private var topLeft: CGPoint!
