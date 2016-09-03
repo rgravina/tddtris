@@ -10,8 +10,11 @@ class DefaultCollisionDetectorTest: XCTestCase {
         gameState.tetromino = tetromino
 
         let detector = DefaultCollisionDetector()
-        let result = detector.wouldCollide(gameState, position: tetromino.position)
-
+        let result = detector.wouldCollide(
+            gameState,
+            position: tetromino.position,
+            direction: .DOWN
+        )
         expect(result).to(beTrue())
     }
 
@@ -22,7 +25,11 @@ class DefaultCollisionDetectorTest: XCTestCase {
         gameState.tetromino = tetromino
         gameState.cells[0][1] = true
         let detector = DefaultCollisionDetector()
-        let result = detector.wouldCollide(gameState, position: tetromino.position)
+        let result = detector.wouldCollide(
+            gameState,
+            position: tetromino.position,
+            direction: .DOWN
+        )
 
         expect(result).to(beTrue())
     }

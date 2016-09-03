@@ -27,7 +27,8 @@ class DefaultActionSelector: ActionSelector {
         for position in tetromino.lowerBlocks {
             if collisionDetector.wouldCollide(
                 state,
-                position: position
+                position: position,
+                direction: .DOWN
             ) {
                 return SettleTetrominoAction()
             }
