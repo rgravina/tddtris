@@ -4,32 +4,38 @@ import Nimble
 
 class DefaultCollisionDetectorTest: XCTestCase {
     func test_willCollide_returnsTrueWhenTetrominoReachesBottom() {
-        var tetromino = STetromino()
-        tetromino.position = (0, 19)
+        let tetromino = STetromino(
+            position: (0, 18),
+            blocks: [
+                (column: 0, row: 19),
+                (column: 1, row: 18),
+                (column: 1, row: 19),
+                (column: 2, row: 18)
+            ]
+        )
         let gameState = GameState()
         gameState.tetromino = tetromino
 
-        let detector = DefaultCollisionDetector()
-        let result = detector.wouldCollide(
-            gameState,
-            position: tetromino.position,
-            direction: .DOWN
-        )
+        let detector = DefaultCollisionDetector(state: gameState)
+        let result = detector.wouldCollide(.DOWN)
         expect(result).to(beTrue())
     }
 
-    func test_willCollide_returnsTrueWhenTetrominoIsObstructedBelow() {
-        var tetromino = STetromino()
-        tetromino.position = (0, 0)
+    func test_willCollide_returnsTrueWhenTetrominoIsObstructedDirectlyBelow() {
+        let tetromino = STetromino(
+            position: (0, 0),
+            blocks: [
+                (column: 0, row: 1),
+                (column: 1, row: 0),
+                (column: 1, row: 1),
+                (column: 2, row: 0)
+            ]
+        )
         let gameState = GameState()
         gameState.tetromino = tetromino
-        gameState.cells[0][1] = true
-        let detector = DefaultCollisionDetector()
-        let result = detector.wouldCollide(
-            gameState,
-            position: tetromino.position,
-            direction: .DOWN
-        )
+        gameState.cells[0][2] = true
+        let detector = DefaultCollisionDetector(state: gameState)
+        let result = detector.wouldCollide(.DOWN)
 
         expect(result).to(beTrue())
     }

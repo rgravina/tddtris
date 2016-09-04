@@ -1,3 +1,5 @@
+@testable import TddTetris
+
 class SpyInputHandler: InputHandler {
     var didSwipeLeft_wasCalled = false
     func didSwipeLeft() {

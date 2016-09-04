@@ -17,7 +17,6 @@ class DefaultActionSelector: ActionSelector {
 
     func next() -> Action {
         let maybeTetromino = state.tetromino
-
         if maybeTetromino == nil {
             return NextTetrominoAction(
                 view: view,
@@ -26,18 +25,10 @@ class DefaultActionSelector: ActionSelector {
             )
         }
 
-        let tetromino = maybeTetromino!
-
-        for position in tetromino.lowerBlocks {
-            if collisionDetector.wouldCollide(
-                state,
-                position: position,
-                direction: .DOWN
-            ) {
-                return SettleTetrominoAction(
-                    state: state
-                )
-            }
+        if collisionDetector.wouldCollide(.DOWN) {
+            return SettleTetrominoAction(
+                state: state
+            )
         }
 
         return MoveTetrominoDownOneRowAction(

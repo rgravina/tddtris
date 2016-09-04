@@ -1,14 +1,10 @@
 @testable import TddTetris
 
 class SpyCollisionDetector: CollisionDetector {
-    var wouldCollide_arguments = (column: 0, row: 0)
+    var wouldCollide_arguments: CollisionDetectorDirection!
     var wouldCollide_returnValue = false
-    func wouldCollide(
-        state: GameState,
-        position: (column: Int, row: Int),
-        direction: CollisionDetectorDirection
-    ) -> Bool {
-        wouldCollide_arguments = position
+    func wouldCollide(direction: CollisionDetectorDirection) -> Bool {
+        wouldCollide_arguments = direction
         return wouldCollide_returnValue
     }
 }

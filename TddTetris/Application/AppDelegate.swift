@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 view: view,
                 state: gameState,
                 tetrominoGenerator: DefaultTetrominoGenerator(),
-                collisionDetector: DefaultCollisionDetector()
+                collisionDetector: DefaultCollisionDetector(
+                    state: gameState
+                )
             ),
             gameState: gameState
         )

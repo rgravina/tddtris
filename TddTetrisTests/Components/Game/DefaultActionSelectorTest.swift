@@ -54,7 +54,7 @@ class DefaultActionSelectorTest: XCTestCase {
     func test_next_returnsSettleTetrominoActionWhenTetrominoWillCollide() {
         collisionDetector.wouldCollide_returnValue = true
         let gameState = GameState()
-        gameState.tetromino =  STetromino(
+        gameState.tetromino = STetromino(
             position: (0, 0),
             blocks: [
                 (column: 0, row: 0),

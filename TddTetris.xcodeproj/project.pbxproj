@@ -23,7 +23,6 @@
 		973716BB1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973716BA1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift */; };
 		973CB7311D746EF300E3B29D /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7301D746EF300E3B29D /* InputHandler.swift */; };
 		973CB7331D74703C00E3B29D /* DefaultInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */; };
-		973CB7351D7470E400E3B29D /* SpyInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CB7341D7470E400E3B29D /* SpyInputHandler.swift */; };
 		974943FC1D770E7A00156B14 /* MoveTetrominoLeftOneColumnActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974943FB1D770E7A00156B14 /* MoveTetrominoLeftOneColumnActionTest.swift */; };
 		974943FE1D770F7F00156B14 /* MoveTetrominoRightOneColumnActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974943FD1D770F7F00156B14 /* MoveTetrominoRightOneColumnActionTest.swift */; };
 		975349511D43A3530084B569 /* TetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975349501D43A3530084B569 /* TetrominoGenerator.swift */; };
@@ -65,6 +64,7 @@
 		97DC642C1D3F36F900A17A17 /* SpyTetrominoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC642B1D3F36F900A17A17 /* SpyTetrominoGenerator.swift */; };
 		97E0CC681D6C7CB7000B2693 /* DefaultTickHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0CC671D6C7CB7000B2693 /* DefaultTickHandlerTest.swift */; };
 		97EB0EED1D7AA60000882F3B /* CollisionDetectorDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB0EEC1D7AA60000882F3B /* CollisionDetectorDirection.swift */; };
+		97EE16741D7BBAF80025607A /* SpyInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE16731D7BBAF80025607A /* SpyInputHandler.swift */; };
 		97F2EFEF1D72A25000154407 /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFEE1D72A25000154407 /* Tetromino.swift */; };
 		97F2EFF11D72A2E500154407 /* STetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFF01D72A2E500154407 /* STetromino.swift */; };
 		97F2EFF31D72A31B00154407 /* SquareTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F2EFF21D72A31B00154407 /* SquareTetromino.swift */; };
@@ -124,7 +124,6 @@
 		973716BA1D75BD14008EAE98 /* MoveTetrominoLeftOneColumnAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoLeftOneColumnAction.swift; sourceTree = "<group>"; };
 		973CB7301D746EF300E3B29D /* InputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputHandler.swift; sourceTree = "<group>"; };
 		973CB7321D74703C00E3B29D /* DefaultInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultInputHandler.swift; sourceTree = "<group>"; };
-		973CB7341D7470E400E3B29D /* SpyInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyInputHandler.swift; sourceTree = "<group>"; };
 		974943FB1D770E7A00156B14 /* MoveTetrominoLeftOneColumnActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoLeftOneColumnActionTest.swift; sourceTree = "<group>"; };
 		974943FD1D770F7F00156B14 /* MoveTetrominoRightOneColumnActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoRightOneColumnActionTest.swift; sourceTree = "<group>"; };
 		975349501D43A3530084B569 /* TetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetrominoGenerator.swift; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		97DC642B1D3F36F900A17A17 /* SpyTetrominoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyTetrominoGenerator.swift; sourceTree = "<group>"; };
 		97E0CC671D6C7CB7000B2693 /* DefaultTickHandlerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTickHandlerTest.swift; sourceTree = "<group>"; };
 		97EB0EEC1D7AA60000882F3B /* CollisionDetectorDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionDetectorDirection.swift; sourceTree = "<group>"; };
+		97EE16731D7BBAF80025607A /* SpyInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyInputHandler.swift; sourceTree = "<group>"; };
 		97F2EFEE1D72A25000154407 /* Tetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
 		97F2EFF01D72A2E500154407 /* STetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STetromino.swift; sourceTree = "<group>"; };
 		97F2EFF21D72A31B00154407 /* SquareTetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareTetromino.swift; sourceTree = "<group>"; };
@@ -212,6 +212,7 @@
 				973211DF1D716EDA00E9C4F8 /* SpyAction.swift */,
 				973211D31D716A9D00E9C4F8 /* SpyActionSelector.swift */,
 				9754CBD01D72F190000B4106 /* SpyCollisionDetector.swift */,
+				97EE16731D7BBAF80025607A /* SpyInputHandler.swift */,
 				977C672B1D68A95000E1CE7D /* SpyLauncher.swift */,
 				975C59211D5C0B0800B3AB2A /* SpyTickHandler.swift */,
 				972329F11D5A062400E23AA3 /* SpyTimeKeeper.swift */,
@@ -376,7 +377,6 @@
 				973211DB1D716BF200E9C4F8 /* NextTetrominoAction.swift */,
 				97C9C65D1D71765A0051B329 /* NoAction.swift */,
 				97F2EFF41D72A66500154407 /* SettleTetrominoAction.swift */,
-				973CB7341D7470E400E3B29D /* SpyInputHandler.swift */,
 				977C67291D68A51600E1CE7D /* TickHandler.swift */,
 				972329ED1D5888D000E23AA3 /* TimeKeeper.swift */,
 			);
@@ -534,7 +534,6 @@
 				972329EC1D56F03E00E23AA3 /* SpriteKitSTetromino.swift in Sources */,
 				97CD4F771D4C63260055B47C /* SpriteKitTetromino.swift in Sources */,
 				97CD4F751D4C5EB20055B47C /* SpriteKitTetrominoMover.swift in Sources */,
-				973CB7351D7470E400E3B29D /* SpyInputHandler.swift in Sources */,
 				97F2EFF31D72A31B00154407 /* SquareTetromino.swift in Sources */,
 				97F2EFF11D72A2E500154407 /* STetromino.swift in Sources */,
 				975C59261D5C3DA300B3AB2A /* TestingAppDelegate.swift in Sources */,
@@ -568,6 +567,7 @@
 				973211D41D716A9D00E9C4F8 /* SpyActionSelector.swift in Sources */,
 				9754CBD11D72F190000B4106 /* SpyCollisionDetector.swift in Sources */,
 				97D120D41D3CD5B8007A7E2B /* SpyGameView.swift in Sources */,
+				97EE16741D7BBAF80025607A /* SpyInputHandler.swift in Sources */,
 				977C672C1D68A95000E1CE7D /* SpyLauncher.swift in Sources */,
 				97DC642C1D3F36F900A17A17 /* SpyTetrominoGenerator.swift in Sources */,
 				975C59221D5C0B0800B3AB2A /* SpyTickHandler.swift in Sources */,
