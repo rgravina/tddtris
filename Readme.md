@@ -10,24 +10,28 @@ This game only has one view controller (`GameViewController`) which renders the 
 
 * `SpriteKitGameView` - contains the `SKView` and `SKScene` required to display a Sprite Kit scene.
 * `GameState` - keeps the state of the 10 column x 20 row game grid.
+* `DefaultCollisionDetector` - determines if a move left, down or right would result in a collision.
 * `DefaultTickHandler` - handles the 'tick' of the game.
 * `DefaultTimeKeeper` - keeps track of the last tick time.
-* `DefaultActionSelector` - generates an appropriate action based on the game state.
+* `DefaultActionSelector` - generates the next action to take based on the game state each tick.
 * `DefaultTetrominoGenerator` - generates a random tetromino.
-* `DefaultCollisionDetector` - determines if the next move would result in a collision.
 * `DefaultInputHandler` - handles left and right swipes.
 * `GameLauncher` - sets `DefaultTickHandler` to handle game ticks, `DefaultInputHandler` to handle user input and gets the game started.
 
 ```swift
 let view = SpriteKitGameView()
 let gameState = GameState()
+let collisionDetector = DefaultCollisionDetector(
+    state: gameState
+)
 
 let tickHandler = DefaultTickHandler(
     timeKeeper: DefaultTimeKeeper(),
     actionSelector: DefaultActionSelector(
         view: view,
+        state: gameState,
         tetrominoGenerator: DefaultTetrominoGenerator(),
-        collisionDetector: DefaultCollisionDetector()
+        collisionDetector: collisionDetector
     ),
     gameState: gameState
 )
@@ -38,7 +42,8 @@ let gameVC = GameViewController(
         tickHandler: tickHandler,
         inputHandler: DefaultInputHandler(
             view: view,
-            gameState: gameState
+            gameState: gameState,
+            collisionDetector: collisionDetector
         )
     )
 )
