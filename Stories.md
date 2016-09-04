@@ -4,7 +4,7 @@
 - [x] I want blocks to settle when they reach the bottom.
 - [x] I want a new block to appear at the top after a block has settled.
 - [x] I want blocks to settle when landing on top of other blocks.
-- [ ] I want to be able to move the block left and right as it falls.
+- [x] I want to be able to move the block left and right as it falls.
 - [ ] I want to be able to rotate a block.
 - [ ] I want to play the game with the Z block.
 - [ ] I want to play the game with the square block.
