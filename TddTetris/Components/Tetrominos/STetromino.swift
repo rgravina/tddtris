@@ -16,4 +16,24 @@ struct STetromino: Tetromino {
             return [blocks[2], blocks[3]]
         }
     }
+
+    func move(direction: CollisionDetectorDirection) -> Tetromino {
+        switch (direction) {
+        case .DOWN:
+        return STetromino(
+            position: (
+                position.column,
+                position.row + 1
+            ),
+            blocks: [
+                (blocks[0].column, blocks[0].row + 1),
+                (blocks[1].column, blocks[1].row + 1),
+                (blocks[2].column, blocks[2].row + 1),
+                (blocks[3].column, blocks[3].row + 1)
+            ]
+        )
+        default:
+            return self
+        }
+    }
 }

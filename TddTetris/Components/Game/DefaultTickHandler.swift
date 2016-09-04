@@ -5,9 +5,10 @@ class DefaultTickHandler: TickHandler {
     private var actionSelector: ActionSelector!
     private var gameState: GameState!
 
-    init (timeKeeper: TimeKeeper,
-          actionSelector: ActionSelector,
-          gameState: GameState
+    init (
+        timeKeeper: TimeKeeper,
+        actionSelector: ActionSelector,
+        gameState: GameState
     ) {
         self.timeKeeper = timeKeeper
         self.actionSelector = actionSelector

@@ -11,9 +11,10 @@ class GameLauncher: Launcher {
         }
     }
 
-    init (view: GameView,
-          tickHandler: TickHandler,
-          inputHandler: InputHandler
+    init (
+        view: GameView,
+        tickHandler: TickHandler,
+        inputHandler: InputHandler
     ) {
         self.gameView = view
         self.tickHandler = tickHandler

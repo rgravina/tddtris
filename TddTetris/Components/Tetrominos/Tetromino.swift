@@ -4,4 +4,5 @@ protocol Tetromino {
     var lowerFacingBlocks: Array<(column: Int, row: Int)> { get }
     var leftFacingBlocks: Array<(column: Int, row: Int)> { get }
     var rightFacingBlocks: Array<(column: Int, row: Int)> { get }
+    func move(direction: CollisionDetectorDirection) -> Tetromino
 }

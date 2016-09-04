@@ -16,4 +16,8 @@ struct SquareTetromino: Tetromino {
             return [blocks[2], blocks[3]]
         }
     }
+
+    func move(direction: CollisionDetectorDirection) -> Tetromino {
+        return self
+    }
 }
