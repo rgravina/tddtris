@@ -14,11 +14,29 @@ class DefaultCollisionDetector: CollisionDetector {
 
         switch (direction) {
         case .DOWN:
-            for position in tetromino.lowerBlocks {
-                if (position.row >= GameState.ROWS - 1) {
+            for position in tetromino.lowerFacingBlocks {
+                if (position.row == GameState.ROWS - 1) {
                     return true
                 }
                 if (state.cells[position.column][position.row + 1]) {
+                    return true
+                }
+            }
+        case .LEFT:
+            for position in tetromino.leftFacingBlocks {
+                if (position.column == 0) {
+                    return true
+                }
+                if (state.cells[position.column - 1][position.row]) {
+                    return true
+                }
+            }
+        case .RIGHT:
+            for position in tetromino.rightFacingBlocks {
+                if (position.column == GameState.COLUMNS - 1) {
+                    return true
+                }
+                if (state.cells[position.column + 1][position.row]) {
                     return true
                 }
             }

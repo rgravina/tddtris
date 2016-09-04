@@ -18,7 +18,8 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
 
         let action = MoveTetrominoRightOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()
@@ -26,7 +27,7 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         expect(gameState.tetromino!.position.column).to(equal((1)))
     }
 
-    func test_perform_stopsMovingAtEdge() {
+    func test_perform_stopsMovingIfWouldCollide() {
         let gameState = GameState()
         gameState.tetromino = STetromino(
             position: (7, 0),
@@ -38,9 +39,13 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
             ]
         )
 
+        let collisionDetector = SpyCollisionDetector()
+        collisionDetector.wouldCollide_returnValue = true
+
         let action = MoveTetrominoRightOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: collisionDetector
         )
 
         action.perform()
@@ -53,7 +58,8 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
 
         let action = MoveTetrominoRightOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()
@@ -75,7 +81,8 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
 
         let action = MoveTetrominoRightOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()

@@ -1,15 +1,23 @@
 class DefaultInputHandler: InputHandler {
-    let view: GameView!
-    let gameState: GameState!
+    let view: GameView
+    let gameState: GameState
+    let collisionDetector: CollisionDetector
 
-    init(view: GameView, gameState: GameState) {
+    init(
+        view: GameView,
+        gameState: GameState,
+        collisionDetector: CollisionDetector
+    ) {
         self.view = view
         self.gameState = gameState
+        self.collisionDetector = collisionDetector
     }
+
     func didSwipeLeft() {
         let action = MoveTetrominoLeftOneColumnAction(
             view: view,
-            state: gameState
+            state: gameState,
+            collisionDetector: collisionDetector
         )
         action.perform()
     }
@@ -17,7 +25,8 @@ class DefaultInputHandler: InputHandler {
     func didSwipeRight() {
         let action = MoveTetrominoRightOneColumnAction(
             view: view,
-            state: gameState
+            state: gameState,
+            collisionDetector: collisionDetector
         )
         action.perform()
     }

@@ -18,7 +18,8 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
 
         let action = MoveTetrominoLeftOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()
@@ -26,34 +27,14 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
         expect(gameState.tetromino!.position.column).to(equal((0)))
     }
 
-    func test_perform_stopsMovingAtEdge() {
-        let gameState = GameState()
-        gameState.tetromino = STetromino(
-            position: (0, 0),
-            blocks: [
-                (column: 0, row: 1),
-                (column: 1, row: 0),
-                (column: 1, row: 1),
-                (column: 2, row: 0)
-            ]
-        )
-
-        let action = MoveTetrominoLeftOneColumnAction(
-            view: SpyGameView(),
-            state: gameState
-        )
-
-        action.perform()
-
-        expect(gameState.tetromino!.position.column).to(equal((0)))
-    }
 
     func test_perform_doesNothingWhenThereIsNoTetromino() {
         let gameState = GameState()
 
         let action = MoveTetrominoLeftOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()
@@ -64,9 +45,13 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
     func test_perform_doesNothingIfWouldCollide() {
         let gameState = GameState()
 
+        let collisionDetector = SpyCollisionDetector()
+        collisionDetector.wouldCollide_returnValue = true
+
         let action = MoveTetrominoLeftOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: collisionDetector
         )
 
         action.perform()
@@ -88,7 +73,8 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
 
         let action = MoveTetrominoLeftOneColumnAction(
             view: SpyGameView(),
-            state: gameState
+            state: gameState,
+            collisionDetector: SpyCollisionDetector()
         )
 
         action.perform()

@@ -1,13 +1,16 @@
 class MoveTetrominoLeftOneColumnAction: Action {
     let view: GameView
     let state: GameState
+    let collisionDetector: CollisionDetector
 
     init(
         view: GameView,
-        state: GameState
+        state: GameState,
+        collisionDetector: CollisionDetector
     ) {
         self.view = view
         self.state = state
+        self.collisionDetector = collisionDetector
     }
 
     func perform() {
@@ -15,7 +18,7 @@ class MoveTetrominoLeftOneColumnAction: Action {
             return
         }
         let tetromino = state.tetromino!
-        if tetromino.position.column == 0 {
+        if (collisionDetector.wouldCollide(.LEFT)) {
             return
         }
         let movedTemtromino = STetromino(

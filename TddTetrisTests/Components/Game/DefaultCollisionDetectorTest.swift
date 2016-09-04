@@ -39,4 +39,23 @@ class DefaultCollisionDetectorTest: XCTestCase {
 
         expect(result).to(beTrue())
     }
+
+    func test_willCollide_returnsTrueWhenTetrominoIsObstructedDirectlyLeft() {
+        let tetromino = STetromino(
+            position: (1, 0),
+            blocks: [
+                (column: 1, row: 1),
+                (column: 2, row: 0),
+                (column: 2, row: 1),
+                (column: 1, row: 0)
+            ]
+        )
+        let gameState = GameState()
+        gameState.tetromino = tetromino
+        gameState.cells[0][1] = true
+        let detector = DefaultCollisionDetector(state: gameState)
+        let result = detector.wouldCollide(.LEFT)
+
+        expect(result).to(beTrue())
+    }
 }
