@@ -32,6 +32,32 @@ struct STetromino: Tetromino {
                 (blocks[3].column, blocks[3].row + 1)
             ]
         )
+        case .LEFT:
+            return STetromino(
+                position: (
+                    position.column - 1,
+                    position.row
+                ),
+                blocks: [
+                    (blocks[0].column - 1, blocks[0].row),
+                    (blocks[1].column - 1, blocks[1].row),
+                    (blocks[2].column - 1, blocks[2].row),
+                    (blocks[3].column - 1, blocks[3].row)
+                ]
+            )
+        case .RIGHT:
+            return STetromino(
+                position: (
+                    position.column + 1,
+                    position.row
+                ),
+                blocks: [
+                    (blocks[0].column + 1, blocks[0].row),
+                    (blocks[1].column + 1, blocks[1].row),
+                    (blocks[2].column + 1, blocks[2].row),
+                    (blocks[3].column + 1, blocks[3].row)
+                ]
+            )
         default:
             return self
         }
