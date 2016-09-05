@@ -30,4 +30,7 @@ class DefaultInputHandler: InputHandler {
         )
         action.perform()
     }
+
+    func didSwipeDown() {
+    }
 }

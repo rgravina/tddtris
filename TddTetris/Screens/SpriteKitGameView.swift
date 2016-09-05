@@ -16,6 +16,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     private var skTetromino: SpriteKitTetromino!
     private var swipeRightRegognizer: UISwipeGestureRecognizer!
     private var swipeLeftRegognizer: UISwipeGestureRecognizer!
+    private var swipeDownRegognizer: UISwipeGestureRecognizer!
     private var inputHandler: InputHandler!
 
     func configure(
@@ -39,10 +40,14 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         swipeRightRegognizer.direction = UISwipeGestureRecognizerDirection.Right
         skview.addGestureRecognizer(swipeRightRegognizer)
 
-        let swipeLeftRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
+        swipeLeftRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
         swipeLeftRegognizer.direction = UISwipeGestureRecognizerDirection.Left
         skview.addGestureRecognizer(swipeLeftRegognizer)
-    }
+
+        swipeDownRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
+        swipeDownRegognizer.direction = UISwipeGestureRecognizerDirection.Down
+        skview.addGestureRecognizer(swipeDownRegognizer)
+}
 
     func didSwipe(sender: UISwipeGestureRecognizer) {
         switch sender.direction {
@@ -50,6 +55,8 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             inputHandler.didSwipeLeft()
         case UISwipeGestureRecognizerDirection.Right:
             inputHandler.didSwipeRight()
+        case UISwipeGestureRecognizerDirection.Down:
+            inputHandler.didSwipeDown()
         default: break
         }
     }
