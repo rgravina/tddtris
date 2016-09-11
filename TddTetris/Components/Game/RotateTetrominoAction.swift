@@ -19,7 +19,7 @@ class RotateTetrominoAction : Action {
         }
         let tetromino = state.tetromino!
         if (collisionDetector.canRotate()) {
-            tetromino.rotate()
+            state.tetromino = tetromino.rotate()
             view.rotate()
         }
     }

@@ -19,6 +19,8 @@ class RotateTetrominoActionTest: XCTestCase {
     func test_perform_rotatesTetrominoWhenNoRotateCollision() {
         spyTetromino.rotate_returnValue = spyTetromino
         gameState.tetromino = spyTetromino
+        let rotatedTetromino = STetromino()
+        spyTetromino.rotate_returnValue = rotatedTetromino
         spyCollisionDetector.canRotate_returnValue = true
 
         let action = RotateTetrominoAction(
@@ -32,6 +34,7 @@ class RotateTetrominoActionTest: XCTestCase {
         expect(self.spyCollisionDetector.canRotate_wasCalled).to(beTrue())
         expect(self.spyTetromino.rotate_wasCalled).to(beTrue())
         expect(self.spyGameView.rotate_wasCalled).to(beTrue())
+        expect(self.gameState.tetromino as? STetromino).toNot(beNil())
     }
 
     func test_perform_doesNotRotateTetrominoWhenCollision() {
