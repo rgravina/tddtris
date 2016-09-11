@@ -39,4 +39,13 @@ class DefaultInputHandler: InputHandler {
         )
         action.perform()
     }
+
+    func didTap() {
+        let action = RotateTetrominoAction(
+            view: view,
+            state: gameState,
+            collisionDetector: collisionDetector
+        )
+        action.perform()
+    }
 }

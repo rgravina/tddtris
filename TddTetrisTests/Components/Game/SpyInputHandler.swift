@@ -15,4 +15,9 @@ class SpyInputHandler: InputHandler {
     func didSwipeDown() {
         didSwipeDown_wasCalled = true
     }
+
+    var didTap_wasCalled = false
+    func didTap() {
+        didTap_wasCalled = true
+    }
 }
