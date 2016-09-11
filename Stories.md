@@ -5,6 +5,7 @@
 - [x] I want a new block to appear at the top after a block has settled.
 - [x] I want blocks to settle when landing on top of other blocks.
 - [x] I want to be able to move the block left and right as it falls.
+- [x] I want to be able to quick drop the block.
 - [ ] I want to be able to rotate a block.
 - [ ] I want to play the game with the Z block.
 - [ ] I want to play the game with the square block.
@@ -17,7 +18,6 @@
 - [ ] I want to get points when I complete rows.
 - [ ] I want to see a preview of the next randomly chosen block.
 - [ ] I want blocks to have random colors.
-- [ ] I want to be able to quick drop the block.
 - [ ] I want sound effects and background music.
 - [ ] I want to level up after getting a certain number of points.
 - [ ] I want the game to get harder as I progress in levels.
