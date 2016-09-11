@@ -17,7 +17,7 @@ struct SquareTetromino: Tetromino {
         }
     }
 
-    func move(direction: CollisionDetectorDirection) -> Tetromino {
+    func move(direction: Direction) -> Tetromino {
         return self
     }
 }

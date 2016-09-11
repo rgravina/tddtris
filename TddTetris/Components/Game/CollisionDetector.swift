@@ -1,3 +1,3 @@
 protocol CollisionDetector {
-    func wouldCollide(direction: CollisionDetectorDirection) -> Bool
+    func wouldCollide(direction: Direction) -> Bool
 }

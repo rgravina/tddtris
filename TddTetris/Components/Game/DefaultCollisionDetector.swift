@@ -5,7 +5,7 @@ class DefaultCollisionDetector: CollisionDetector {
         self.state = state
     }
 
-    func wouldCollide(direction: CollisionDetectorDirection) -> Bool {
+    func wouldCollide(direction: Direction) -> Bool {
         let maybeTetromino = state.tetromino
         if maybeTetromino == nil {
             return false

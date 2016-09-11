@@ -17,7 +17,7 @@ struct STetromino: Tetromino {
         }
     }
 
-    func move(direction: CollisionDetectorDirection) -> Tetromino {
+    func move(direction: Direction) -> Tetromino {
         switch (direction) {
         case .DOWN:
         return STetromino(

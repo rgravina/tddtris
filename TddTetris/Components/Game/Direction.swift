@@ -1,4 +1,4 @@
-enum CollisionDetectorDirection: Int {
+enum Direction: Int {
     case UP = 0
     case RIGHT
     case LEFT
