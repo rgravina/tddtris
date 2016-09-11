@@ -62,4 +62,8 @@ struct STetromino: Tetromino {
             return self
         }
     }
+
+    func rotate() -> Tetromino {
+        return self
+    }
 }

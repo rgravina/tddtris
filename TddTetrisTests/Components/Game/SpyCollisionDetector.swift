@@ -7,4 +7,11 @@ class SpyCollisionDetector: CollisionDetector {
         wouldCollide_arguments = direction
         return wouldCollide_returnValue
     }
+
+    var canRotate_wasCalled = false
+    var canRotate_returnValue = false
+    func canRotate() -> Bool {
+        canRotate_wasCalled = true
+        return canRotate_returnValue
+    }
 }

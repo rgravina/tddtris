@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		972144F61D854F9F00D8879F /* RotateTetrominoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972144F51D854F9F00D8879F /* RotateTetrominoAction.swift */; };
+		972144F81D8553C500D8879F /* RotateTetrominoActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972144F71D8553C500D8879F /* RotateTetrominoActionTest.swift */; };
+		972144FA1D85574D00D8879F /* SpyTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972144F91D85574D00D8879F /* SpyTetromino.swift */; };
 		972329EA1D55DEFA00E23AA3 /* GameLancherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329E91D55DEFA00E23AA3 /* GameLancherTest.swift */; };
 		972329EC1D56F03E00E23AA3 /* SpriteKitSTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329EB1D56F03E00E23AA3 /* SpriteKitSTetromino.swift */; };
 		972329EE1D5888D000E23AA3 /* TimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972329ED1D5888D000E23AA3 /* TimeKeeper.swift */; };
@@ -111,6 +113,8 @@
 
 /* Begin PBXFileReference section */
 		972144F51D854F9F00D8879F /* RotateTetrominoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateTetrominoAction.swift; sourceTree = "<group>"; };
+		972144F71D8553C500D8879F /* RotateTetrominoActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateTetrominoActionTest.swift; sourceTree = "<group>"; };
+		972144F91D85574D00D8879F /* SpyTetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyTetromino.swift; sourceTree = "<group>"; };
 		972329E91D55DEFA00E23AA3 /* GameLancherTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLancherTest.swift; sourceTree = "<group>"; };
 		972329EB1D56F03E00E23AA3 /* SpriteKitSTetromino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitSTetromino.swift; sourceTree = "<group>"; };
 		972329ED1D5888D000E23AA3 /* TimeKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeKeeper.swift; sourceTree = "<group>"; };
@@ -212,12 +216,14 @@
 				974943FB1D770E7A00156B14 /* MoveTetrominoLeftOneColumnActionTest.swift */,
 				974943FD1D770F7F00156B14 /* MoveTetrominoRightOneColumnActionTest.swift */,
 				97F2EFFA1D72BB9800154407 /* NextTetrominoActionTest.swift */,
+				972144F71D8553C500D8879F /* RotateTetrominoActionTest.swift */,
 				97F2EFF81D72B20800154407 /* SettleTetrominoActionTest.swift */,
 				973211DF1D716EDA00E9C4F8 /* SpyAction.swift */,
 				973211D31D716A9D00E9C4F8 /* SpyActionSelector.swift */,
 				9754CBD01D72F190000B4106 /* SpyCollisionDetector.swift */,
 				97EE16731D7BBAF80025607A /* SpyInputHandler.swift */,
 				977C672B1D68A95000E1CE7D /* SpyLauncher.swift */,
+				972144F91D85574D00D8879F /* SpyTetromino.swift */,
 				975C59211D5C0B0800B3AB2A /* SpyTickHandler.swift */,
 				972329F11D5A062400E23AA3 /* SpyTimeKeeper.swift */,
 			);
@@ -568,6 +574,7 @@
 				974943FC1D770E7A00156B14 /* MoveTetrominoLeftOneColumnActionTest.swift in Sources */,
 				974943FE1D770F7F00156B14 /* MoveTetrominoRightOneColumnActionTest.swift in Sources */,
 				97F2EFFB1D72BB9800154407 /* NextTetrominoActionTest.swift in Sources */,
+				972144F81D8553C500D8879F /* RotateTetrominoActionTest.swift in Sources */,
 				97F2EFF91D72B20800154407 /* SettleTetrominoActionTest.swift in Sources */,
 				97D120DA1D3D1EF5007A7E2B /* SpriteKitGameViewTest.swift in Sources */,
 				97CD4F731D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift in Sources */,
@@ -577,6 +584,7 @@
 				97D120D41D3CD5B8007A7E2B /* SpyGameView.swift in Sources */,
 				97EE16741D7BBAF80025607A /* SpyInputHandler.swift in Sources */,
 				977C672C1D68A95000E1CE7D /* SpyLauncher.swift in Sources */,
+				972144FA1D85574D00D8879F /* SpyTetromino.swift in Sources */,
 				97DC642C1D3F36F900A17A17 /* SpyTetrominoGenerator.swift in Sources */,
 				975C59221D5C0B0800B3AB2A /* SpyTickHandler.swift in Sources */,
 				972329F21D5A062400E23AA3 /* SpyTimeKeeper.swift in Sources */,

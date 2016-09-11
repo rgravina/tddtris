@@ -9,4 +9,5 @@ protocol GameView {
     func moveDownOneRow()
     func moveLeftOneColumn()
     func moveRightOneColumn()
+    func rotate()
 }

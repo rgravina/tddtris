@@ -20,4 +20,8 @@ struct SquareTetromino: Tetromino {
     func move(direction: Direction) -> Tetromino {
         return self
     }
+
+    func rotate() -> Tetromino {
+        return self
+    }
 }

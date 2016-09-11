@@ -101,4 +101,9 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             tetromino: skTetromino,
             topLeft: topLeft
             ).moveRightOneColumn()
-    }}
+    }
+
+    func rotate() {
+        
+    }
+}

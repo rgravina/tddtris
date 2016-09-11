@@ -17,5 +17,10 @@ class RotateTetrominoAction : Action {
         if (state.tetromino == nil) {
             return
         }
+        let tetromino = state.tetromino!
+        if (collisionDetector.canRotate()) {
+            tetromino.rotate()
+            view.rotate()
+        }
     }
 }

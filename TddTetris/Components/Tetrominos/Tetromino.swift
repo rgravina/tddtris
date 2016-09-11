@@ -5,4 +5,5 @@ protocol Tetromino {
     var leftFacingBlocks: Array<(column: Int, row: Int)> { get }
     var rightFacingBlocks: Array<(column: Int, row: Int)> { get }
     func move(direction: Direction) -> Tetromino
+    func rotate() -> Tetromino
 }
