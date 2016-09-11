@@ -32,12 +32,11 @@ class DefaultInputHandler: InputHandler {
     }
 
     func didSwipeDown() {
-        let action = MoveTetrominoDownOneRowAction(
+        let action = DropTetrominoAction(
             view: view,
-            state: gameState
+            state: gameState,
+            collisionDetector: collisionDetector
         )
-        while !collisionDetector.wouldCollide(.DOWN) {
-            action.perform()
-        }
+        action.perform()
     }
 }
