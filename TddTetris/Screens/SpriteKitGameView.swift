@@ -17,8 +17,8 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     private var swipeRightRegognizer: UISwipeGestureRecognizer!
     private var swipeLeftRegognizer: UISwipeGestureRecognizer!
     private var swipeDownRegognizer: UISwipeGestureRecognizer!
+    private var tapRecogniser: UITapGestureRecognizer!
     private var inputHandler: InputHandler!
-
     func configure(
         game: TickHandler,
         inputHandler: InputHandler,
@@ -47,7 +47,10 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         swipeDownRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
         swipeDownRegognizer.direction = UISwipeGestureRecognizerDirection.Down
         skview.addGestureRecognizer(swipeDownRegognizer)
-}
+
+        tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(self.didTap(_:)))
+        skview.addGestureRecognizer(tapRecogniser)
+    }
 
     func didSwipe(sender: UISwipeGestureRecognizer) {
         switch sender.direction {
@@ -59,6 +62,10 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             inputHandler.didSwipeDown()
         default: break
         }
+    }
+
+    func didTap(sender: UITapGestureRecognizer) {
+        inputHandler.didTap()
     }
 
     func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
