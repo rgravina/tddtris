@@ -23,6 +23,6 @@ class MoveTetrominoDownOneRowAction: Action {
         for position in movedTemtromino.blocks {
             state.cells[position.column][position.row] = true
         }
-        view.moveDownOneRow()
+        view.move(movedTemtromino)
     }
 }

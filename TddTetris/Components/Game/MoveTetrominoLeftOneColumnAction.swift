@@ -29,6 +29,6 @@ class MoveTetrominoLeftOneColumnAction: Action {
         for position in movedTetromino.blocks {
             state.cells[position.column][position.row] = true
         }
-        view.moveLeftOneColumn()
+        view.move(movedTetromino)
     }
 }

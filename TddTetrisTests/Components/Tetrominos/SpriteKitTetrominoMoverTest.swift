@@ -13,11 +13,16 @@ class SpriteKitTetrominoMoverTest: XCTestCase {
         )
     }
 
-    func test_moveToDropCoordinates_movesToTopCenter() {
-        self.mover.moveToDropCoordinates()
+    func test_move_movesToPosition() {
+        self.mover.move(
+            STetromino(
+                position: (3, 1),
+                blocks: []
+            )
+        )
         expect(self.tetromino.position).to(equal(
             CGPoint(x: CGFloat(10 + SpriteKitGameView.BLOCK_SIZE * 3),
-                y: CGFloat(300)
+                y: CGFloat(300 - SpriteKitGameView.BLOCK_SIZE)
             )
         ))
     }

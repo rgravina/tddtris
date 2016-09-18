@@ -1,7 +1,7 @@
 import SpriteKit
 
 class SpriteKitSTetromino: SKNode, SpriteKitTetromino {
-    private var sprites = [SKSpriteNode]()
+    internal var sprites = [SKSpriteNode]()
     private let block = SKTexture(imageNamed: "blue")
     override init() {
         super.init()

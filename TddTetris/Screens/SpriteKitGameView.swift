@@ -82,35 +82,21 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
 
     func displayNext(tetromino: Tetromino) {
         skTetromino = SpriteKitSTetromino()
-        SpriteKitTetrominoMover(
-            tetromino: skTetromino,
-            topLeft: topLeft
-        ).moveToDropCoordinates()
+        move(tetromino)
         scene.addChild(skTetromino as! SKNode)
     }
 
-    func moveDownOneRow() {
+    func move(tetromino: Tetromino) {
         SpriteKitTetrominoMover(
             tetromino: skTetromino,
             topLeft: topLeft
-        ).moveDownOneRow()
-    }
-
-    func moveLeftOneColumn() {
-        SpriteKitTetrominoMover(
-            tetromino: skTetromino,
-            topLeft: topLeft
-            ).moveLeftOneColumn()
-    }
-
-    func moveRightOneColumn() {
-        SpriteKitTetrominoMover(
-            tetromino: skTetromino,
-            topLeft: topLeft
-            ).moveRightOneColumn()
+        ).move(tetromino)
     }
 
     func rotate() {
-        
+        SpriteKitTetrominoMover(
+            tetromino: skTetromino,
+            topLeft: topLeft
+        ).rotate()
     }
 }
