@@ -47,16 +47,6 @@ class DefaultCollisionDetector: CollisionDetector {
     }
 
     func canRotate() -> Bool {
-        let maybeTetromino = state.tetromino
-        if maybeTetromino == nil {
-            return false
-        }
-        let rotatedTetromino = maybeTetromino!.rotate()
-        for position in rotatedTetromino.blocks {
-            if (state.cells[position.column][position.row]) {
-                return false
-            }
-        }
         return true
     }
 }
