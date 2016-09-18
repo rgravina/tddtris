@@ -48,6 +48,7 @@
 		977C672A1D68A51600E1CE7D /* TickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C67291D68A51600E1CE7D /* TickHandler.swift */; };
 		977C672C1D68A95000E1CE7D /* SpyLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C672B1D68A95000E1CE7D /* SpyLauncher.swift */; };
 		979844E51D75C6B800CE5894 /* MoveTetrominoRightOneColumnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979844E41D75C6B800CE5894 /* MoveTetrominoRightOneColumnAction.swift */; };
+		979DD6AE1D8E894200026E0D /* STetrominoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979DD6AD1D8E894200026E0D /* STetrominoTest.swift */; };
 		97C9C65C1D7174B80051B329 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9C65B1D7174B80051B329 /* GameState.swift */; };
 		97C9C65E1D71765A0051B329 /* NoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9C65D1D71765A0051B329 /* NoAction.swift */; };
 		97C9C6601D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9C65F1D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift */; };
@@ -151,6 +152,7 @@
 		977C67291D68A51600E1CE7D /* TickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickHandler.swift; sourceTree = "<group>"; };
 		977C672B1D68A95000E1CE7D /* SpyLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLauncher.swift; sourceTree = "<group>"; };
 		979844E41D75C6B800CE5894 /* MoveTetrominoRightOneColumnAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoRightOneColumnAction.swift; sourceTree = "<group>"; };
+		979DD6AD1D8E894200026E0D /* STetrominoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STetrominoTest.swift; sourceTree = "<group>"; };
 		97C9C65B1D7174B80051B329 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		97C9C65D1D71765A0051B329 /* NoAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoAction.swift; sourceTree = "<group>"; };
 		97C9C65F1D717A2B0051B329 /* MoveTetrominoDownOneRowAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTetrominoDownOneRowAction.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				9753495A1D44DC320084B569 /* DefaultTetrominoGeneratorTest.swift */,
 				97CD4F721D4C5D820055B47C /* SpriteKitTetrominoMoverTest.swift */,
+				979DD6AD1D8E894200026E0D /* STetrominoTest.swift */,
 			);
 			path = Tetrominos;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				97DC642C1D3F36F900A17A17 /* SpyTetrominoGenerator.swift in Sources */,
 				975C59221D5C0B0800B3AB2A /* SpyTickHandler.swift in Sources */,
 				972329F21D5A062400E23AA3 /* SpyTimeKeeper.swift in Sources */,
+				979DD6AE1D8E894200026E0D /* STetrominoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
