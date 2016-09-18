@@ -92,11 +92,4 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             topLeft: topLeft
         ).move(tetromino)
     }
-
-    func rotate() {
-        SpriteKitTetrominoMover(
-            tetromino: skTetromino,
-            topLeft: topLeft
-        ).rotate()
-    }
 }

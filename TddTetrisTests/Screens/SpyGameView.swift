@@ -38,9 +38,4 @@ class SpyGameView: GameView {
         move_arg = tetromino
         move_wasCalled = true
     }
-
-    var rotate_wasCalled = false
-    func rotate() {
-        rotate_wasCalled = true
-    }
 }

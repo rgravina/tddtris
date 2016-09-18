@@ -17,7 +17,4 @@ class SpriteKitTetrominoMover {
             y: topLeft.y - (CGFloat(tetromino.position.row) * CGFloat(SpriteKitGameView.BLOCK_SIZE))
         )
     }
-
-    func rotate() {
-    }
 }

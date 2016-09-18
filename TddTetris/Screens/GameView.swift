@@ -7,5 +7,4 @@ protocol GameView {
     func size() -> CGSize
     func displayNext(tetromino: Tetromino)
     func move(tetromino: Tetromino)
-    func rotate()
 }

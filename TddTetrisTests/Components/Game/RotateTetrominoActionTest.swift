@@ -33,7 +33,7 @@ class RotateTetrominoActionTest: XCTestCase {
 
         expect(self.spyCollisionDetector.canRotate_wasCalled).to(beTrue())
         expect(self.spyTetromino.rotate_wasCalled).to(beTrue())
-        expect(self.spyGameView.rotate_wasCalled).to(beTrue())
+        expect(self.spyGameView.move_wasCalled).to(beTrue())
         expect(self.gameState.tetromino as? STetromino).toNot(beNil())
     }
 
@@ -52,6 +52,6 @@ class RotateTetrominoActionTest: XCTestCase {
 
         expect(self.spyCollisionDetector.canRotate_wasCalled).to(beTrue())
         expect(self.spyTetromino.rotate_wasCalled).to(beFalse())
-        expect(self.spyGameView.rotate_wasCalled).to(beFalse())
+        expect(self.spyGameView.move_wasCalled).to(beFalse())
     }
 }
