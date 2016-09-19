@@ -9,12 +9,19 @@ class SpriteKitTetrominoMover {
         self.topLeft = topLeft
     }
 
-    func move(
-        tetromino: Tetromino
-    ) {
+    func move(tetromino: Tetromino) {
         self.tetromino.position = CGPoint(
-            x: topLeft.x + (CGFloat(tetromino.position.column) * CGFloat(SpriteKitGameView.BLOCK_SIZE)),
-            y: topLeft.y - (CGFloat(tetromino.position.row) * CGFloat(SpriteKitGameView.BLOCK_SIZE))
+            x: topLeft.x + (CGFloat(tetromino.position.column * SpriteKitGameView.BLOCK_SIZE)),
+            y: topLeft.y - (CGFloat(tetromino.position.row * SpriteKitGameView.BLOCK_SIZE))
         )
+    }
+
+    func display(tetromino: Tetromino) {
+        for (index, position) in tetromino.blocks.enumerate() {
+            self.tetromino.sprites[index].position = CGPoint(
+                x: CGFloat(position.column * SpriteKitGameView.BLOCK_SIZE),
+                y: CGFloat(-(position.row * SpriteKitGameView.BLOCK_SIZE))
+            )
+        }
     }
 }

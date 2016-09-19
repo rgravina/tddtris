@@ -13,16 +13,39 @@ class SpriteKitTetrominoMoverTest: XCTestCase {
         )
     }
 
-    func test_move_movesToPosition() {
-        self.mover.move(
-            STetromino(
-                position: (3, 1),
-                blocks: []
-            )
-        )
+    func test_move_movesToStartPosition() {
+        let tetromino = STetromino()
+        self.mover.move(tetromino)
+        self.mover.display(tetromino)
+
         expect(self.tetromino.position).to(equal(
-            CGPoint(x: CGFloat(10 + SpriteKitGameView.BLOCK_SIZE * 3),
-                y: CGFloat(300 - SpriteKitGameView.BLOCK_SIZE)
+            CGPoint(
+                x: CGFloat(10 + SpriteKitGameView.BLOCK_SIZE * 3),
+                y: CGFloat(300)
+            )
+        ))
+        expect(self.tetromino.sprites[0].position).to(equal(
+            CGPoint(
+                x: CGFloat(0),
+                y: -CGFloat(SpriteKitGameView.BLOCK_SIZE)
+            )
+        ))
+        expect(self.tetromino.sprites[1].position).to(equal(
+            CGPoint(
+                x: CGFloat(SpriteKitGameView.BLOCK_SIZE),
+                y: -CGFloat(SpriteKitGameView.BLOCK_SIZE)
+            )
+        ))
+        expect(self.tetromino.sprites[2].position).to(equal(
+            CGPoint(
+                x: CGFloat(SpriteKitGameView.BLOCK_SIZE),
+                y: CGFloat(0)
+            )
+        ))
+        expect(self.tetromino.sprites[3].position).to(equal(
+            CGPoint(
+                x: CGFloat(SpriteKitGameView.BLOCK_SIZE)*2,
+                y: CGFloat(0)
             )
         ))
     }

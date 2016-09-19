@@ -7,7 +7,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             return skview as UIView!
         }
     }
-    private static let BOARD_TOP_PADDING = 46
+    private static let BOARD_TOP_PADDING = 16
     private static let BOARD_LEFT_PADDING = 16
     private var skview: SKView!
     private var scene: SKScene!
@@ -82,8 +82,12 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
 
     func displayNext(tetromino: Tetromino) {
         skTetromino = SpriteKitSTetromino()
-        move(tetromino)
         scene.addChild(skTetromino as! SKNode)
+        move(tetromino)
+        SpriteKitTetrominoMover(
+            tetromino: skTetromino,
+            topLeft: topLeft
+        ).display(tetromino)
     }
 
     func move(tetromino: Tetromino) {

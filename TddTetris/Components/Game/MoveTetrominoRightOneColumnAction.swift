@@ -7,7 +7,7 @@ class MoveTetrominoRightOneColumnAction: Action {
         view: GameView,
         state: GameState,
         collisionDetector: CollisionDetector
-        ) {
+    ) {
         self.view = view
         self.state = state
         self.collisionDetector = collisionDetector
@@ -23,11 +23,12 @@ class MoveTetrominoRightOneColumnAction: Action {
         }
         let movedTetromino = tetromino.move(.RIGHT)
         state.tetromino = movedTetromino
+
         for position in tetromino.blocks {
-            state.cells[position.column][position.row] = false
+            state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row] = false
         }
         for position in movedTetromino.blocks {
-            state.cells[position.column][position.row] = true
+            state.cells[movedTetromino.position.column + position.column][movedTetromino.position.row + position.row] = true
         }
         view.move(movedTetromino)
     }

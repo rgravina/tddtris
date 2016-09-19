@@ -15,28 +15,28 @@ class DefaultCollisionDetector: CollisionDetector {
         switch (direction) {
         case .DOWN:
             for position in tetromino.lowerFacingBlocks {
-                if (position.row == GameState.ROWS - 1) {
+                if (tetromino.position.row + position.row == GameState.ROWS - 1) {
                     return true
                 }
-                if (state.cells[position.column][position.row + 1]) {
+                if (state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row + 1]) {
                     return true
                 }
             }
         case .LEFT:
             for position in tetromino.leftFacingBlocks {
-                if (position.column == 0) {
+                if (tetromino.position.column + position.column == 0) {
                     return true
                 }
-                if (state.cells[position.column - 1][position.row]) {
+                if (state.cells[tetromino.position.column - 1][tetromino.position.row + position.row]) {
                     return true
                 }
             }
         case .RIGHT:
             for position in tetromino.rightFacingBlocks {
-                if (position.column == GameState.COLUMNS - 1) {
+                if (tetromino.position.column + position.column == GameState.COLUMNS - 1) {
                     return true
                 }
-                if (state.cells[position.column + 1][position.row]) {
+                if (state.cells[tetromino.position.column + position.column + 1][tetromino.position.row + position.row]) {
                     return true
                 }
             }
@@ -47,6 +47,6 @@ class DefaultCollisionDetector: CollisionDetector {
     }
 
     func canRotate() -> Bool {
-        return true
+        return false
     }
 }

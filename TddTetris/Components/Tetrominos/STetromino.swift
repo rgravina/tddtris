@@ -3,18 +3,33 @@ struct STetromino: Tetromino {
     var blocks = Array<(column: Int, row: Int)>()
     var lowerFacingBlocks: Array<(column: Int, row: Int)> {
         get {
-            return [blocks[0], blocks[2], blocks[3]]
+            return [blocks[0], blocks[1], blocks[3]]
         }
     }
     var leftFacingBlocks: Array<(column: Int, row: Int)> {
         get {
-            return [blocks[0], blocks[1]]
+            return [blocks[0], blocks[2]]
         }
     }
     var rightFacingBlocks: Array<(column: Int, row: Int)> {
         get {
-            return [blocks[2], blocks[3]]
+            return [blocks[1], blocks[3]]
         }
+    }
+
+    init() {
+        position = (3, 0)
+        blocks = [
+            (column: 0, row: 1),
+            (column: 1, row: 1),
+            (column: 1, row: 0),
+            (column: 2, row: 0),
+        ]
+    }
+
+    init(position: (column: Int, row: Int), blocks: Array<(column: Int, row: Int)>) {
+        self.position = position
+        self.blocks = blocks
     }
 
     func move(direction: Direction) -> Tetromino {
@@ -25,12 +40,7 @@ struct STetromino: Tetromino {
                 position.column,
                 position.row + 1
             ),
-            blocks: [
-                (blocks[0].column, blocks[0].row + 1),
-                (blocks[1].column, blocks[1].row + 1),
-                (blocks[2].column, blocks[2].row + 1),
-                (blocks[3].column, blocks[3].row + 1)
-            ]
+            blocks: blocks
         )
         case .LEFT:
             return STetromino(
@@ -38,12 +48,7 @@ struct STetromino: Tetromino {
                     position.column - 1,
                     position.row
                 ),
-                blocks: [
-                    (blocks[0].column - 1, blocks[0].row),
-                    (blocks[1].column - 1, blocks[1].row),
-                    (blocks[2].column - 1, blocks[2].row),
-                    (blocks[3].column - 1, blocks[3].row)
-                ]
+                blocks: blocks
             )
         case .RIGHT:
             return STetromino(
@@ -51,12 +56,7 @@ struct STetromino: Tetromino {
                     position.column + 1,
                     position.row
                 ),
-                blocks: [
-                    (blocks[0].column + 1, blocks[0].row),
-                    (blocks[1].column + 1, blocks[1].row),
-                    (blocks[2].column + 1, blocks[2].row),
-                    (blocks[3].column + 1, blocks[3].row)
-                ]
+                blocks: blocks
             )
         default:
             return self

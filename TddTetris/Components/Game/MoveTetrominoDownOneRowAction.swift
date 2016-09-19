@@ -15,14 +15,14 @@ class MoveTetrominoDownOneRowAction: Action {
             return
         }
         let tetromino = state.tetromino!
-        let movedTemtromino = tetromino.move(.DOWN) as! STetromino
-        state.tetromino = movedTemtromino
+        let movedTetromino = tetromino.move(.DOWN) as! STetromino
+        state.tetromino = movedTetromino
         for position in tetromino.blocks {
-            state.cells[position.column][position.row] = false
+            state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row] = false
         }
-        for position in movedTemtromino.blocks {
-            state.cells[position.column][position.row] = true
+        for position in movedTetromino.blocks {
+            state.cells[movedTetromino.position.column + position.column][movedTetromino.position.row + position.row] = true
         }
-        view.move(movedTemtromino)
+        view.move(movedTetromino)
     }
 }

@@ -32,10 +32,10 @@ class NextTetrominoActionTest: XCTestCase {
         tetrominoGenerator.next_return = STetromino(
             position: (3, 0),
             blocks: [
-                (column: 3, row: 1),
-                (column: 4, row: 0),
-                (column: 4, row: 1),
-                (column: 5, row: 0)
+                (column: 0, row: 1),
+                (column: 1, row: 1),
+                (column: 1, row: 0),
+                (column: 2, row: 0)
             ]
         )
 

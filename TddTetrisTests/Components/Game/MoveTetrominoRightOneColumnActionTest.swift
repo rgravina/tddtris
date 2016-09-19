@@ -9,10 +9,10 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         gameState.tetromino = STetromino(
             position: (0, 0),
             blocks: [
-                (column: 3, row: 1),
-                (column: 4, row: 0),
-                (column: 4, row: 1),
-                (column: 5, row: 0)
+                (column: 0, row: 1),
+                (column: 1, row: 1),
+                (column: 1, row: 0),
+                (column: 2, row: 0)
             ]
         )
 
@@ -32,10 +32,10 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         gameState.tetromino = STetromino(
             position: (7, 0),
             blocks: [
-                (column: 3, row: 1),
-                (column: 4, row: 0),
-                (column: 4, row: 1),
-                (column: 5, row: 0)
+                (column: 0, row: 1),
+                (column: 1, row: 1),
+                (column: 1, row: 0),
+                (column: 2, row: 0)
             ]
         )
 
@@ -72,10 +72,10 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
         gameState.tetromino = STetromino(
             position: (3, 0),
             blocks: [
-                (column: 3, row: 1),
-                (column: 4, row: 0),
-                (column: 4, row: 1),
-                (column: 5, row: 0)
+                (column: 0, row: 1),
+                (column: 1, row: 1),
+                (column: 1, row: 0),
+                (column: 2, row: 0)
             ]
         )
 
@@ -87,9 +87,9 @@ class MoveTetrominoRightOneColumnActionTest: XCTestCase {
 
         action.perform()
 
+        expect(gameState.cells[4][1]).to(beTrue())
+        expect(gameState.cells[5][1]).to(beTrue())
         expect(gameState.cells[5][0]).to(beTrue())
         expect(gameState.cells[6][0]).to(beTrue())
-        expect(gameState.cells[5][1]).to(beTrue())
-        expect(gameState.cells[4][1]).to(beTrue())
     }
 }

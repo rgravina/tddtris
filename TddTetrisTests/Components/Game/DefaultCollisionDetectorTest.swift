@@ -7,10 +7,10 @@ class DefaultCollisionDetectorTest: XCTestCase {
         let tetromino = STetromino(
             position: (0, 18),
             blocks: [
-                (column: 0, row: 19),
-                (column: 1, row: 18),
-                (column: 1, row: 19),
-                (column: 2, row: 18)
+                (column: 0, row: 1),
+                (column: 1, row: 0),
+                (column: 1, row: 1),
+                (column: 2, row: 0)
             ]
         )
         let gameState = GameState()
