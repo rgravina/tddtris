@@ -1,9 +1,9 @@
 import UIKit
 
 class GameLauncher: Launcher {
-    private let gameView: GameView
-    private let tickHandler: TickHandler
-    private let inputHandler: InputHandler
+    fileprivate let gameView: GameView
+    fileprivate let tickHandler: TickHandler
+    fileprivate let inputHandler: InputHandler
 
     var view: UIView {
         get {
@@ -21,7 +21,7 @@ class GameLauncher: Launcher {
         self.inputHandler = inputHandler
     }
 
-    func configure(frame: CGRect) {
+    func configure(_ frame: CGRect) {
         gameView.configure(
             tickHandler,
             inputHandler: inputHandler,

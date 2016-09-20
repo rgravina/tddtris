@@ -9,7 +9,7 @@ class SpyLauncher: Launcher {
     }
 
     var configure_arguments: CGRect!
-    func configure(frame: CGRect) {
+    func configure(_ frame: CGRect) {
         configure_arguments = frame
     }
 

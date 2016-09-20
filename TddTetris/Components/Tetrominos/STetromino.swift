@@ -32,9 +32,9 @@ struct STetromino: Tetromino {
         self.blocks = blocks
     }
 
-    func move(direction: Direction) -> Tetromino {
+    func move(_ direction: Direction) -> Tetromino {
         switch (direction) {
-        case .DOWN:
+        case .down:
         return STetromino(
             position: (
                 position.column,
@@ -42,7 +42,7 @@ struct STetromino: Tetromino {
             ),
             blocks: blocks
         )
-        case .LEFT:
+        case .left:
             return STetromino(
                 position: (
                     position.column - 1,
@@ -50,7 +50,7 @@ struct STetromino: Tetromino {
                 ),
                 blocks: blocks
             )
-        case .RIGHT:
+        case .right:
             return STetromino(
                 position: (
                     position.column + 1,

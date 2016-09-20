@@ -6,7 +6,7 @@ class ExtensionsForTest {}
 
 
 // MARK: - Custom Matchers
-internal func containSubview(containedView: UIView) -> NonNilMatcherFunc<UIView> {
+internal func containSubview(_ containedView: UIView) -> NonNilMatcherFunc<UIView> {
     return NonNilMatcherFunc { expression, failureMessage in
         guard let superView = try expression.evaluate() else {
             return false
@@ -21,7 +21,7 @@ internal func containSubview(containedView: UIView) -> NonNilMatcherFunc<UIView>
 }
 
 // MARK: - Private Methods
-private func viewContainsSubview(superView: UIView, containedView: UIView) -> Bool {
+private func viewContainsSubview(_ superView: UIView, containedView: UIView) -> Bool {
     for subView in superView.subviews {
         if subView == containedView {
             return true

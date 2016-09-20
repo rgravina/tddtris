@@ -2,7 +2,7 @@ import SpriteKit
 
 class SpriteKitSTetromino: SKNode, SpriteKitTetromino {
     internal var sprites = [SKSpriteNode]()
-    private let block = SKTexture(imageNamed: "blue")
+    fileprivate let block = SKTexture(imageNamed: "blue")
     override init() {
         super.init()
         sprites.append(SKSpriteNode(texture: block, size: CGSize(width: SpriteKitGameView.BLOCK_SIZE, height: SpriteKitGameView.BLOCK_SIZE)))

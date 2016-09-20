@@ -6,11 +6,11 @@ class GameState {
 
     init() {
         cells = Array<Array<Bool>>(
-            count: GameState.COLUMNS,
-            repeatedValue: Array<Bool>(
-                count: GameState.ROWS,
-                repeatedValue: false
-            )
+            repeating: Array<Bool>(
+                repeating: false,
+                count: GameState.ROWS
+            ),
+            count: GameState.COLUMNS
         )
     }
 }

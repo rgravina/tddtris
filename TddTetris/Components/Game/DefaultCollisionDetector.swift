@@ -5,7 +5,7 @@ class DefaultCollisionDetector: CollisionDetector {
         self.state = state
     }
 
-    func wouldCollide(direction: Direction) -> Bool {
+    func wouldCollide(_ direction: Direction) -> Bool {
         let maybeTetromino = state.tetromino
         if maybeTetromino == nil {
             return false
@@ -13,7 +13,7 @@ class DefaultCollisionDetector: CollisionDetector {
         let tetromino = maybeTetromino!
 
         switch (direction) {
-        case .DOWN:
+        case .down:
             for position in tetromino.lowerFacingBlocks {
                 if (tetromino.position.row + position.row == GameState.ROWS - 1) {
                     return true
@@ -22,7 +22,7 @@ class DefaultCollisionDetector: CollisionDetector {
                     return true
                 }
             }
-        case .LEFT:
+        case .left:
             for position in tetromino.leftFacingBlocks {
                 if (tetromino.position.column + position.column == 0) {
                     return true
@@ -31,7 +31,7 @@ class DefaultCollisionDetector: CollisionDetector {
                     return true
                 }
             }
-        case .RIGHT:
+        case .right:
             for position in tetromino.rightFacingBlocks {
                 if (tetromino.position.column + position.column == GameState.COLUMNS - 1) {
                     return true

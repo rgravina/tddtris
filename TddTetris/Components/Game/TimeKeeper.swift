@@ -1,5 +1,5 @@
 import Foundation
 
 protocol TimeKeeper {
-    func update(now: NSTimeInterval) -> Bool
+    func update(_ now: TimeInterval) -> Bool
 }

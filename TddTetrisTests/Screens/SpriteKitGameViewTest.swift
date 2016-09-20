@@ -14,7 +14,7 @@ class SpriteKitGameViewTest: XCTestCase {
         gameView.configure(
             tickHandler,
             inputHandler: inputHandler,
-            frame: CGRectMake(0, 0, 100, 200)
+            frame: CGRect(x: 0, y: 0, width: 100, height: 200)
         )
     }
 }

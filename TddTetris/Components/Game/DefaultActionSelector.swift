@@ -25,7 +25,7 @@ class DefaultActionSelector: ActionSelector {
             )
         }
 
-        if collisionDetector.wouldCollide(.DOWN) {
+        if collisionDetector.wouldCollide(.down) {
             return SettleTetrominoAction(
                 state: state
             )

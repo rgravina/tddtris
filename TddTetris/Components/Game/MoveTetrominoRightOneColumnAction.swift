@@ -18,10 +18,10 @@ class MoveTetrominoRightOneColumnAction: Action {
             return
         }
         let tetromino = state.tetromino!
-        if (collisionDetector.wouldCollide(.RIGHT)) {
+        if (collisionDetector.wouldCollide(.right)) {
             return
         }
-        let movedTetromino = tetromino.move(.RIGHT)
+        let movedTetromino = tetromino.move(.right)
         state.tetromino = movedTetromino
 
         for position in tetromino.blocks {

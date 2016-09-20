@@ -15,7 +15,7 @@ class MoveTetrominoDownOneRowAction: Action {
             return
         }
         let tetromino = state.tetromino!
-        let movedTetromino = tetromino.move(.DOWN) as! STetromino
+        let movedTetromino = tetromino.move(.down) as! STetromino
         state.tetromino = movedTetromino
         for position in tetromino.blocks {
             state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row] = false

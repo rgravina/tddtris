@@ -1,7 +1,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    private let launcher: Launcher!
+    fileprivate let launcher: Launcher!
 
     init(launcher: Launcher) {
         self.launcher = launcher
@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 
@@ -22,12 +22,12 @@ class GameViewController: UIViewController {
         addSubviews()
     }
 
-    private func configureSubviews() {
+    fileprivate func configureSubviews() {
         launcher.configure(view.frame)
         launcher.start()
     }
 
-    private func addSubviews() {
+    fileprivate func addSubviews() {
         view.addSubview(launcher.view)
     }
 }

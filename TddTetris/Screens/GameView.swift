@@ -3,8 +3,8 @@ import UIKit
 protocol GameView {
     var view: UIView! { get }
     func presentScene()
-    func configure(game: TickHandler, inputHandler: InputHandler, frame: CGRect)
+    func configure(_ game: TickHandler, inputHandler: InputHandler, frame: CGRect)
     func size() -> CGSize
-    func displayNext(tetromino: Tetromino)
-    func move(tetromino: Tetromino)
+    func displayNext(_ tetromino: Tetromino)
+    func move(_ tetromino: Tetromino)
 }

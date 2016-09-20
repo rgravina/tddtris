@@ -28,8 +28,8 @@ class GameLancherTest: XCTestCase {
 
     func test_configure_configuresGameView() {
         let args = self.spyGameView.configure_args
-        expect(args.delegate as! SpyTickHandler === self.spyTickHandler).to(equal(true))
-        expect(args.frame).to(equal(frame))
+        expect(args?.delegate as! SpyTickHandler === self.spyTickHandler).to(equal(true))
+        expect(args?.frame).to(equal(frame))
     }
 
     func test_start_presentsScene() {

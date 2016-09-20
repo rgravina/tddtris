@@ -1,9 +1,9 @@
 import UIKit
 
 class DefaultTickHandler: TickHandler {
-    private let timeKeeper: TimeKeeper
-    private var actionSelector: ActionSelector!
-    private var gameState: GameState!
+    fileprivate let timeKeeper: TimeKeeper
+    fileprivate var actionSelector: ActionSelector!
+    fileprivate var gameState: GameState!
 
     init (
         timeKeeper: TimeKeeper,
@@ -15,7 +15,7 @@ class DefaultTickHandler: TickHandler {
         self.gameState = gameState
     }
 
-    func update(currentTime: NSTimeInterval) {
+    func update(_ currentTime: TimeInterval) {
         if (timeKeeper.update(currentTime)) {
             tick()
         }

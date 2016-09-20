@@ -1,5 +1,5 @@
 import UIKit
 
 protocol TickHandler {
-    func update(currentTime: NSTimeInterval)
+    func update(_ currentTime: TimeInterval)
 }

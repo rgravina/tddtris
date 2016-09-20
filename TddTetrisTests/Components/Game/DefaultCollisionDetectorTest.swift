@@ -17,7 +17,7 @@ class DefaultCollisionDetectorTest: XCTestCase {
         gameState.tetromino = tetromino
 
         let detector = DefaultCollisionDetector(state: gameState)
-        let result = detector.wouldCollide(.DOWN)
+        let result = detector.wouldCollide(.down)
         expect(result).to(beTrue())
     }
 
@@ -35,7 +35,7 @@ class DefaultCollisionDetectorTest: XCTestCase {
         gameState.tetromino = tetromino
         gameState.cells[0][2] = true
         let detector = DefaultCollisionDetector(state: gameState)
-        let result = detector.wouldCollide(.DOWN)
+        let result = detector.wouldCollide(.down)
 
         expect(result).to(beTrue())
     }
@@ -54,7 +54,7 @@ class DefaultCollisionDetectorTest: XCTestCase {
         gameState.tetromino = tetromino
         gameState.cells[0][1] = true
         let detector = DefaultCollisionDetector(state: gameState)
-        let result = detector.wouldCollide(.LEFT)
+        let result = detector.wouldCollide(.left)
 
         expect(result).to(beTrue())
     }

@@ -7,68 +7,68 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
             return skview as UIView!
         }
     }
-    private static let BOARD_TOP_PADDING = 16
-    private static let BOARD_LEFT_PADDING = 16
-    private var skview: SKView!
-    private var scene: SKScene!
-    private var topLeft: CGPoint!
-    private var game: TickHandler!
-    private var skTetromino: SpriteKitTetromino!
-    private var swipeRightRegognizer: UISwipeGestureRecognizer!
-    private var swipeLeftRegognizer: UISwipeGestureRecognizer!
-    private var swipeDownRegognizer: UISwipeGestureRecognizer!
-    private var tapRecogniser: UITapGestureRecognizer!
-    private var inputHandler: InputHandler!
+    fileprivate static let BOARD_TOP_PADDING = 16
+    fileprivate static let BOARD_LEFT_PADDING = 16
+    fileprivate var skview: SKView!
+    fileprivate var scene: SKScene!
+    fileprivate var topLeft: CGPoint!
+    fileprivate var game: TickHandler!
+    fileprivate var skTetromino: SpriteKitTetromino!
+    fileprivate var swipeRightRegognizer: UISwipeGestureRecognizer!
+    fileprivate var swipeLeftRegognizer: UISwipeGestureRecognizer!
+    fileprivate var swipeDownRegognizer: UISwipeGestureRecognizer!
+    fileprivate var tapRecogniser: UITapGestureRecognizer!
+    fileprivate var inputHandler: InputHandler!
     func configure(
-        game: TickHandler,
+        _ game: TickHandler,
         inputHandler: InputHandler,
         frame: CGRect
     ) {
         self.game = game
         self.inputHandler = inputHandler
         skview = SKView(frame: frame)
-        view.multipleTouchEnabled = false
+        view.isMultipleTouchEnabled = false
         topLeft = CGPoint(
             x: CGFloat(CGFloat(SpriteKitGameView.BOARD_LEFT_PADDING)),
             y: frame.height - CGFloat(SpriteKitGameView.BOARD_TOP_PADDING)
         )
         scene = SKScene(size: size())
         scene.delegate = self
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .aspectFill
 
         swipeRightRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
-        swipeRightRegognizer.direction = UISwipeGestureRecognizerDirection.Right
+        swipeRightRegognizer.direction = UISwipeGestureRecognizerDirection.right
         skview.addGestureRecognizer(swipeRightRegognizer)
 
         swipeLeftRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
-        swipeLeftRegognizer.direction = UISwipeGestureRecognizerDirection.Left
+        swipeLeftRegognizer.direction = UISwipeGestureRecognizerDirection.left
         skview.addGestureRecognizer(swipeLeftRegognizer)
 
         swipeDownRegognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipe(_:)))
-        swipeDownRegognizer.direction = UISwipeGestureRecognizerDirection.Down
+        swipeDownRegognizer.direction = UISwipeGestureRecognizerDirection.down
         skview.addGestureRecognizer(swipeDownRegognizer)
 
         tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(self.didTap(_:)))
         skview.addGestureRecognizer(tapRecogniser)
     }
 
-    func didSwipe(sender: UISwipeGestureRecognizer) {
+    func didSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case UISwipeGestureRecognizerDirection.Left:
+        case UISwipeGestureRecognizerDirection.left:
             inputHandler.didSwipeLeft()
-        case UISwipeGestureRecognizerDirection.Right:
+        case UISwipeGestureRecognizerDirection.right:
             inputHandler.didSwipeRight()
-        case UISwipeGestureRecognizerDirection.Down:
+        case UISwipeGestureRecognizerDirection.down:
             inputHandler.didSwipeDown()
         default: break
         }
     }
 
-    func didTap(sender: UITapGestureRecognizer) {
+    func didTap(_ sender: UITapGestureRecognizer) {
         inputHandler.didTap()
     }
 
-    func update(currentTime: NSTimeInterval, forScene scene: SKScene) {
+    func update(_ currentTime: TimeInterval, for scene: SKScene) {
         game.update(currentTime)
     }
 
@@ -80,7 +80,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         return skview.bounds.size
     }
 
-    func displayNext(tetromino: Tetromino) {
+    func displayNext(_ tetromino: Tetromino) {
         skTetromino = SpriteKitSTetromino()
         scene.addChild(skTetromino as! SKNode)
         move(tetromino)
@@ -90,7 +90,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         ).display(tetromino)
     }
 
-    func move(tetromino: Tetromino) {
+    func move(_ tetromino: Tetromino) {
         SpriteKitTetrominoMover(
             tetromino: skTetromino,
             topLeft: topLeft

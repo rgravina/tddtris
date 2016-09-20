@@ -10,7 +10,7 @@ class SpyTetromino: Tetromino {
 
     var move_arguments: Direction!
     var move_returnValue: Tetromino!
-    func move(direction: Direction) -> Tetromino {
+    func move(_ direction: Direction) -> Tetromino {
         move_arguments = direction
         return move_returnValue
     }
