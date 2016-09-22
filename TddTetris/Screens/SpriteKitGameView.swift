@@ -81,7 +81,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     }
 
     func displayNext(_ tetromino: Tetromino) {
-        skTetromino = SpriteKitSTetromino()
+        skTetromino = DefaultSpriteKitTetromino()
         scene.addChild(skTetromino as! SKNode)
         move(tetromino)
         SpriteKitTetrominoMover(

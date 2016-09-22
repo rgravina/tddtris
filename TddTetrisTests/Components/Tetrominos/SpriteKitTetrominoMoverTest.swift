@@ -7,7 +7,7 @@ class SpriteKitTetrominoMoverTest: XCTestCase {
     var mover: SpriteKitTetrominoMover!
 
     override func setUp() {
-        tetromino = SpriteKitSquareTetromino()
+        tetromino = DefaultSpriteKitTetromino()
         mover = SpriteKitTetrominoMover(tetromino: tetromino,
                            topLeft: CGPoint(x: 10, y: 300)
         )
