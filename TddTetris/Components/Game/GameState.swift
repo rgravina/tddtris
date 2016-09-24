@@ -14,32 +14,32 @@ class GameState {
         )
     }
 
-    func allocate(column: Int, row: Int) {
-        guard inBounds(column: column, row: row) else {
+    func allocate(position: Position) {
+        guard inBounds(position: position) else {
             return
         }
-        cells[column][row] = true
+        cells[position.column][position.row] = true
     }
 
-    func free(column: Int, row: Int) {
-        guard inBounds(column: column, row: row) else {
+    func free(position: Position) {
+        guard inBounds(position: position) else {
             return
         }
-        cells[column][row] = false
+        cells[position.column][position.row] = false
     }
 
-    func cell(column: Int, row: Int) -> Bool {
-        guard inBounds(column: column, row: row) else {
+    func cell(position: Position) -> Bool {
+        guard inBounds(position: position) else {
             return false
         }
-        return cells[column][row]
+        return cells[position.column][position.row]
     }
 
-    private func inBounds(column: Int, row: Int) -> Bool {
-        if (column >= 0 && column >= GameState.COLUMNS) {
+    private func inBounds(position: Position) -> Bool {
+        if (position.column >= 0 && position.column >= GameState.COLUMNS) {
             return false
         }
-        if (row >= 0 && row >= GameState.ROWS) {
+        if (position.row >= 0 && position.row >= GameState.ROWS) {
             return false
         }
         return true
