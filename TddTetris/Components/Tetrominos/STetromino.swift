@@ -1,6 +1,9 @@
 struct STetromino: Tetromino {
     var position = (column: 0, row: 0)
-    var blocks = Array<(column: Int, row: Int)>()
+    private var _blocks = Array<(column: Int, row: Int)>()
+    var blocks: Array<(column: Int, row: Int)> {
+        return _blocks
+    }
     var lowerFacingBlocks: Array<(column: Int, row: Int)> {
         get {
             return [blocks[0], blocks[1], blocks[3]]
@@ -19,7 +22,7 @@ struct STetromino: Tetromino {
 
     init() {
         position = (3, 0)
-        blocks = [
+        _blocks = [
             (column: 0, row: 1),
             (column: 1, row: 1),
             (column: 1, row: 0),
@@ -29,7 +32,7 @@ struct STetromino: Tetromino {
 
     init(position: (column: Int, row: Int), blocks: Array<(column: Int, row: Int)>) {
         self.position = position
-        self.blocks = blocks
+        self._blocks = blocks
     }
 
     func move(_ direction: Direction) -> Tetromino {
