@@ -25,10 +25,18 @@ class MoveTetrominoRightOneColumnAction: Action {
         state.tetromino = movedTetromino
 
         for position in tetromino.blocks {
-            state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row] = false
+            state.free(
+                position: Position(
+                    column: tetromino.position.column + position.column,
+                    row: tetromino.position.row + position.row
+            ))
         }
         for position in movedTetromino.blocks {
-            state.cells[movedTetromino.position.column + position.column][movedTetromino.position.row + position.row] = true
+            state.occupy(
+                position: Position(
+                    column: movedTetromino.position.column + position.column,
+                    row: movedTetromino.position.row + position.row
+            ))
         }
         view.move(movedTetromino)
     }

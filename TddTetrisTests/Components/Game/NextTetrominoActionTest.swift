@@ -47,11 +47,11 @@ class NextTetrominoActionTest: XCTestCase {
 
         action.perform()
 
-        expect(gameState.cells[3][0]).to(beFalse())
-        expect(gameState.cells[3][1]).to(beTrue())
-        expect(gameState.cells[4][0]).to(beTrue())
-        expect(gameState.cells[4][1]).to(beTrue())
-        expect(gameState.cells[5][0]).to(beTrue())
-        expect(gameState.cells[5][1]).to(beFalse())
+        expect(gameState.occupied(position: Position(column: 3, row: 0))).to(beFalse())
+        expect(gameState.occupied(position: Position(column: 3, row: 1))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 4, row: 0))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 4, row: 1))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 5, row: 0))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 5, row: 1))).to(beFalse())
     }
 }

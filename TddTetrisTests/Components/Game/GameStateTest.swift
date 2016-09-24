@@ -27,6 +27,6 @@ class GameStateTest: XCTestCase {
 
     func test_getCellOutOfBounds() {
         let position = Position(column: GameState.COLUMNS+1, row:  GameState.ROWS+1)
-        expect(self.state.occupied(position: position)).to(equal(false))
+        expect(self.state.occupied(position: position)).to(equal(true))
     }
 }

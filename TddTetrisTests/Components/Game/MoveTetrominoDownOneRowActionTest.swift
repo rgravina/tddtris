@@ -46,7 +46,7 @@ class MoveTetrominoDownOneRowActionTest: XCTestCase {
         
         action.perform()
 
-        expect(gameState.cells[0][1]).to(beFalse())
-        expect(gameState.cells[0][2]).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 0, row: 1))).to(beFalse())
+        expect(gameState.occupied(position: Position(column: 0, row: 2))).to(beTrue())
     }
 }

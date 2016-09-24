@@ -79,9 +79,9 @@ class MoveTetrominoLeftOneColumnActionTest: XCTestCase {
 
         action.perform()
 
-        expect(gameState.cells[2][1]).to(beTrue())
-        expect(gameState.cells[3][1]).to(beTrue())
-        expect(gameState.cells[3][0]).to(beTrue())
-        expect(gameState.cells[4][0]).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 2, row: 1))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 3, row: 1))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 3, row: 0))).to(beTrue())
+        expect(gameState.occupied(position: Position(column: 4, row: 0))).to(beTrue())
     }
 }

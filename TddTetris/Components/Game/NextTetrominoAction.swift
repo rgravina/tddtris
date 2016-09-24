@@ -17,7 +17,11 @@ class NextTetrominoAction: Action {
         let tetromino = tetrominoGenerator.next()
         state.tetromino = tetromino
         for position in tetromino.blocks {
-            state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row] = true
+            state.occupy(
+                position: Position(
+                    column: tetromino.position.column + position.column,
+                    row: tetromino.position.row + position.row
+            ))
         }
         view.displayNext(tetromino)
     }

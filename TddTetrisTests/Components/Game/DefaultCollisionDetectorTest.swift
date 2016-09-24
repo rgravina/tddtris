@@ -33,7 +33,7 @@ class DefaultCollisionDetectorTest: XCTestCase {
         )
         let gameState = GameState()
         gameState.tetromino = tetromino
-        gameState.cells[0][2] = true
+        gameState.occupy(position: Position(column: 0, row: 2))
         let detector = DefaultCollisionDetector(state: gameState)
         let result = detector.wouldCollide(.down)
 
@@ -44,15 +44,15 @@ class DefaultCollisionDetectorTest: XCTestCase {
         let tetromino = STetromino(
             position: (1, 0),
             blocks: [
+                (column: 0, row: 1),
                 (column: 1, row: 1),
-                (column: 2, row: 0),
-                (column: 2, row: 1),
-                (column: 1, row: 0)
+                (column: 1, row: 0),
+                (column: 2, row: 0)
             ]
         )
         let gameState = GameState()
         gameState.tetromino = tetromino
-        gameState.cells[0][1] = true
+        gameState.occupy(position: Position(column: 0, row: 1))
         let detector = DefaultCollisionDetector(state: gameState)
         let result = detector.wouldCollide(.left)
 

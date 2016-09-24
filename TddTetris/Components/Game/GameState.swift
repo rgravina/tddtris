@@ -1,8 +1,8 @@
 class GameState {
     static let ROWS = 20
     static let COLUMNS = 10
-    var cells: Array<Array<Bool>>
     var tetromino: Tetromino?
+    private var cells: Array<Array<Bool>>
 
     init() {
         cells = Array<Array<Bool>>(
@@ -30,7 +30,7 @@ class GameState {
 
     func occupied(position: Position) -> Bool {
         guard inBounds(position: position) else {
-            return false
+            return true
         }
         return cells[position.column][position.row]
     }

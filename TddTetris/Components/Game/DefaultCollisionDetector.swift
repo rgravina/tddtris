@@ -11,39 +11,34 @@ class DefaultCollisionDetector: CollisionDetector {
             return false
         }
         let tetromino = maybeTetromino!
-
         switch (direction) {
         case .down:
-            for position in tetromino.lowerFacingBlocks {
-                if (tetromino.position.row + position.row == GameState.ROWS - 1) {
-                    return true
-                }
-                if (state.cells[tetromino.position.column + position.column][tetromino.position.row + position.row + 1]) {
-                    return true
-                }
-            }
+            return tetromino.lowerFacingBlocks.contains(where: {position in
+                return state.occupied(
+                    position: Position(
+                        column: tetromino.position.column + position.column,
+                        row: tetromino.position.row + position.row + 1
+                ))}
+            )
         case .left:
-            for position in tetromino.leftFacingBlocks {
-                if (tetromino.position.column + position.column == 0) {
-                    return true
-                }
-                if (state.cells[tetromino.position.column - 1][tetromino.position.row + position.row]) {
-                    return true
-                }
-            }
+            return tetromino.leftFacingBlocks.contains(where: {position in
+                return state.occupied(
+                    position: Position(
+                        column: tetromino.position.column + position.column - 1,
+                        row: tetromino.position.row + position.row
+                ))}
+            )
         case .right:
-            for position in tetromino.rightFacingBlocks {
-                if (tetromino.position.column + position.column == GameState.COLUMNS - 1) {
-                    return true
-                }
-                if (state.cells[tetromino.position.column + position.column + 1][tetromino.position.row + position.row]) {
-                    return true
-                }
-            }
+            return tetromino.rightFacingBlocks.contains(where: {position in
+                return state.occupied(
+                    position: Position(
+                        column: tetromino.position.column + position.column + 1,
+                        row: tetromino.position.row + position.row
+                ))}
+            )
         default:
             return false
         }
-        return false
     }
 
     func canRotate() -> Bool {

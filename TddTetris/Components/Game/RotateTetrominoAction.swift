@@ -24,10 +24,18 @@ class RotateTetrominoAction : Action {
         let rotatedTetromino = tetromino.rotate()
         state.tetromino = rotatedTetromino
         for position in tetromino.blocks {
-            state.cells[position.column][position.row] = false
+            state.free(
+                position: Position(
+                    column: position.column,
+                    row: position.row
+            ))
         }
         for position in rotatedTetromino.blocks {
-            state.cells[position.column][position.row] = true
+            state.occupy(
+                position: Position(
+                    column: position.column,
+                    row: position.row
+            ))
         }
         view.move(rotatedTetromino)
     }
