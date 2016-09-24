@@ -27,16 +27,18 @@ class MoveTetrominoRightOneColumnAction: Action {
         for position in tetromino.blocks {
             state.free(
                 position: Position(
-                    column: tetromino.position.column + position.column,
-                    row: tetromino.position.row + position.row
-            ))
+                    column: position.column,
+                    row: position.row
+                )
+            )
         }
         for position in movedTetromino.blocks {
             state.occupy(
                 position: Position(
-                    column: movedTetromino.position.column + position.column,
-                    row: movedTetromino.position.row + position.row
-            ))
+                    column: position.column,
+                    row: position.row
+                )
+            )
         }
         view.move(movedTetromino)
     }

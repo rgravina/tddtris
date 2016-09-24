@@ -19,8 +19,8 @@ class SpriteKitTetrominoMover {
     func display(_ tetromino: Tetromino) {
         for (index, position) in tetromino.blocks.enumerated() {
             self.tetromino.sprites[index].position = CGPoint(
-                x: CGFloat(position.column * SpriteKitGameView.BLOCK_SIZE),
-                y: CGFloat(-(position.row * SpriteKitGameView.BLOCK_SIZE))
+                x: CGFloat((position.column - tetromino.position.column) * SpriteKitGameView.BLOCK_SIZE),
+                y: CGFloat(-((position.row - tetromino.position.row) * SpriteKitGameView.BLOCK_SIZE))
             )
         }
     }

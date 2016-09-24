@@ -2,7 +2,12 @@ struct STetromino: Tetromino {
     var position = (column: 0, row: 0)
     private var _blocks = Array<(column: Int, row: Int)>()
     var blocks: Array<(column: Int, row: Int)> {
-        return _blocks
+        return _blocks.map({block in
+            return (
+                column: position.column + block.column,
+                row: position.row + block.row
+            )
+        })
     }
     var lowerFacingBlocks: Array<(column: Int, row: Int)> {
         get {
@@ -43,7 +48,7 @@ struct STetromino: Tetromino {
                 position.column,
                 position.row + 1
             ),
-            blocks: blocks
+            blocks: _blocks
         )
         case .left:
             return STetromino(
@@ -51,7 +56,7 @@ struct STetromino: Tetromino {
                     position.column - 1,
                     position.row
                 ),
-                blocks: blocks
+                blocks: _blocks
             )
         case .right:
             return STetromino(
@@ -59,7 +64,7 @@ struct STetromino: Tetromino {
                     position.column + 1,
                     position.row
                 ),
-                blocks: blocks
+                blocks: _blocks
             )
         default:
             return self

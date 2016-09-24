@@ -19,9 +19,10 @@ class NextTetrominoAction: Action {
         for position in tetromino.blocks {
             state.occupy(
                 position: Position(
-                    column: tetromino.position.column + position.column,
-                    row: tetromino.position.row + position.row
-            ))
+                    column: position.column,
+                    row: position.row
+                )
+            )
         }
         view.displayNext(tetromino)
     }
