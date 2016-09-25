@@ -42,6 +42,6 @@ class DefaultCollisionDetector: CollisionDetector {
     }
 
     func canRotate() -> Bool {
-        return false
+        return true
     }
 }

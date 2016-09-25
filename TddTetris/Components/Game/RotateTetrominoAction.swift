@@ -38,5 +38,6 @@ class RotateTetrominoAction : Action {
             ))
         }
         view.move(rotatedTetromino)
+        view.display(rotatedTetromino)
     }
 }

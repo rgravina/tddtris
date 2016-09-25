@@ -7,4 +7,5 @@ protocol GameView {
     func size() -> CGSize
     func displayNext(_ tetromino: Tetromino)
     func move(_ tetromino: Tetromino)
+    func display(_ tetromino: Tetromino)
 }

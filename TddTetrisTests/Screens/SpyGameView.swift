@@ -38,4 +38,11 @@ class SpyGameView: GameView {
         move_arg = tetromino
         move_wasCalled = true
     }
+
+    var display_wasCalled = false
+    var display_arg: Tetromino!
+    func display(_ tetromino: Tetromino) {
+        display_arg = tetromino
+        display_wasCalled = true
+    }
 }
