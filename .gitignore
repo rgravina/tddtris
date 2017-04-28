@@ -1,2 +1,9 @@
+# macOS
+.DS_Store
+
+# XCode
+xcuserdata/
+
+# Carthage
 Carthage/Build
 Carthage/Checkouts
