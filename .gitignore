@@ -3,6 +3,7 @@
 
 # XCode
 xcuserdata/
+xcshareddata/
 
 # Carthage
 Carthage/Build

@@ -52,7 +52,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         skview.addGestureRecognizer(tapRecogniser)
     }
 
-    func didSwipe(_ sender: UISwipeGestureRecognizer) {
+    @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.left:
             inputHandler.didSwipeLeft()
@@ -64,7 +64,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
         }
     }
 
-    func didTap(_ sender: UITapGestureRecognizer) {
+    @objc func didTap(_ sender: UITapGestureRecognizer) {
         inputHandler.didTap()
     }
 
