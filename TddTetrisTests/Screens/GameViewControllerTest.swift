@@ -19,8 +19,4 @@ class GameViewControllerTest: XCTestCase {
     func test_viewDidLoad_callsStart() {
         expect(self.spyLauncher.start_wasCalled).to(equal(true))
     }
-
-    func test_viewDidLoad_addsSubviews() {
-        expect(self.gameVC.view).to(containSubview(spyLauncher.view))
-    }
 }

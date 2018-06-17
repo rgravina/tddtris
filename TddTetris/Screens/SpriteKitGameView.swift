@@ -4,7 +4,7 @@ class SpriteKitGameView: NSObject, GameView, SKSceneDelegate {
     static let BLOCK_SIZE = 28
     var view: UIView! {
         get {
-            return skview as UIView!
+            return skview
         }
     }
     fileprivate static let BOARD_TOP_PADDING = 16
